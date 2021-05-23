@@ -1,0 +1,88 @@
+<!--
+    Flex-layout
+    https://github.com/angular/flex-layout
+    https://github.com/angular/flex-layout/wiki/Declarative-API-Overview
+
+    Ikonice i njihov import
+    https://material.angular.io/components/icon/overview
+    https://github.com/google/material-design-icons
+
+ -->
+<!--
+    Testiranje rada ikonica
+<section>
+    <button mat-icon-button color="warn">
+        <mat-icon>home</mat-icon>
+    </button>
+</section> -->
+
+<!--
+    Testiranje Flex-Layout
+<section id="container">
+    <div id="child1" class="child"></div>
+    <div id="child2" class="child"></div>
+    <div id="child3" class="child"></div>
+</section> -->
+
+<!--
+  Sidenav
+  https://material.angular.io/components/sidenav/overview
+
+  Ikonice:
+  https://fonts.google.com/icons
+ -->
+
+ <mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/signup" (click)="sidenav.close()">
+        <mat-icon>face</mat-icon>
+        Signup
+      </a>
+      <a mat-list-item routerLink="/login" (click)="sidenav.close()">
+        <mat-icon>login</mat-icon>
+        Login
+      </a>
+      <a mat-list-item routerLink="/training" (click)="sidenav.close()">
+        <mat-icon>fitness_center</mat-icon>
+        Training
+      </a>
+      <a mat-list-item routerLink="/" (click)="sidenav.close()">
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- <mat-sidenav-content>
+    <div>This is the content</div>
+  </mat-sidenav-content> -->
+
+</mat-sidenav-container>
+<mat-toolbar color="warn">
+
+  <div fxHide.gt-xs>
+    <button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div>
+    <a routerLink="/">Logo</a>
+  </div>
+
+  <!--
+    sablon: direktivaNaredba.dimenzijeDispleja
+    https://github.com/angular/flex-layout/wiki/Responsive-API
+  -->
+
+  <div fxFlex fxLayoutAlign="end" fxLayoutGap="15px" fxHide.xs>
+    <a routerLink="/signup">Signup</a>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/training">Training</a>
+  </div>
+
+</mat-toolbar>
+<router-outlet></router-outlet>
+

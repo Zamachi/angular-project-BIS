@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cliwebapp": {
+      "hosting": {
+        "BIS-project": [
+          "cliwebapp"
+        ]
+      }
+    }
+  }
+}
