@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,7 +63,14 @@
       <option name="presentableId" value="Default" />
       <updated>1623526014986</updated>
       <workItem from="1623526017010" duration="5000" />
+      <workItem from="1623599856392" duration="2293000" />
+      <workItem from="1623667540134" duration="1909000" />
+      <workItem from="1623849169212" duration="234000" />
+      <workItem from="1623862345596" duration="1888000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

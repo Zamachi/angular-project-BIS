@@ -4,12 +4,11 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
 
 @Data
 public class OrderModel {
     private String id;
-    private Map<Integer, List<ProductModel>> productModel; // razmisliti;
+    private List<OrderItem> items;
     private UserModel userModel;
     private double totalPrice;
     private LocalDate dateCreated;
