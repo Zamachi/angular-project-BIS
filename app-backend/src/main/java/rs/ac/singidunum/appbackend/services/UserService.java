@@ -19,6 +19,8 @@ public class UserService implements iUserService{
     @Autowired
     private AutoMapperService autoMapperService;
 
+    // login metoda koja vraca UserEntity (model) korisnika ukoliko korisnik postoji u bazi i ako se poklope lozinke
+    // u suprotnom vraca null
     // mozda zameniti if(s) sa try-catch
     public UserEntity login(UserModel userModel) {
         if (userModel != null) {
@@ -32,6 +34,8 @@ public class UserService implements iUserService{
         return null;
     }
 
+    // registruje korisnika - upisuje u bazu ukoliko poslat username ne postoji u bazi
+    // ako je username zauzet, vraca null
     public UserEntity register(UserModel userModel) {
         if (userModel != null && this.userRepository.findByUsername(userModel.getUsername()) == null ) {
             userModel.setPassword(this.passwordEncoder.encode(userModel.getPassword()));
