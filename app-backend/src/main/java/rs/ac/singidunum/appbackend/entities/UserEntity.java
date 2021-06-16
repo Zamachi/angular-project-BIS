@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import rs.ac.singidunum.appbackend.models.AddressModel;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,7 +23,7 @@ public class UserEntity {
     @Field("phone")
     private String phone;
     @Field("address")
-    private String address;
+    private AddressModel address;
     @Field("favourites")
     private List<String> favourites; // array of what???
     @Field("username")

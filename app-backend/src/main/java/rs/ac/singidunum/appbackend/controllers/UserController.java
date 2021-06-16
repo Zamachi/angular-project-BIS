@@ -8,8 +8,6 @@ import rs.ac.singidunum.appbackend.services.UserService;
 @RestController
 @RequestMapping("users")
 public class UserController {
-
     @Autowired
     private UserService userService;
-
 }

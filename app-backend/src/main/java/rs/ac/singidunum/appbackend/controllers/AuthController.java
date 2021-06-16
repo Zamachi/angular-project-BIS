@@ -1,7 +1,6 @@
 package rs.ac.singidunum.appbackend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import rs.ac.singidunum.appbackend.entities.UserEntity;
 import rs.ac.singidunum.appbackend.models.UserModel;
