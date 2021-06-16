@@ -2,11 +2,9 @@ package rs.ac.singidunum.appbackend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import rs.ac.singidunum.appbackend.entities.UserEntity;
+import rs.ac.singidunum.appbackend.models.UserModel;
 import rs.ac.singidunum.appbackend.services.UserService;
 
 @RestController
@@ -14,14 +12,12 @@ import rs.ac.singidunum.appbackend.services.UserService;
 public class AuthController {
     @Autowired
     private UserService userService;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @PostMapping("login")
     @CrossOrigin(origins = "*")
-    public UserEntity login() { return null; }
+    public UserEntity login(@RequestBody UserModel userModel) { return this.userService.login(userModel); }
 
     @PostMapping("register")
     @CrossOrigin(origins = "*")
-    public UserEntity register() { return null; }
+    public UserEntity register(@RequestBody UserModel userModel) { return this.userService.register(userModel); }
 }
