@@ -6,5 +6,6 @@ import rs.ac.singidunum.appbackend.entities.ProductEntity;
 import java.util.List;
 
 public interface iProductRepository extends MongoRepository<ProductEntity, String> {
-    List<ProductEntity>  findAll();
+    // pronadji sve proizvode u bazi
+    List<ProductEntity> findAll();
 }

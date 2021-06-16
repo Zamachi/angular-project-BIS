@@ -9,7 +9,7 @@ import java.util.List;
 public class OrderModel {
     private String id;
     private List<OrderItem> items;
-    private UserModel userModel;
+    private UserModel user;
     private double totalPrice;
     private LocalDate dateCreated;
     private String status; // zavrsena, tekuca, otkazana

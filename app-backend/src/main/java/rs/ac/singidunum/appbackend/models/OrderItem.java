@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class OrderItem {
-    private ProductModel productModel;
+    private ProductModel product;
     private int quantity;
 }

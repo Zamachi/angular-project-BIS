@@ -17,8 +17,8 @@ public class OrderEntity {
     private String id;
     @Field("items")
     private List<OrderItem> items;
-    @Field("userModel")
-    private UserModel userModel;
+    @Field("user")
+    private UserModel user;
     @Field("totalPrice")
     private double totalPrice;
     @Field("dateCreated")

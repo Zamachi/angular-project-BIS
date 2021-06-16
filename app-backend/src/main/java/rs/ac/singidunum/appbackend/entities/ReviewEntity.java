@@ -14,10 +14,10 @@ import java.time.LocalDate;
 public class ReviewEntity {
     @Id
     private String id;
-    @Field("productModel")
-    private ProductModel productModel;
-    @Field("userModel")
-    private UserModel userModel;
+    @Field("product")
+    private ProductModel product;
+    @Field("user")
+    private UserModel user;
     @Field("score")
     private int score;
     @Field("comment")
