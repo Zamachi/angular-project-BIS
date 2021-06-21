@@ -10,4 +10,6 @@ import rs.ac.singidunum.appbackend.services.OrderService;
 public class OrderController {
     @Autowired
     private OrderService orderService;
+
+    //NOTE: CREATE, READ, UPDATE
 }

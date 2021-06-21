@@ -10,4 +10,6 @@ import rs.ac.singidunum.appbackend.services.UserService;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    //NOTE: READ, UPDATE i DELETE (? maybe) o podacima korisniku
 }

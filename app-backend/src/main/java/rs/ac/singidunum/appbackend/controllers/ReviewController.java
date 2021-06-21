@@ -10,4 +10,6 @@ import rs.ac.singidunum.appbackend.services.ReviewService;
 public class ReviewController {
     @Autowired
     private ReviewService reviewService;
+
+    //NOTE: CREATE i READ, mozda i UPDATE (?)
 }
