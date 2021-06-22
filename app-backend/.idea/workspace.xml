@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iOrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iReviewRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rs/ac/singidunum/appbackend/AppBackendApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

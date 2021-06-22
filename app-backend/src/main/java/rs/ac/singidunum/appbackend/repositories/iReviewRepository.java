@@ -12,10 +12,10 @@ public interface iReviewRepository extends MongoRepository<ReviewEntity, String>
     List<ReviewEntity> findAllByUser_Username(String username);
 
     // lista svih recenzija za odredjeni proizvod
-    @Query(value = " 'product.id' : ?0 ")
+//    @Query(value = " 'product.id' : ?0 ")
     List<ReviewEntity> findAllByProduct_Id(String id);
 
     // jedinstvena recenzija korisnika za jedan proizvod
-    @Query(value = " 'product.id' : ?1, 'user.username':?0 ")
-    List<ReviewEntity> findByUser_UsernameAndProduct_Id(String username, String id);
+//    @Query(value = " 'product.id' : ?1, 'user.username':?0 ")
+    List<ReviewEntity> findByUser_UsernameAndProduct_Id(String Username, String id);
 }

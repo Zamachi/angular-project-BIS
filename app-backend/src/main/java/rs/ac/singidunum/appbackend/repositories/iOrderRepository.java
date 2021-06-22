@@ -18,5 +18,6 @@ public interface iOrderRepository extends MongoRepository<OrderEntity, String> {
     // ti objekti se sastoje od product modela i quantity
     // u tom modelu proveriti id product-a
 //    @Query(value = "{ 'user.username': {$regex: ?0}, 'items.product.id': { $regex: ?1 } }")
+    //    @Query(value = "{ 'user.username': {$regex: ?0}, 'items': { $elemMatch: { 'id': {$regex: ?1} } } }") //NOTE: Alternativa
     List<OrderEntity> findAllByUsernameAndProductId(String username, String itemId);
 }

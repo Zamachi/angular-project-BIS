@@ -48,7 +48,6 @@ public class OrderService implements iOrderService {
                 findById(orderModel.getId()).get();
 
         //NOTE: azurirati neophodne atribute
-
         return orderRepository.save(order);
     }
 
