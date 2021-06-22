@@ -45,4 +45,25 @@ public class UserService implements iUserService{
         return null;
     }
 
+    @Override
+    public void deleteUserByUsername(String username) {
+
+        var user_to_delete = userRepository
+                .findByUsername(username);
+
+        userRepository.delete(user_to_delete);
+    }
+
+    @Override
+    public UserEntity findUserByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public UserEntity updateUser(UserModel userModel) {
+        //NOTE: trebalo bi da sacuva ceo model korisnika sa update panela
+        var user = autoMapperService.map(userModel, UserEntity.class);
+
+        return userRepository.save(user);
+    }
 }
