@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [ //NOTE: koje komponente su deo ovog modula?
@@ -26,6 +27,7 @@ import { environment } from 'src/environments/environment';
     AngularFirestoreModule
   ], //NOTE: postoji i exports niz koji izlistava modules koje tekuci modul izvozi i omogucuje drugim modulima da koriste te elemente
   providers: [], //NOTE: koje servise koristi ovaj modul?
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] //NOTE: ovo je neophodno ukoliko se koristi tzv. "Web component"
 })
 export class AppModule { }

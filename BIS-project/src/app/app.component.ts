@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import "@google/model-viewer";
 
 @Component({
   selector: 'app-root',
