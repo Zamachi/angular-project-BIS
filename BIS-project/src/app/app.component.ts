@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,4 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class AppComponent {
   title = 'BIS-project';
-
-  constructor(private store: AngularFirestore){
-            //NOTE: inicijalizuje Firestore servis
-  }
-
 }

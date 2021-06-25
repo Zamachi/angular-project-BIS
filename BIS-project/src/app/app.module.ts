@@ -1,31 +1,29 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { AngularFireModule } from "@angular/fire";
-import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { RoutingModule } from './routing.module';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { environment } from 'src/environments/environment';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [ //NOTE: koje komponente su deo ovog modula?
-    AppComponent, WelcomeComponent
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    PagenotfoundComponent
   ],
-  imports: [ //NOTE: koje module importujemo da bi koristili njihove funkcionalnosti?
+  imports: [
     BrowserModule,
-    AppRoutingModule,
-    MaterialModule,
     BrowserAnimationsModule,
+    RoutingModule,
     FlexLayoutModule,
-    AngularFireModule.initializeApp(environment.firebase), //NOTE: inicijalizuje Firebase aplikaciju konfiguracijom iz environment-a
-    AngularFirestoreModule
-  ], //NOTE: postoji i exports niz koji izlistava modules koje tekuci modul izvozi i omogucuje drugim modulima da koriste te elemente
-  providers: [], //NOTE: koje servise koristi ovaj modul?
-  bootstrap: [AppComponent]
+    MaterialModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

@@ -1,36 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html, body {
-  font-family: 'Roboto', sans-serif;
-  color: #cecece;
-  height: 100%;
-  margin: 0%;
-  padding: 0%;
-}
-
-body{
-  background: rgb( 20, 12, 25);
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-  height: auto;
-  border-bottom: 1px solid orange;
-}
-
-a:hover, a:active {
-  color: #cecece;
-}
-
-mat-sidenav-container, mat-sidenav-container > * {
-  height: 100%;
-  position: fixed !important;
-  top: 0%;
-  left: 0%;
-}
-
-mat-sidenav {
-  width: 270px;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
