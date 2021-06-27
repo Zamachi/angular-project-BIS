@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -34,7 +35,6 @@ public class ProductService implements iProductService {
     private final Set<String> allowedPosterExtensions = Set.of(
             "png", "jpg", "jpeg", "bmp"
     );
-
 
     @Override
     public ProductEntity createProduct(ProductModel productModel, MultipartFile[] file) {
@@ -130,7 +130,6 @@ public class ProductService implements iProductService {
 
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(contentType))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + product.getFilename() + "\"")
                 .body(product);
     }
 

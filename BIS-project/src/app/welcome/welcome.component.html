@@ -4,17 +4,16 @@
   <h1>Community / comments</h1>
   <p>add comments</p>
 
-  <model-viewer
+  <model-viewer id="reveal"
   camera-controls alt="A 3D model of a sphere"
+  loading="eager"
   autoplay
-  src="../../assets/bugatti/bugatti.gltf"
-  poster="../../assets/dagger/dagger.png"
-  shadow-intensity="1"
+  src="http://localhost:8080/products/download?fileName=model-veliki-stampac-za-modele.glb"
+  poster="http://localhost:8080/products/download?fileName=poster-veliki-stampac-za-modele.png"
   auto-rotate
-  rotation-per-second="30deg"
+  rotation-per-second="40deg"
   reveal="interaction"
   onmouseover="dismissPoster();"
-  onmouseout="showPoster();"
   >
   </model-viewer>
   <!-- reveal="interaction" -->
