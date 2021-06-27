@@ -40,11 +40,11 @@ public class OrderController {
         return orderService.getAllCompleteOrders(username);
     }
 
-    @GetMapping("findallbyusernameandproductid/{username}/{id}")
-    @CrossOrigin(origins = "*")
-    public List<OrderEntity> findAllByUsernameAndProductId(@PathVariable("username")String username, @PathVariable("id")String id){
-        return orderService.findAllByUsernameAndProductId(username,id);
-    }
+//    @GetMapping("findallbyusernameandproductid/{username}/{id}")
+//    @CrossOrigin(origins = "*")
+//    public List<OrderEntity> findAllByUsernameAndProductId(@PathVariable("username")String username, @PathVariable("id")String id){
+//        return orderService.findAllByUsernameAndProductId(username,id);
+//    }
 
     @PutMapping("updateorder")
     @CrossOrigin(origins = "*")

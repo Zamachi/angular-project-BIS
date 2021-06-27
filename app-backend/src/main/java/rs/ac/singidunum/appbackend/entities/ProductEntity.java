@@ -11,6 +11,8 @@ import rs.ac.singidunum.appbackend.models.AddressModel;
 public class ProductEntity {
     @Id
     private String id;
+    @Field("slug")
+    private String slug;
     @Field("name")
     private String name;
     @Field("description")

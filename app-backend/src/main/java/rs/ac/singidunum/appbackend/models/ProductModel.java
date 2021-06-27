@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class ProductModel {
     private String id;
+    private String slug;
     private String name;
     private String description;
     private int leftInStock;

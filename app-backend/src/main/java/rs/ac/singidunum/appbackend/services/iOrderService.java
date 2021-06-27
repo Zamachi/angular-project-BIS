@@ -12,6 +12,6 @@ public interface iOrderService {
     List<OrderEntity> getAllOrders();
     OrderEntity updateOrder(OrderModel orderModel);
     List<OrderEntity> getAllCompleteOrders(String username);
-    List<OrderEntity> findAllByUsernameAndProductId(String username, String id);
+//    List<OrderEntity> findAllByUsernameAndProductId(String username, String id);
 
 }

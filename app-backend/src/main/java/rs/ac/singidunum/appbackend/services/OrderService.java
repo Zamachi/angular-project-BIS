@@ -69,8 +69,8 @@ public class OrderService implements iOrderService {
 
     }
 
-    @Override
-    public List<OrderEntity> findAllByUsernameAndProductId(String username, String id) {
-        return orderRepository.findAllByUsernameAndProductId(username,id);
-    }
+//    @Override
+//    public List<OrderEntity> findAllByUsernameAndProductId(String username, String id) {
+//        return orderRepository.findAllByUsernameAndProductId(username,id);
+//    }
 }
