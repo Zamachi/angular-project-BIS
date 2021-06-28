@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   isUserLoggedIn(): BehaviorSubject<boolean> {
-    if (this.localStorageService.getLocalStorageItem("user") != null) {
+    if (this.localStorageService.getLocalStorageItem("username") != null) {
       this.logTheUserIn();
     }
     return this.isLoggedIn;

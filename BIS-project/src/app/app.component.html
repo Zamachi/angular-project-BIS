@@ -32,7 +32,7 @@
         <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/signup">Signup</a>
         &nbsp;
         &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Logout</a>
+        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" (click)="logout()">Logout</a>
       </div>
       &nbsp;
       &nbsp;

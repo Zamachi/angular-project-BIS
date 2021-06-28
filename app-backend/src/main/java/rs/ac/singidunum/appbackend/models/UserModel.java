@@ -13,7 +13,7 @@ public class UserModel {
     private String email;
     private String phone;
     private AddressModel address;
-    private List<String> favourites; // array of what??? use angular chips?
+    private List<String> favourites; //NOTE: niz kategorija koje su omiljene korisniku
     private String username;
     private String password;
     private LocalDate dateCreated;

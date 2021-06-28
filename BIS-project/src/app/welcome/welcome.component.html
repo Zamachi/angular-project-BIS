@@ -62,9 +62,49 @@
         </div>
     </div>
 
-    <div [ngClass]="'mid-container-2'" fxFlex fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
+    <div [ngClass]="'mid-container-2'" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
         <div>
             <h2>A variety of models to choose from</h2>
+        </div>
+        <div fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
+            <!-- Delivery -->
+            <div fxFlex="50%" fxFlexFill fxLayout="row wrap" fxLayoutAlign="center center">
+                <div [ngClass]="'mid-item-img-container-2'">
+                    <img src="https://i.imgur.com/HzMzVeG.png"  [ngClass]="'mid-item-img-2'"/>
+                </div>
+                <div>
+                    <p [ngClass]="'mid-p'">Delivery available in the Republic of Serbia (for now)! Be on the lookout for when we expand!</p>
+                </div>
+            </div>
+            <!-- Social -->
+            <div fxFlex="50%" fxFlexFill fxLayout="row wrap" fxLayoutAlign="center center">
+                <div [ngClass]="'mid-item-img-container-2'">
+                    <img src="https://i.imgur.com/rDmUmUD.png"  [ngClass]="'mid-item-img-2'"/>
+                </div>
+                <div>
+                    <p [ngClass]="'mid-p'">Leave a comment, see what others think about our products and make a safe purchase.</p>
+                </div>
+            </div>
+        </div>
+        <div fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
+            <!-- Rating -->
+            <div fxFlex="50%" fxFlexFill fxLayout="row wrap" fxLayoutAlign="center center">
+                <div [ngClass]="'mid-item-img-container-2'">
+                    <img src="https://i.imgur.com/6kg4GV8.png"  [ngClass]="'mid-item-img-2'"/>
+                </div>
+                <div>
+                    <p [ngClass]="'mid-p'">Rate your purchase, so that others and we can see how your experience was. It also helps us improve.</p>
+                </div>
+            </div>
+            <!-- Payment -->
+            <div fxFlex="50%" fxFlexFill fxLayout="row wrap" fxLayoutAlign="center center">
+                <div [ngClass]="'mid-item-img-container-2'">
+                    <img src="https://i.imgur.com/aoRIPZ5.png"  [ngClass]="'mid-item-img-2'"/>
+                </div>
+                <div>
+                    <p [ngClass]="'mid-p'">We support a couple of different payment options. Most popular being VISA debit card and PayPal.</p>
+                </div>
+            </div>
         </div>
         <div>
             

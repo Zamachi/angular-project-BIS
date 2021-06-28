@@ -32,7 +32,10 @@ export class LoginComponent implements OnInit {
 
         this.userService.setCurrentUser(response);
 
+        console.log(this.userService.getCurrentUser());
+
         this.authService.logTheUserIn();
+
         this.router.navigate(["welcome"]);
       }
       else {

@@ -3,13 +3,15 @@ model-viewer#reveal {
 }
 
 .app-bg {
-    opacity: 0.8;
+    opacity: 1;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    /* height: calc(100%-400px); */
     height: 85vh;
     z-index: 0;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 .welcome-content * {
@@ -39,12 +41,6 @@ h1 {
     padding: 5px;
 }
 
-.mid-container-2 {
-    background-color: lightblue;
-    width: 100%;
-    min-height: 450px;
-}
-
 .mid-item {
     max-width: 400px;
 }
@@ -60,8 +56,37 @@ h1 {
 .mid-item-img {
     width: 400px;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
 }
+
+.mid-container-2 {
+    background-color: lightblue;
+    width: 100%;
+    min-height: 450px;
+}
+
+.mid-item-img-container-2 {
+    min-width: 150px;
+    min-height: 100px;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.mid-item-img-2 {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.mid-p {
+    text-align: center;
+}
+
+
+
+
+
 
 .dont-break-out {
     /* These are technically the same, but use both */
