@@ -1,5 +1,5 @@
 .appcomp {
-    min-height: 100vh;
+    min-height: 120vh;
     /* background-image: url(https://i.imgur.com/zuugiTD.jpeg);
     background-position: center;
     background-repeat: no-repeat; */
@@ -7,13 +7,8 @@
     position: relative;
 }
 
-.app-bg {
-    opacity: 0.8;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
+.appcomp * {
+    z-index: 1;
 }
 
 .app-content {

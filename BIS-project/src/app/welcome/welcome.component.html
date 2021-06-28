@@ -1,13 +1,23 @@
-<div fxFlex fxLayout="column wrap" fxLayoutAlign="center center">
+<img
+    class="app-bg"
+    src="https://i.imgur.com/VxTybJO.jpeg"
+    alt="background-image"
+/>
+<div class="welcome-content" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="20px">
+    
+
     <h1>Welcome to KVA shop!</h1>
 
     <div class="wrapper-1" fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
-        <div fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center center">
-            <h2>This is a description of the website functions, also trying to make you shop here!</h2>
+        <div [ngClass]="'top-div'" fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center center">
+            <h2>Great place for your shopping plans!</h2>
+            <p>We bring your models to life! Browse, select, order and we ship!</p>
+            <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlexAlign="start" fxLayoutGap="5px">
+                <button mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('login')">Login</button>
+                <button mat-button style="background-color:rgb(255, 158, 58); color:white" (click)="goNavigate('signup')">Signup</button>
+            </div>
         </div>
-        <div fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center center">
-            <!-- <model-viewer id="reveal" loading="eager" src="" poster="https://i.imgur.com/yO6sjhX.png" alt="A 3D model of a model" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer> -->
-
+        <div [ngClass]="'top-div'" fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center center">
             <model-viewer  fxFlexFill  id="reveal"
             camera-controls alt="A 3D model of a sphere"
             loading="eager"
@@ -18,7 +28,47 @@
             >
             </model-viewer>
         </div>
-        
+    </div>
+
+    <div [ngClass]="'mid-container-1'" fxFlex fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <div [ngClass]="'mid-item'" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
+            <div [ngClass]="'mid-item-img-container'">
+                <img src="https://i.imgur.com/Odd2HRE.jpeg" [ngClass]="'mid-item-img'" />
+            </div>
+            <div fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
+                <h2>Lorem ipsum placeholder text here lala dasdas dasd sadasd asdas dasd</h2>
+                <button mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('')">Placeholder</button>
+            </div>
+        </div>
+
+        <div [ngClass]="'mid-item'" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
+            <div [ngClass]="'mid-item-img-container'">
+                <img src="https://i.imgur.com/O6MlqZj.png" [ngClass]="'mid-item-img'" />
+            </div>
+            <div fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
+                <h2>Lorem ipsum placeholder text here lala</h2>
+                <button mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('')">Placeholder</button>
+            </div>
+        </div>
+
+        <div [ngClass]="'mid-item'" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
+            <div [ngClass]="'mid-item-img-container'">
+                <img src="https://i.imgur.com/8vUz2pU.png" [ngClass]="'mid-item-img'" />
+            </div>
+            <div fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
+                <h2>Lorem ipsum placeholder text here lala</h2>
+                <button mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('')">Placeholder</button>
+            </div>
+        </div>
+    </div>
+
+    <div [ngClass]="'mid-container-2'" fxFlex fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <div>
+            <h2>A variety of models to choose from</h2>
+        </div>
+        <div>
+            
+        </div>
     </div>
 
     

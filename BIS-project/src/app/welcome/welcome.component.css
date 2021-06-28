@@ -2,6 +2,88 @@ model-viewer#reveal {
     --poster-color: transparent;
 }
 
+.app-bg {
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 85vh;
+    z-index: 0;
+}
+
+.welcome-content * {
+    z-index: 1;
+}
+
+h1 {
+    color: white;
+}
+
 .wrapper-1 {
-    min-height: 400px;
+    min-height: 450px;
+}
+
+.wrapper-1 > div > h2,p {
+    width: 450px;
+    color: white;
+}
+
+.top-div {
+    min-width: 500px;
+}
+
+.mid-container-1 {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.mid-container-2 {
+    background-color: lightblue;
+    width: 100%;
+    min-height: 450px;
+}
+
+.mid-item {
+    max-width: 400px;
+}
+
+.mid-item-img-container {
+    min-width: 400px;
+    min-height: 250px;
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.mid-item-img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.dont-break-out {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.truncate {
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

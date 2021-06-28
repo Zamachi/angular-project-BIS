@@ -39,17 +39,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="app-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="rs.ac.singidunum.appbackend.AppBackendApplication" />
@@ -74,6 +63,9 @@
       <workItem from="1624010357083" duration="27000" />
       <workItem from="1624293808909" duration="2185000" />
       <workItem from="1624389113295" duration="933000" />
+      <workItem from="1624873954853" duration="184000" />
+      <workItem from="1624886406442" duration="72000" />
+      <workItem from="1624887198583" duration="29000" />
     </task>
     <servers />
   </component>

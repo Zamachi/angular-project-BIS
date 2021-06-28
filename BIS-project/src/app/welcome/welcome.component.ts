@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import '@google/model-viewer';
 
 @Component({
@@ -8,9 +9,13 @@ import '@google/model-viewer';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goNavigate(url: string) {
+    this.router.navigate([url]);
   }
 
 }

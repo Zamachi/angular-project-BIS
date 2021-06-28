@@ -1,13 +1,16 @@
 <div fxFlex fxFlexFill class="mat-app-background appcomp" [ngClass]="isDarkTheme? 'darkMode' : '' " fxLayout>
-  <img
+  <!-- <img
     class="app-bg"
-    src="https://i.imgur.com/gFHFqXL.jpeg"
+    src="https://i.imgur.com/VxTybJO.jpeg"
     alt="background-image"
-  />
+  /> -->
   <!-- 
     https://i.imgur.com/gFHFqXL.jpeg  -- elipse
     https://i.imgur.com/3exdnGV.jpeg  -- croped
     https://i.imgur.com/zuugiTD.jpeg  -- original
+
+    https://i.imgur.com/VxTybJO.jpeg  -- blue bg original
+    https://i.imgur.com/E0UJkoZ.jpeg  -- blue bg crop
 
    -->
   <div fxFlex fxFlexFill class="app-content">
@@ -22,17 +25,11 @@
       <!-- <span class="example-spacer"></span> -->
 
       <div fxFlex fxLayoutAlign="end" fxLayoutGap="10px">
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Files</a>
-        &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Audio</a>
-        &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Photos</a>
-        &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Notes</a>
+        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/products">Browse products</a>
         &nbsp; <div> | </div>
-        <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Login</a>
+        <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/login">Login</a>
         &nbsp;
-        <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Signup</a>
+        <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/signup">Signup</a>
         &nbsp;
         &nbsp;
         <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/welcome">Logout</a>
