@@ -1,3 +1,26 @@
-<p>welcome works!</p>
+<div fxFlex fxLayout="column wrap" fxLayoutAlign="center center">
+    <h1>Welcome to KVA shop!</h1>
 
-<model-viewer src="https://poly.google.com/view/fQf265AV_af" alt="A 3D model of a model" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
+    <div class="wrapper-1" fxFlex fxLayout="row wrap" fxLayoutAlign="center center">
+        <div fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center center">
+            <h2>This is a description of the website functions, also trying to make you shop here!</h2>
+        </div>
+        <div fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center center">
+            <!-- <model-viewer id="reveal" loading="eager" src="" poster="https://i.imgur.com/yO6sjhX.png" alt="A 3D model of a model" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer> -->
+
+            <model-viewer  fxFlexFill  id="reveal"
+            camera-controls alt="A 3D model of a sphere"
+            loading="eager"
+            autoplay
+            src="../../assets/dagger/scene.glb"
+            auto-rotate
+            rotation-per-second="40deg"
+            >
+            </model-viewer>
+        </div>
+        
+    </div>
+
+    
+</div>
+
