@@ -1,14 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { UserModel } from '../models/userModel';
+import { LocalstorageService } from './localstorage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  user: UserModel;
+  constructor(private http: HttpClient, private localStorageService: LocalstorageService) { }
 
-  constructor() { }
+  user: UserModel;
 
   getCurrentUser(): UserModel {
     return this.user;
@@ -17,4 +20,12 @@ export class UserService {
   setCurrentUser(user: UserModel) {
     this.user = user;
   }
+
+  getUserByUsernameFromTheServer(username: string): Observable<UserModel> {
+    
+    const url = "http://localhost:8080/users/finduserbyusername/" + username;
+
+    return this.http.get<UserModel>(url, { observe: 'body' });
+  }
+
 }

@@ -26,8 +26,15 @@ h1 {
     min-height: 450px;
 }
 
-.wrapper-1 > div > h2,p {
-    width: 450px;
+.wrapper-1.top-div > h2,p {
+    max-width: 450px;
+}
+
+.top-h2 {
+    text-align: start;
+}
+
+.color-white {
     color: white;
 }
 
@@ -38,11 +45,19 @@ h1 {
 .mid-container-1 {
     background-color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 15px;
 }
 
 .mid-item {
     max-width: 400px;
+}
+
+.mid-item h2 {
+    color: black;
+}
+
+.mid-item > div > h2 {
+    text-align: center;
 }
 
 .mid-item-img-container {
@@ -81,6 +96,31 @@ h1 {
 
 .mid-p {
     text-align: center;
+}
+
+.mid-container-3 {
+    width: 100%;
+}
+
+/*  */
+.mid-item-img-container-3 {
+    min-width: 100px;
+    min-height: 60px;
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.mid-item-img-3 {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
+.link-decoration {
+    color: rgb(7, 131, 231);
+    text-decoration: none;
 }
 
 

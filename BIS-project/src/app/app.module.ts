@@ -18,6 +18,10 @@ import { AuthService } from './services/auth.service';
 import { LocalstorageService } from './services/localstorage.service';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import { ProductService } from './services/product.service';
+import { AuthguardService } from './services/guards/authguard.service';
+import { ComponentaccessService } from './services/guards/componentaccess.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     UserprofileComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule
   ],
-  providers: [AuthService, LocalstorageService, UserService],
+  providers: [AuthService, LocalstorageService, UserService, ProductService, AuthguardService, ComponentaccessService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
