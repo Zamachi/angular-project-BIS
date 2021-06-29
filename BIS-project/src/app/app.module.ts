@@ -5,6 +5,8 @@ import { RoutingModule } from './routing.module';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -13,12 +15,11 @@ import { ProductsComponent } from './products/products.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { CartComponent } from './cart/cart.component';
 
 import { AuthService } from './services/auth.service';
 import { LocalstorageService } from './services/localstorage.service';
 import { UserService } from './services/user.service';
-import { HttpClientModule } from '@angular/common/http';
-import { CartComponent } from './cart/cart.component';
 import { ProductService } from './services/product.service';
 import { AuthguardService } from './services/guards/authguard.service';
 import { ComponentaccessService } from './services/guards/componentaccess.service';
@@ -41,7 +42,8 @@ import { ComponentaccessService } from './services/guards/componentaccess.servic
     HttpClientModule,
     FlexLayoutModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    NgxSliderModule
   ],
   providers: [AuthService, LocalstorageService, UserService, ProductService, AuthguardService, ComponentaccessService],
   bootstrap: [AppComponent],

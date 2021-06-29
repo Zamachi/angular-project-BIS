@@ -2,12 +2,20 @@
     max-width: 400px;
     max-height: 500px;
     overflow: hidden;
+    border: 1px solid black;
+}
+
+.example-card:hover {
+    border: 2px solid #2697e7;
+    box-shadow: 1px 1px 10px darkcyan;
+    animation: 0.3s;
 }
 
 mat-card {
     padding: 0% !important;
     margin-top: 5px;
     cursor: pointer;
+    /* border-radius: 0%; */
 }
 
 mat-card-subtitle{
@@ -19,14 +27,6 @@ mat-card-subtitle{
 mat-icon {
     font-size: 18px;
 }
-/* 
-.icon-rating {
-    color: gold;
-}
-
-.icon-price {
-    color: green
-} */
 
 mat-card-title{
     color:rgb(0, 55, 128);
@@ -46,6 +46,10 @@ mat-card-content > img {
     width: 400px;
     height: 250px;
     object-fit: contain;
+}
+
+.eighty-percent {
+    max-width: 80%;
 }
 
 .dont-break-out {
