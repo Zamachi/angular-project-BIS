@@ -4,13 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { AngularFireModule } from "@angular/fire";
-import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -22,9 +19,7 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
-    AngularFireModule.initializeApp(environment.firebase), //NOTE: inicijalizuje Firebase aplikaciju konfiguracijom iz environment-a
-    AngularFirestoreModule
+    FlexLayoutModule
   ], //NOTE: postoji i exports niz koji izlistava modules koje tekuci modul izvozi i omogucuje drugim modulima da koriste te elemente
   providers: [], //NOTE: koje servise koristi ovaj modul?
   bootstrap: [AppComponent],
