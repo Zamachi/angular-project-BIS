@@ -34,10 +34,6 @@ h1 {
     text-align: start;
 }
 
-.color-white {
-    color: white;
-}
-
 .top-div {
     min-width: 500px;
 }
@@ -54,17 +50,12 @@ h1 {
 
 .mid-item h2 {
     color: black;
-}
-
-.mid-item > div > h2 {
     text-align: center;
 }
 
 .mid-item-img-container {
     min-width: 400px;
     min-height: 250px;
-    width: 400px;
-    height: 250px;
     overflow: hidden;
 }
 
@@ -83,8 +74,6 @@ h1 {
 .mid-item-img-container-2 {
     min-width: 150px;
     min-height: 100px;
-    width: 150px;
-    height: 100px;
     overflow: hidden;
 }
 
@@ -94,20 +83,13 @@ h1 {
     object-fit: contain;
 }
 
-.mid-p {
-    text-align: center;
-}
-
 .mid-container-3 {
     width: 100%;
 }
 
-/*  */
 .mid-item-img-container-3 {
     min-width: 100px;
     min-height: 60px;
-    width: 100px;
-    height: 60px;
     overflow: hidden;
 }
 
@@ -117,10 +99,19 @@ h1 {
     object-fit: contain;
 }
 
+/* decorations */
 
 .link-decoration {
     color: rgb(7, 131, 231);
     text-decoration: none;
+}
+
+.mid-p {
+    text-align: center;
+}
+
+.color-white {
+    color: white;
 }
 
 

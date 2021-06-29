@@ -11,8 +11,8 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<ProductModel[]> {
-    const url = "http://localhost:8080/auth/login";
+    const url = "http://localhost:8080/products/findallproducts";
 
-    return this.http.post<ProductModel[]>(url, { observe: 'body' });
+    return this.http.get<ProductModel[]>(url, { observe: 'body' });
   }
 }

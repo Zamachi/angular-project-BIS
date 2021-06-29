@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   isUserLoggedIn(): BehaviorSubject<boolean> {
-    if (this.localStorageService.getLocalStorageItem("username") != null) {
+    if (this.localStorageService.getLocalStorageItem("username") != null && this.localStorageService.getLocalStorageItem("username").length > 0) {
       this.logTheUserIn();
     }
     return this.isLoggedIn;
@@ -41,7 +41,7 @@ export class AuthService {
   }
 
   logout() {
-    this.localStorageService.clearLocalStorage();
+    this.localStorageService.removeLocalStorageItem("username");
     this.logTheUserOut();
   }
 }
