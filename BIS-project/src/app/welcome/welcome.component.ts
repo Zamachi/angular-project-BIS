@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import "@google/model-viewer";
-// import { Sketchfab } from "@sketchfab/viewer-api";
+import { Router } from '@angular/router';
+import '@google/model-viewer';
 
 @Component({
   selector: 'app-welcome',
@@ -9,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goNavigate(url: string) {
+    this.router.navigate([url]);
   }
 
 }

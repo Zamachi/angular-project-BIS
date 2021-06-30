@@ -17,6 +17,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 
 @NgModule ({
@@ -38,7 +42,10 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatTableModule,
         MatSortModule,
         MatPaginatorModule,
-        MatDialogModule
+        MatDialogModule,
+        MatSnackBarModule,
+        MatProgressBarModule,
+        MatSlideToggleModule
     ],
     exports: [
         MatButtonModule,
@@ -58,7 +65,10 @@ import { MatDialogModule } from '@angular/material/dialog';
         MatTableModule,
         MatSortModule,
         MatPaginatorModule,
-        MatDialogModule
+        MatDialogModule,
+        MatSnackBarModule,
+        MatProgressBarModule,
+        MatSlideToggleModule
     ]
 })
 
