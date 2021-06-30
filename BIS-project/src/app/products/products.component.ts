@@ -76,6 +76,9 @@ export class ProductsComponent implements OnInit {
                 values.push(obj.subCategory);
             }
         });
+
+        values = [...new Set(values)];
+
         this.cat.set(key, values);
     });
   }
