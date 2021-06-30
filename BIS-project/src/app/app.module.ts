@@ -24,6 +24,7 @@ import { UserService } from './services/user.service';
 import { ProductService } from './services/product.service';
 import { AuthguardService } from './services/guards/authguard.service';
 import { ComponentaccessService } from './services/guards/componentaccess.service';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ComponentaccessService } from './services/guards/componentaccess.servic
     UserprofileComponent,
     LoginComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
