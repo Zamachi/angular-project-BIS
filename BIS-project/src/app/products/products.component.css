@@ -1,5 +1,5 @@
 .example-card {
-    max-width: 400px;
+    max-width: 355px;
     max-height: 500px;
     border: 1px solid black;
 }
@@ -13,8 +13,8 @@
 mat-card {
     padding: 0% !important;
     margin-top: 5px;
+    margin-left: 5px;
     cursor: pointer;
-    /* border-radius: 0%; */
 }
 
 mat-card-subtitle{
@@ -30,19 +30,20 @@ mat-icon {
 mat-card-title{
     color:rgb(0, 55, 128);
     font-size:20px;
-    text-align: center;
+    text-align: start;
 }
 
 mat-card-content {
-    min-width: 400px;
+    min-width: 350px;
     min-height: 250px;
-    width: 400px;
+    width: 350px;
     height: 250px;
     overflow: hidden;
+    background-image: url(https://i.imgur.com/s7SDEey.png);
 }
 
 mat-card-content > img {
-    width: 400px;
+    width: 350px;
     height: 250px;
     object-fit: contain;
 }
@@ -71,7 +72,7 @@ mat-card-content > img {
 }
 
 .truncate {
-    width: 300px;
+    width: 150px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -1,18 +1,31 @@
 <div fxFlex fxLayout="column wrap" fxLayoutGap="10px">
-    <mat-form-field color='primary' fxFlexAlign="center">
-        <input type="text" ngModel matInput placeholder="Search products..." name="search"
-        search #searchInput="ngModel" (keyup) = "search(searchInput.value)">
-    </mat-form-field>
+    <div fxLayout="row nowrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field color='primary' fxFlexAlign="center">
+            <input type="text" ngModel matInput placeholder="Search products..." name="search"
+            search #searchInput="ngModel" [(ngModel)]="searchValue" (keyup) = "search()">
+        </mat-form-field>
+        <span> | </span>
+        <div>
+            <table matSort (matSortChange)="sortData($event)">
+                <tr>
+                  <th mat-sort-header="name">Name</th>
+                  <th mat-sort-header="score">Score</th>
+                  <th mat-sort-header="price">Price</th>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div fxFlex fxLayout="row wrap">
         <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
             <p>Filter search results:</p>
             <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
                 <p>Price range:</p>
                 <ngx-slider
-                [(value)]="minValuePrice"
-                [(highValue)]="maxValuePrice"
+                [value]="minValuePrice" (valueChange)="minValuePrice=$event"
+                [highValue]="maxValuePrice" (highValueChange)="maxValuePrice=$event"
                 [options]="optionsPrice"
-                >
+                ngModel
+                (ngModelChange)="search()">
                 </ngx-slider>
             </div>
 
@@ -20,7 +33,8 @@
                 <p>Category:</p>
                 <mat-form-field appearance="fill">
                     <mat-label>Category</mat-label>
-                    <mat-select [(ngModel)]="catValue">
+                    <mat-select [(ngModel)]="catValue" (selectionChange)="search()">
+                        <mat-option value="any">Any</mat-option>
                       <mat-option *ngFor="let test of cat | keyvalue" [value]="test.key" >
                         {{test.key}}
                       </mat-option>
@@ -32,7 +46,8 @@
                 <p>Sub-category:</p>
                 <mat-form-field appearance="fill">
                     <mat-label>Sub-category</mat-label>
-                    <mat-select [(ngModel)]="subCatValue">
+                    <mat-select [(ngModel)]="subCatValue" (selectionChange)="search()">
+                        <mat-option value="any">Any</mat-option>
                       <mat-option *ngFor="let test of cat.get(catValue)" [value]="test">
                         {{test}}
                       </mat-option>
@@ -46,6 +61,8 @@
                 [(value)]="minValueScore"
                 [(highValue)]="maxValueScore"
                 [options]="optionsScore"
+                ngModel
+                (ngModelChange)="search()">
                 >
                 </ngx-slider>
             </div>
@@ -53,9 +70,11 @@
             <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
                 <p>Quantity:</p>
                 <ngx-slider
-                [(value)]="minValueStock"
-                [(highValue)]="maxValueStock"
+                [value]="minValueStock" (valueChange)="minValueStock=$event"
+                [highValue]="maxValueStock" (highValueChange)="maxValueStock=$event"
                 [options]="optionsStock"
+                ngModel
+                (ngModelChange)="search()">
                 >
                 </ngx-slider>
             </div>
@@ -64,9 +83,10 @@
                 <p>Distance:</p>
             </div>
         </div>
-        <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="15px">
-            <mat-card class="example-card" *ngFor="let product of data" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="1px" (click)="singleProductDetails(product.id)">
-                <mat-card-content fxFlex fxLayout="column wrap" fxLayoutAlign="center center">
+        <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start">
+            <mat-card class="example-card" *ngFor="let product of data | paginate: { itemsPerPage: 8, currentPage:p }" 
+            fxFlex fxLayout="column wrap" fxLayoutAlign="center center" (click)="singleProductDetails(product.id)">
+                <mat-card-content fxFlex fxLayout="column wrap" fxLayoutAlign="end center">
                     <img mat-card-image 
                     src="{{product.imagePath}}" 
                     alt="{{product.name}}" class="matCardImage" >
@@ -80,5 +100,8 @@
                 </mat-card-header>
             </mat-card>
         </div>
+    </div>
+    <div fxLayoutAlign="center center">
+        <pagination-controls (pageChange) = "p = $event"></pagination-controls>
     </div>
 </div>

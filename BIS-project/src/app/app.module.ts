@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -43,7 +44,8 @@ import { ComponentaccessService } from './services/guards/componentaccess.servic
     FlexLayoutModule,
     MaterialModule,
     FormsModule,
-    NgxSliderModule
+    NgxSliderModule,
+    NgxPaginationModule
   ],
   providers: [AuthService, LocalstorageService, UserService, ProductService, AuthguardService, ComponentaccessService],
   bootstrap: [AppComponent],
