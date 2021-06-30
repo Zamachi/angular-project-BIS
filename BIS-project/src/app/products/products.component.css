@@ -39,7 +39,8 @@ mat-card-content {
     width: 350px;
     height: 250px;
     overflow: hidden;
-    background-image: url(https://i.imgur.com/s7SDEey.png);
+    /* background-image: url(https://i.imgur.com/s7SDEey.png); */
+    background-image: url('../../assets/img-container-background.png');
 }
 
 mat-card-content > img {
