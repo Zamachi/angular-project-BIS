@@ -90,6 +90,10 @@ public class ProductService implements iProductService {
 
         productModel.setSlug(slug);
 
+        productModel.setLeftInStock( (int) (1+Math.random()*100) );
+        productModel.setPrice( Double.parseDouble( decimalFormat.format( 1+Math.random()*565 ) ) );
+        productModel.setScore(0);
+
         try {
             this.storeFile(model, storageLocation, modelFileName);
             this.storeFile(poster, storageLocation, posterFileName);
