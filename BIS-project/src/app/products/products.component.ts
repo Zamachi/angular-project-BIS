@@ -56,7 +56,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.initializeCategories();
+    // this.initializeCategories();
   }
 
   initializeCategories(){
@@ -84,7 +84,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
       if (result != null) {
         this.data = result;
       }
-    }).add(() =>  {} );
+    }).add(() =>  {this.initializeCategories();} );
   }
 
   singleProductDetails(id: string) {

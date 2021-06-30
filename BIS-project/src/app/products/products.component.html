@@ -21,6 +21,7 @@
                 <mat-form-field appearance="fill">
                     <mat-label>Category</mat-label>
                     <mat-select [(ngModel)]="catValue">
+                      <mat-option [value]="'any'">Any</mat-option>
                       <mat-option *ngFor="let test of cat | keyvalue" [value]="test.key" >
                         {{test.key}}
                       </mat-option>
