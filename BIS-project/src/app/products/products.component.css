@@ -50,6 +50,7 @@ mat-card-content > img {
 
 .eighty-percent {
     max-width: 80%;
+    flex: 0 !important;
 }
 
 .dont-break-out {

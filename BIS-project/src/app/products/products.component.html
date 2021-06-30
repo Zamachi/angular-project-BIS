@@ -1,4 +1,4 @@
-<div fxFlex fxLayout="column wrap">
+<div fxFlex fxLayout="column wrap" fxLayoutGap="10px">
     <mat-form-field color='primary' fxFlexAlign="center">
         <input type="text" ngModel matInput placeholder="Search products..." name="search"
         search #searchInput="ngModel" (keyup) = "search(searchInput.value)">
