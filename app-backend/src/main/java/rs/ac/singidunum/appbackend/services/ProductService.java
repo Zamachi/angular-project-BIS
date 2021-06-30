@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -30,6 +31,8 @@ public class ProductService implements iProductService {
     private iProductRepository productRepository;
     @Autowired
     private AutoMapperService autoMapperService;
+
+    private static final DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
     // allowed poster extensions
     private final Set<String> allowedPosterExtensions = Set.of(
@@ -93,6 +96,10 @@ public class ProductService implements iProductService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        productModel.setLeftInStock( (int) (1+Math.random()*100) );
+        productModel.setPrice( Double.parseDouble( decimalFormat.format( 1+Math.random()*565 ) ) );
+        productModel.setScore(0);
 
         return productRepository.insert(autoMapperService.map(productModel, ProductEntity.class));
     }
