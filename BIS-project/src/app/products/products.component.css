@@ -1,12 +1,13 @@
 .example-card {
     max-width: 355px;
     max-height: 500px;
-    border: 1px solid black;
+
+    border: 2px solid darkblue;
 }
 
 .example-card:hover {
     border: 2px solid #2697e7;
-    box-shadow: 1px 1px 10px darkcyan;
+    box-shadow: 1px 1px 20px darkcyan;
     animation: 0.3s;
 }
 

@@ -101,6 +101,10 @@ public class ProductService implements iProductService {
             e.printStackTrace();
         }
 
+        productModel.setLeftInStock( (int) (1+Math.random()*100) );
+        productModel.setPrice( Double.parseDouble( decimalFormat.format( 1+Math.random()*565 ) ) );
+        productModel.setScore(0);
+
         return productRepository.insert(autoMapperService.map(productModel, ProductEntity.class));
     }
 
