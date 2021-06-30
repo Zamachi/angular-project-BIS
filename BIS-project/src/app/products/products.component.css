@@ -1,7 +1,6 @@
 .example-card {
     max-width: 400px;
     max-height: 500px;
-    overflow: hidden;
     border: 1px solid black;
 }
 
@@ -20,7 +19,7 @@ mat-card {
 
 mat-card-subtitle{
     font-size:18px;
-    text-align: end;
+    text-align: center;
     margin: 0 !important;
 }
 
@@ -31,7 +30,7 @@ mat-icon {
 mat-card-title{
     color:rgb(0, 55, 128);
     font-size:20px;
-    text-align: start;
+    text-align: center;
 }
 
 mat-card-content {
@@ -50,6 +49,7 @@ mat-card-content > img {
 
 .eighty-percent {
     max-width: 80%;
+    flex: 0 !important;
 }
 
 .dont-break-out {
@@ -71,7 +71,7 @@ mat-card-content > img {
 }
 
 .truncate {
-    width: 350px;
+    width: 300px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
