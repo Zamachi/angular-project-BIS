@@ -214,6 +214,12 @@ export class ProductsComponent implements OnInit {
       data: product
     });
 
+    productDetailsDialog
+    .afterClosed()
+    .subscribe(
+      result => { this.dialogOpen=false; }
+    );
+
   }
 
   search() {

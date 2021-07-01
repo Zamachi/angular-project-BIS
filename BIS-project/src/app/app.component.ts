@@ -4,6 +4,7 @@ import { UserModel } from './models/userModel';
 import { AuthService } from './services/auth.service';
 import { LocalstorageService } from './services/localstorage.service';
 import { UserService } from './services/user.service';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-root',

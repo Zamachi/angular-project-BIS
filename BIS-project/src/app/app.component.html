@@ -13,7 +13,9 @@
       <div fxFlex fxLayoutAlign="end" fxLayoutGap="10px">
         <a routerLink="/products">Browse products</a>
         &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/cart">Cart</a>
+        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/cart">
+          <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+        </a>
         &nbsp; <div> | </div>
         <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/login">Login</a>
         &nbsp;
@@ -35,5 +37,5 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-    
+
 </div>

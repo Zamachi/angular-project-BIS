@@ -25,4 +25,6 @@ public class OrderEntity {
     private LocalDate dateCreated;
     @Field("status")
     private String status; // zavrsena, tekuca, otkazana
+    @Field("paymentOption")
+    private String paymentOption;
 }

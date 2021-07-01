@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { RatingModule } from 'ng-starrating';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -25,6 +26,7 @@ import { ProductService } from './services/product.service';
 import { AuthguardService } from './services/guards/authguard.service';
 import { ComponentaccessService } from './services/guards/componentaccess.service';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { ReviewService } from './services/review.service';
 
 @NgModule({
   declarations: [
@@ -47,9 +49,18 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
     MaterialModule,
     FormsModule,
     NgxSliderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    RatingModule
   ],
-  providers: [AuthService, LocalstorageService, UserService, ProductService, AuthguardService, ComponentaccessService],
+  providers: [
+    AuthService,
+    LocalstorageService,
+    UserService,
+    ProductService,
+    AuthguardService,
+    ComponentaccessService,
+    ReviewService
+  ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
