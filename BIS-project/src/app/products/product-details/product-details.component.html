@@ -2,12 +2,8 @@
   <mat-icon matListIcon>close</mat-icon>
 </button>
 
-<mat-dialog-content fxLayout="row" fxLayoutAlign="start center">
-  <div
-    fxFlex="80%"
-    fxLayout="column wrap"
-    fxLayoutAlign="start center"
-  >
+<mat-dialog-content  fxLayout="row nowrap" fxLayoutAlign="start start">
+  <div fxFlex="80%" fxLayout="column wrap" fxLayoutAlign="start center">
     <div class="top-div">
       <model-viewer
         fxFlexFill
@@ -25,18 +21,43 @@
 
     <div class="top-div" >
       <h2>{{data.name}}</h2>
+    </div>
+
+    <div class="top-div" fxFlex fxLayout="column wrap" fxLayoutAlign="start start">
       <mat-tab-group dynamicHeight>
 
         <mat-tab label="Description">
-          <p>{{data.description}}</p>
+          <div>
+            <p>{{data.description}}</p>
+          </div>
         </mat-tab>
-        <mat-tab label="Reviews">
 
-          <mat-list >
-            <mat-list-item *ngFor="let review of reviews" >
-              <div >
-                <span>
-                  {{review.user.username}} | {{ review.dateCreated | date }} |
+        <mat-tab label="Reviews">
+          <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center start">
+            <div class="top-div" *ngFor="let review of reviews" style="background-color: aqua; border: 1px solid black;">
+              <div>
+                {{review.user.id}} | {{ review.dateCreated | date }} |
+                <star-rating
+                value="{{review.score}}"
+                totalstars="5"
+                checkedcolor="red"
+                uncheckedcolor="black"
+                size="24px"
+                readonly="true"
+                ></star-rating>
+              </div>
+              <div>
+                <p>{{review.comment}}</p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <mat-list>
+            <mat-list-item *ngFor="let review of reviews" fxLayout="column nowrap">
+              <div fxLayout="column nowrap">
+                <div>
+                  {{review.user.id}} | {{ review.dateCreated | date }} |
                   <star-rating
                   value="{{review.score}}"
                   totalstars="5"
@@ -45,14 +66,13 @@
                   size="24px"
                   readonly="true"
                   ></star-rating>
-                </span>
+                </div>
                 <div>
-                  <p style="min-height: 200px;">{{review.comment}}</p>
-
+                  <p>{{review.comment}}</p>
                 </div>
               </div>
             </mat-list-item>
-           </mat-list>
+           </mat-list> -->
 
         </mat-tab>
 

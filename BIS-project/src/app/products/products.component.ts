@@ -211,6 +211,7 @@ export class ProductsComponent implements OnInit {
     const productDetailsDialog = this.dialog.open(ProductDetailsComponent, {
       disableClose: true,
       width: '70vw',
+      panelClass: "dialog-responsive",
       data: product
     });
 

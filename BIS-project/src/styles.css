@@ -18,3 +18,16 @@ a:hover, a:active {
     color: #cecece;
 }
 
+.dialog-responsive {
+    width: 40%;
+}
+
+@media only screen and (max-width: 760px) {
+    .dialog-responsive {
+        width: 100%;
+    }
+}
+
+.mat-tab-body-wrapper{
+    flex-grow: 1;
+}
