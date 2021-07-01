@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/entities/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/entities/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/models/OrderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/models/OrderModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/asus-laptop/model-asus-laptop.glb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/asus-laptop/model-asus-laptop.glb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/asus-laptop/poster-asus-laptop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/asus-laptop/poster-asus-laptop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/sonic/model-sonic.glb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/sonic/model-sonic.glb" afterDir="false" />
-    </list>
+    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,17 +50,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunManager" selected="Application.AppBackendApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rs.ac.singidunum.appbackend.AppBackendApplication" />
       <module name="app-backend" />
@@ -118,6 +97,7 @@
       <workItem from="1624959421431" duration="1808000" />
       <workItem from="1624992716098" duration="1381000" />
       <workItem from="1625061719301" duration="3311000" />
+      <workItem from="1625159466826" duration="1085000" />
     </task>
     <servers />
   </component>
@@ -129,7 +109,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java</url>
-          <line>32</line>
+          <line>52</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

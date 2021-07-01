@@ -1,12 +1,26 @@
 .top-div{
-
   width: 100%;
 }
+
+#matDialogContentCustom {
+  place-content: start;
+  align-items: start;
+}
+
 model-viewer {
   min-height: 500px !important;
 }
+
 model-viewer#reveal {
   background-color: transparent;
+}
+
+:host /deep/ .mat-list-item-content {
+  padding: 0!important;
+}
+
+mat-list {
+  width: 100%
 }
 
 /* mat-dialog-content{
