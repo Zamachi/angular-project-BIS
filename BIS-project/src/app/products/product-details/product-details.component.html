@@ -2,25 +2,76 @@
   <mat-icon matListIcon>close</mat-icon>
 </button>
 
-<mat-dialog-content fxLayout="column" fxLayoutAlign="start center">
-  <div class="top-div" fxFlex fxLayout="column wrap" fxLayoutAlign="start center">
-    <model-viewer
-      fxFlexFill
-      id="reveal"
-      camera-controls
-      alt="A 3D model of a sphere"
-      loading="eager"
-      autoplay
-      src="{{ data.modelPath }}"
-      auto-rotate
-      rotation-per-second="40deg"
-    >
-    </model-viewer>
+<mat-dialog-content fxLayout="row" fxLayoutAlign="start center">
+  <div
+    fxFlex="80%"
+    fxLayout="column wrap"
+    fxLayoutAlign="start center"
+  >
+    <div class="top-div">
+      <model-viewer
+        fxFlexFill
+        id="reveal"
+        camera-controls
+        alt="A 3D model of a sphere"
+        loading="eager"
+        autoplay
+        src="{{ data.modelPath }}"
+        auto-rotate
+        rotation-per-second="40deg"
+      >
+      </model-viewer>
+    </div>
+
+    <div class="top-div" >
+      <h2>{{data.name}}</h2>
+      <mat-tab-group dynamicHeight>
+
+        <mat-tab label="Description">
+          <p>{{data.description}}</p>
+        </mat-tab>
+        <mat-tab label="Reviews">
+
+          <mat-list >
+            <mat-list-item *ngFor="let review of reviews" >
+              <div >
+                <span>
+                  {{review.user.username}} | {{ review.dateCreated | date }} |
+                  <star-rating
+                  value="{{review.score}}"
+                  totalstars="5"
+                  checkedcolor="red"
+                  uncheckedcolor="black"
+                  size="24px"
+                  readonly="true"
+                  ></star-rating>
+                </span>
+                <div>
+                  <p style="min-height: 200px;">{{review.comment}}</p>
+
+                </div>
+              </div>
+            </mat-list-item>
+           </mat-list>
+
+        </mat-tab>
+
+      </mat-tab-group>
+    </div>
+
   </div>
 
-  <div>
+  <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
     <p>{{ data.name }}</p>
     <p>{{ data.description }}</p>
     <p>{{ data.price }}</p>
+    <star-rating
+    value="3"
+    totalstars="5"
+    checkedcolor="red"
+    uncheckedcolor="black"
+    size="24px"
+    readonly="true"
+    ></star-rating>
   </div>
 </mat-dialog-content>

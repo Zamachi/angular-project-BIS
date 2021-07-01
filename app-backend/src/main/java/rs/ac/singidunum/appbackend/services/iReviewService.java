@@ -17,4 +17,6 @@ public interface iReviewService {
     List<ReviewEntity> findAllByUsernameAndProductId(String username, String id);
 
     List<ReviewEntity> findAll();
+
+//    boolean canWriteReview(String username, String order_id);
 }

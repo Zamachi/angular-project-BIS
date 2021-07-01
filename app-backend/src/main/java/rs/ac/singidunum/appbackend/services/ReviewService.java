@@ -3,9 +3,12 @@ package rs.ac.singidunum.appbackend.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rs.ac.singidunum.appbackend.entities.ReviewEntity;
+import rs.ac.singidunum.appbackend.models.ProductModel;
 import rs.ac.singidunum.appbackend.models.ReviewModel;
+import rs.ac.singidunum.appbackend.repositories.iProductRepository;
 import rs.ac.singidunum.appbackend.repositories.iReviewRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -16,8 +19,25 @@ public class ReviewService implements iReviewService {
     @Autowired
     private AutoMapperService autoMapperService;
 
+    @Autowired
+    private iProductRepository productRepository;
+
     @Override
     public ReviewEntity createReview(ReviewModel reviewModel) {
+        //NOTE: mzoda bi mogla da se izvrsi provera da li je Order status =="complete" pre no sto se izvrs insert
+        reviewModel.setDateCreated(LocalDate.now());
+
+        //NOTE: modify the original product
+        var product = productRepository.findById(reviewModel.getProduct().getId()).get();
+
+        int number_of_reviews = findAllByProductId( product.getId() ).size();
+        product.setScore( product.getScore() + ( (reviewModel.getScore() - product.getScore() ) / (number_of_reviews+1) ) );
+
+        reviewModel.setProduct( autoMapperService.map( product, ProductModel.class) );
+
+        productRepository.save(product);
+        //NOTE: modify the original product
+
         return reviewRepository
                 .insert(autoMapperService
                         .map(reviewModel,ReviewEntity.class));

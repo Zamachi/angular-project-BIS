@@ -1,6 +1,5 @@
 .top-div{
-  min-width: 500px;
-  min-height: 500px;
+
   width: 100%;
 }
 model-viewer {
@@ -9,3 +8,7 @@ model-viewer {
 model-viewer#reveal {
   background-color: transparent;
 }
+
+/* mat-dialog-content{
+  background-color: rgba(16, 14, 131, 0.753);
+} */
