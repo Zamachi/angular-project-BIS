@@ -34,45 +34,28 @@
 
         <mat-tab label="Reviews">
           <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center start">
-            <div class="top-div" *ngFor="let review of reviews" style="background-color: aqua; border: 1px solid black;">
-              <div>
-                {{review.user.id}} | {{ review.dateCreated | date }} |
-                <star-rating
-                value="{{review.score}}"
-                totalstars="5"
-                checkedcolor="red"
-                uncheckedcolor="black"
-                size="24px"
-                readonly="true"
-                ></star-rating>
-              </div>
-              <div>
-                <p>{{review.comment}}</p>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- <mat-list>
-            <mat-list-item *ngFor="let review of reviews" fxLayout="column nowrap">
-              <div fxLayout="column nowrap">
+            <div class="top-div" *ngFor="let review of reviews" fxLayout="column nowrap">
+              <div fxFlex fxLayout="row nowrap">
                 <div>
-                  {{review.user.id}} | {{ review.dateCreated | date }} |
-                  <star-rating
-                  value="{{review.score}}"
-                  totalstars="5"
+                  <p>{{review.user.id}} | {{ review.dateCreated | date }} |</p>
+                </div>
+                <div>
+                  <star-rating fxFlex
+                  [value]="review.score"
+                  [totalstars]="5"
                   checkedcolor="red"
                   uncheckedcolor="black"
                   size="24px"
                   readonly="true"
                   ></star-rating>
                 </div>
-                <div>
-                  <p>{{review.comment}}</p>
-                </div>
+                
               </div>
-            </mat-list-item>
-           </mat-list> -->
+              <div>
+                <p>{{review.comment}}</p>
+              </div>
+            </div>
+          </div>
 
         </mat-tab>
 
@@ -85,13 +68,5 @@
     <p>{{ data.name }}</p>
     <p>{{ data.description }}</p>
     <p>{{ data.price }}</p>
-    <star-rating
-    value="3"
-    totalstars="5"
-    checkedcolor="red"
-    uncheckedcolor="black"
-    size="24px"
-    readonly="true"
-    ></star-rating>
   </div>
 </mat-dialog-content>
