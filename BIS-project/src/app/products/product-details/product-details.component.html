@@ -24,22 +24,22 @@
     </div>
 
     <div class="top-div" fxFlex fxLayout="column wrap" fxLayoutAlign="start start">
-      <mat-tab-group dynamicHeight>
+      <mat-tab-group dynamicHeight mat-stretch-tabs class="tabovi">
 
         <mat-tab label="Description">
-          <div>
+          <div >
             <p>{{data.description}}</p>
           </div>
         </mat-tab>
 
         <mat-tab label="Reviews">
           <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center start">
-            <div class="top-div" *ngFor="let review of reviews" fxLayout="column nowrap">
-              <div fxFlex fxLayout="row nowrap">
+            <div class="top-div " *ngFor="let review of reviews" fxLayout="column nowrap">
+              <div fxFlex fxLayoutAlign="space-between" fxLayout="row nowrap">
                 <div>
-                  <p>{{review.user.id}} | {{ review.dateCreated | date }} |</p>
+                  <b><p>{{review.user.id}} &nbsp;|&nbsp; {{ review.dateCreated | date }} </p></b>
                 </div>
-                <div>
+                <div fxLayoutAlign="center center">
                   <star-rating fxFlex
                   [value]="review.score"
                   [totalstars]="5"
@@ -49,9 +49,9 @@
                   readonly="true"
                   ></star-rating>
                 </div>
-                
+
               </div>
-              <div>
+              <div id="description">
                 <p>{{review.comment}}</p>
               </div>
             </div>
@@ -64,9 +64,22 @@
 
   </div>
 
-  <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
-    <p>{{ data.name }}</p>
-    <p>{{ data.description }}</p>
-    <p>{{ data.price }}</p>
+  <div fxFlex="20%" fxLayout="column nowrap" fxLayoutAlign="start center">
+    <div class="product-info">
+
+      <h3>Price: {{ data.price | currency }}</h3>
+      <p>Left in stock: {{ data.leftInStock }}</p>
+      <button mat-raised-button color="accent" (click)="addToCart()">
+        Add to cart <mat-icon>shopping_cart_add</mat-icon>
+      </button>
+    </div>
+    <div class="product-info">
+      <h3>Product details:</h3>
+      <p>Manufacturer: {{ data.manufacturer }}</p>
+      <p>Rating: {{ data.score }}</p>
+      <p>Category: {{ data.category }}</p>
+      <p>Subcategory: {{ data.subCategory }}</p>
+    </div>
+
   </div>
 </mat-dialog-content>
