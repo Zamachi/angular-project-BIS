@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="" />
+    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
