@@ -37,7 +37,7 @@
   <div fxFlex fxFill fxLayout="column nowrap" fxLayoutAlign="start center">
     <h2>Shopping cart:</h2>
   </div>
-  <div class="border-1" fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="center center">
+  <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="space-around start">
     <!-- cart content div -->
     <div  class="border-1" fxFlex="80%" fxLayout="column nowrap" fxLayoutAlign="start center">
       <!-- cart content header -->
@@ -129,14 +129,14 @@
     </div>
 
     <!-- checkout div -->
-    <div fxFlex fxFill fxLayout="column nowrap" fxLayoutAlign="start center" fxLayoutGap="10px">
-      <div>
-
-        <div>
+    <div fxFlex="15%" fxLayout="column nowrap" fxLayoutAlign="start center" fxLayoutGap="10px">
+      <div class="border-1" fxFill fxFlex fxLayout="column nowrap" fxLayoutAlign="start center">
+        
+        <div fxFlex>
           <h2>Cart total:</h2>
           <h3>{{ calculateTotal() | currency }}</h3>
         </div>
-        <div>
+        <div fxFlex>
           <p>Payment method:</p>
           <mat-form-field appearance="fill">
               <mat-label>Payment method</mat-label>
@@ -147,7 +147,7 @@
               </mat-select>
           </mat-form-field>
         </div>
-        <div>
+        <div fxFlex>
           <button mat-raised-button color="accent" (click)="buy()">Checkout</button>
         </div>
 

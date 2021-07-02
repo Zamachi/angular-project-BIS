@@ -30,8 +30,6 @@ export class CartService {
   }
 
   updateQuantity(product: ProductModel, newQuantity: string) {
-    console.log(product.id + " " + newQuantity );
-    
     update(product.id, "quantity", newQuantity);
   }
 

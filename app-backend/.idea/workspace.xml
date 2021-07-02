@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BIS-project/src/app/userprofile/userprofile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../BIS-project/src/app/userprofile/userprofile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/repositories/iOrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,11 +98,50 @@
       <workItem from="1624992716098" duration="1381000" />
       <workItem from="1625061719301" duration="3311000" />
       <workItem from="1625159466826" duration="1085000" />
-      <workItem from="1625219755234" duration="656000" />
+      <workItem from="1625219755234" duration="2277000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/OrderController.java</url>
+          <line>20</line>
+          <properties class="rs.ac.singidunum.appbackend.controllers.OrderController" method="createOrder">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

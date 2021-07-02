@@ -7,6 +7,6 @@ export class OrderModel{
   user: UserModel;
   totalPrice: number;
   dateCreated?: Date;
-  status: string;
+  status?: string;
   paymentOption: string;
 }
