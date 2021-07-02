@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
 import { OrderItemModel } from '../models/orderItemModel';
 import { OrderModel } from '../models/orderModel';
 import { ProductModel } from '../models/productModel';
@@ -16,7 +17,6 @@ export class CartComponent implements OnInit, AfterViewInit {
 
   items = [];
   paymentMethods = ["VISA", "Master Card", "PayPal", "Crypto"];
-
   paymentValue = '';
 
   constructor(private cartService: CartService, private orderService: OrderService, private matSnackBar: MatSnackBar, private userService: UserService) { }
@@ -35,7 +35,7 @@ export class CartComponent implements OnInit, AfterViewInit {
     if (this.items.length < 1) {
       this.matSnackBar.open("No items in your cart!", "", { duration: 2500 });
       return;
-    } 
+    }
     if (this.paymentValue == '' || this.paymentValue.length < 1) {
       this.matSnackBar.open("Please select a payment method", "", { duration: 2500 });
       return;
@@ -46,7 +46,7 @@ export class CartComponent implements OnInit, AfterViewInit {
     this.items.forEach((product) => {
       let itemModel: OrderItemModel = {
       "product" : {
-        "id": product.id, 
+        "id": product.id,
         "slug": product.slug,
         "name": product.name,
         "description": product.description,
@@ -73,11 +73,13 @@ export class CartComponent implements OnInit, AfterViewInit {
     }
 
     console.log(orderModel);
-    
+
 
     if (orderModel != null) {
       this.orderService.createOrder(orderModel).subscribe((result) => {
         if (result != null) {
+          this.cartService.clearCart();
+          this.items = this.cartService.getAllFromCart();
           this.matSnackBar.open("Order created!", "", { duration: 2500 });
         } else {
           this.matSnackBar.open("Could not create order...", "", { duration: 2500 });

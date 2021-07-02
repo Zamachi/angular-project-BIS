@@ -22,7 +22,7 @@ export class OrderService {
     return this.http.get<OrderModel[]>(url, { observe: 'body' });
   }
 
-  updateOrder(orderModel: OrderModel){
+  updateOrder(orderModel: any){
     const url = "http://localhost:8080/orders/updateorder";
     return this.http.put<OrderModel>(url, orderModel ,{ observe: 'body' });
 

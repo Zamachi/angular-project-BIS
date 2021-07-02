@@ -203,7 +203,7 @@
         </ng-container>
         <ng-container matColumnDef="dateCreated">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Date created: </mat-header-cell>
-          <mat-cell *matCellDef="let element">{{ element.date | date }}</mat-cell>
+          <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="totalPrice">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>
@@ -219,11 +219,15 @@
         </ng-container>
         <ng-container matColumnDef="complete">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>
-          <mat-cell *matCellDef="let element"><button *ngIf="element.status == 'ongoing'" mat-raised-button (click)="complete(element.id)">Complete</button></mat-cell>
+          <mat-cell *matCellDef="let element">
+            <button *ngIf="element.status == 'ongoing'" color="primary" mat-raised-button (click)="complete(element.id)">Complete</button>
+          </mat-cell>
         </ng-container>
         <ng-container matColumnDef="cancel">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel order?</mat-header-cell>
-          <mat-cell *matCellDef="let element"><button *ngIf="element.status == 'ongoing'" mat-raised-button (click)="cancel(element.id)">Complete</button></mat-cell>
+          <mat-cell *matCellDef="let element">
+            <button *ngIf="element.status == 'ongoing'" color="warn" mat-raised-button (click)="cancel(element.id)">Cancel</button>
+          </mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>

@@ -9,6 +9,7 @@ import { add } from 'cart-localstorage';
 import { UserService } from 'src/app/services/user.service';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -23,7 +24,8 @@ export class ProductDetailsComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: ProductModel,
     private reviewService: ReviewService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +33,6 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart(){
-    add(this.data);
+    this.cartService.addItemToCart(this.data);
   }
 }

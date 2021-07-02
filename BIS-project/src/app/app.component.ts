@@ -5,6 +5,8 @@ import { AuthService } from './services/auth.service';
 import { LocalstorageService } from './services/localstorage.service';
 import { UserService } from './services/user.service';
 import { StarRatingComponent } from 'ng-starrating';
+import { BehaviorSubject } from 'rxjs';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +15,19 @@ import { StarRatingComponent } from 'ng-starrating';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private authService: AuthService, private localStorageService: LocalstorageService, private userService: UserService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private localStorageService: LocalstorageService,
+    private userService: UserService,
+    private router: Router,
+    private cartService:CartService
+    ) {}
 
   isLoggedIn$: any;
   isDarkTheme: boolean = false;
   isWelcomePage: boolean = true;
-
-  currentUser: string;
+  amountInCart$: any;
+  currentUser: any;
 
   title = 'BIS-project';
 
@@ -29,7 +37,7 @@ export class AppComponent implements OnInit {
     if (this.localStorageService.getLocalStorageItem("username") != null && this.localStorageService.getLocalStorageItem("username").length > 0) {
       this.userService.getUserByUsernameFromTheServer(this.localStorageService.getLocalStorageItem("username")).subscribe((user: UserModel) => {
         this.userService.setCurrentUser(user);
-        this.currentUser = this.userService.getCurrentUser().username;
+        this.currentUser = this.userService.getCurrentUsername();
       }).add(() => {});
     }
 
@@ -46,6 +54,8 @@ export class AppComponent implements OnInit {
         this.isWelcomePage = false;
       }
     });
+
+    this.amountInCart$ = this.cartService.geter();
   }
 
   toggleTheme() {

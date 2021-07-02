@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { UserModel } from '../models/userModel';
 import { LocalstorageService } from './localstorage.service';
 
@@ -12,6 +12,7 @@ export class UserService {
   constructor(private http: HttpClient, private localStorageService: LocalstorageService) { }
 
   user: UserModel;
+  userName = new BehaviorSubject<string>("");
 
   getCurrentUser(): UserModel {
     return this.user;
@@ -19,6 +20,15 @@ export class UserService {
 
   setCurrentUser(user: UserModel) {
     this.user = user;
+    this.setCurrentUsername();
+  }
+
+  getCurrentUsername(){
+    return this.userName;
+  }
+
+  setCurrentUsername(){
+    this.userName.next( this.getCurrentUser().username );
   }
 
   getUserByUsernameFromTheServer(username: string): Observable<UserModel> {

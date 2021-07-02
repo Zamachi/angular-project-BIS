@@ -14,14 +14,14 @@
         <a routerLink="/products">Browse products</a>
         &nbsp;
         <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/cart">
-          <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+          <mat-icon [matBadge]="amountInCart$ | async" matBadgeColor="warn">shopping_cart</mat-icon>
         </a>
         &nbsp; <div> | </div>
         <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/login">Login</a>
         &nbsp;
         <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/signup">Signup</a>
         &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/profile">{{ currentUser || "" }}</a>
+        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/profile">{{ currentUser | async }}</a>
         &nbsp;
         <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" class="logoutLink" (click)="logout()">Logout</a>
       </div>

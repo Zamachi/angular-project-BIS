@@ -5,6 +5,7 @@ import { Sort, SortDirection } from '@angular/material/sort';
 import { ProductModel } from '../models/productModel';
 import { LocalstorageService } from '../services/localstorage.service';
 import { ProductService } from '../services/product.service';
+import { UserService } from '../services/user.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @Component({
@@ -16,7 +17,8 @@ export class ProductsComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private dialog: MatDialog,
-    private localStorageService: LocalstorageService) {}
+    private localStorageService: LocalstorageService,
+    private userService: UserService) {}
 
   sortValue: string = '';
   sortValueDirection: SortDirection = '';
@@ -30,6 +32,7 @@ export class ProductsComponent implements OnInit {
   p: number = 1;
   cat = new Map();
   cities: string[] = [];
+  isChecked:boolean = false;
 
   minValuePrice: number = 1;
   maxValuePrice: number = 1000;
@@ -244,6 +247,17 @@ export class ProductsComponent implements OnInit {
     let search = this.searchValue.trim().toLowerCase();
     let arr = this.dataOriginal;
 
+
+    if (this.isChecked) {
+      this.catValue = 'any';
+      this.subCatValue = 'any';
+
+      arr = arr.filter((product) => {
+       return this.userService.getCurrentUser().favourites.includes( product.category );
+      });
+    }
+
+
     if (search != '') {
       arr = this.dataOriginal.filter((product) => {
         return product.name.toLowerCase().includes(search);
@@ -290,7 +304,6 @@ export class ProductsComponent implements OnInit {
         return product.address.city == this.cityValue;
       });
     }
-
     this.data = arr;
 
     this.sortData({

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import '@google/model-viewer';
+import { AuthService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-welcome',
@@ -9,9 +11,14 @@ import '@google/model-viewer';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  isLoggedIn$: any;
+
+  constructor(private router: Router,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
+
+    // this.isLoggedIn$ = this.authService.isUserLoggedIn();
   }
 
   goNavigate(url: string) {
