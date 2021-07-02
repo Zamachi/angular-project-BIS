@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../BIS-project/src/app/products/product-details/product-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

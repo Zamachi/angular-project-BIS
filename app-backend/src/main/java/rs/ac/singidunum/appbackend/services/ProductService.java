@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService implements iProductService {
@@ -142,6 +143,12 @@ public class ProductService implements iProductService {
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(contentType))
                 .body(product);
+    }
+
+    @Override
+    public List<String> findAllCategories() {
+
+        return (List<String>) findAll().stream().map(ProductEntity::getCategory).collect(Collectors.toSet());
     }
 
     // method to store file to a local directory on the server (move file to a server)

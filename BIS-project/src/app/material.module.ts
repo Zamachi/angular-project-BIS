@@ -22,33 +22,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatChipsModule} from '@angular/material/chips';
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 
 @NgModule ({
-    imports: [
-        MatButtonModule,
-        MatIconModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatCheckboxModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatListModule,
-        MatTabsModule,
-        MatCardModule,
-        MatSelectModule,
-        MatProgressSpinnerModule,
-        MatTableModule,
-        MatSortModule,
-        MatPaginatorModule,
-        MatDialogModule,
-        MatSnackBarModule,
-        MatProgressBarModule,
-        MatSlideToggleModule,
-        MatDividerModule,
-        MatBadgeModule
-    ],
     exports: [
         MatButtonModule,
         MatIconModule,
@@ -72,7 +49,9 @@ import {MatBadgeModule} from '@angular/material/badge';
         MatProgressBarModule,
         MatSlideToggleModule,
         MatDividerModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatChipsModule,
+        MatAutocompleteModule
     ]
 })
 

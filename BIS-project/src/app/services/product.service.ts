@@ -15,4 +15,11 @@ export class ProductService {
 
     return this.http.get<ProductModel[]>(url, { observe: 'body' });
   }
+
+  findAllCategories(): Observable<string[]> {
+    const url = "http://localhost:8080/products/findallcategories";
+
+    return this.http.get<string[]>(url, { observe: 'body' });
+  }
+
 }

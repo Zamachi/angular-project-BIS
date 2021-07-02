@@ -4,11 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RoutingModule } from './routing.module';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RatingModule } from 'ng-starrating';
+
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -50,7 +51,8 @@ import { ReviewService } from './services/review.service';
     FormsModule,
     NgxSliderModule,
     NgxPaginationModule,
-    RatingModule
+    RatingModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,

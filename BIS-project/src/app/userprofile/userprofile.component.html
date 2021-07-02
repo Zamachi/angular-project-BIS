@@ -1,1 +1,206 @@
-<p>userprofile works!</p>
+<section>
+  <mat-tab-group dynamicHeight mat-stretch-tab>
+    <mat-tab label="Change user info:">
+      <form
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="5px"
+        #f="ngForm"
+        (ngSubmit)="onSubmit(f)"
+      >
+        <mat-form-field>
+          <input
+            type="email"
+            ngModel
+            matInput
+            placeholder="E-mail"
+            name="email"
+            required
+            email
+            #emailInput="ngModel"
+            [value]="user.email"
+          />
+
+          <mat-error *ngIf="emailInput.hasError('required')"
+            >Field cannot be left empty</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field hintLabel="Please enter minimum 8 characters">
+          <input
+            type="password"
+            ngModel
+            matInput
+            placeholder="Password"
+            name="password"
+            required
+            minlength="8"
+            #userInputPassword="ngModel"
+            [value]="user.password"
+          />
+          <mat-hint align="end"
+            >{{ userInputPassword.value?.length }} / 8</mat-hint>
+
+            <mat-error *ngIf="!userInputPassword.hasError('required')">Field cannot be left empty</mat-error>
+        </mat-form-field>
+
+        <mat-form-field hintLabel="Please enter minimum 8 characters">
+          <input
+            type="password"
+            ngModel
+            matInput
+            placeholder="Password"
+            name="passwordConfirm"
+            required
+            minlength="8"
+            #userInputPasswordConfirm="ngModel"
+          />
+          <mat-hint align="end"
+            >{{ userInputPasswordConfirm.value?.length }} / 8</mat-hint
+          >
+          <mat-error
+            *ngIf="userInputPasswordConfirm.value != userInputPassword.value"
+            >Passwords do not match!</mat-error
+          >
+          <mat-error *ngIf="!userInputPasswordConfirm.hasError('required')">Field cannot be left empty</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="First name"
+            name="firstName"
+            required
+            [value]="user.firstName"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="Last name"
+            name="lastName"
+            required
+            [value]="user.lastName"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="Phone number"
+            name="phone"
+            required
+            [value]="user.phone"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="Country"
+            name="country"
+            required
+            [value]="user.address.country"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="City"
+            name="city"
+            required
+            [value]="user.address.city"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="Street"
+            name="street"
+            required
+            [value]="user.address.street"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="Street number"
+            name="number"
+            required
+            [value]="user.address.number"
+          />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            ngModel
+            matInput
+            placeholder="Zip code"
+            name="zipCode"
+            required
+            [value]="user.address.zipCode"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-chip-list" appearance="fill">
+          <mat-label>Favorite categories</mat-label>
+          <mat-chip-list #chipList aria-label="Favorite category selection . . .">
+            <mat-chip
+              *ngFor="let favorCategory of user.favourites"
+              [selectable]="true"
+              [removable]="true"
+              (removed)="remove(favorCategory)">
+              {{favorCategory}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input
+              placeholder="New favorite category..."
+              #categoryInput
+              [formControl] = "categoryControl"
+              [matAutocomplete]="auto"
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+            <mat-option *ngFor="let category of allCategories | async" [value]="category">
+              {{fruit}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <button
+          type="submit"
+          mat-raised-button
+          color="warn"
+          [disabled]="f.invalid"
+        >
+          Submit
+        </button>
+      </form>
+    </mat-tab>
+
+    <mat-tab label="View my orders:"> Content 2 </mat-tab>
+
+    <mat-tab label="View my reviews: "> Content 3 </mat-tab>
+  </mat-tab-group>
+</section>
