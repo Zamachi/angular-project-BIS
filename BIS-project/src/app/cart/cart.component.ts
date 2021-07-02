@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ProductModel } from '../models/productModel';
-import { list, update, total } from 'cart-localstorage';
+import { list, update, total, get } from 'cart-localstorage';
 import { MatTableDataSource } from '@angular/material/table';
 import { ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
@@ -12,7 +12,7 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class CartComponent implements OnInit, AfterViewInit {
 
-  items: MatTableDataSource<ProductModel>;
+  items = new MatTableDataSource<any>();
   displayedColumns = ["name", "description", "price", "quantity","total"];
 
 
@@ -24,7 +24,7 @@ export class CartComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.items = list();
+    this.items.data = list();
   }
 
   buy(){
@@ -34,6 +34,8 @@ export class CartComponent implements OnInit, AfterViewInit {
   azuriraj(kolicina, id_elementa){
     console.log(kolicina.value);
     update(id_elementa, "quantity", kolicina.value);
+    // this.items.data = list(); //DANGER: NE RADI
+    this.items.data.find(item => item.id == id_elementa).quantity = kolicina;
   }
 
   calculateTotal(){

@@ -13,11 +13,11 @@
   </ng-container>
   <ng-container matColumnDef="quantity">
     <mat-header-cell *matHeaderCellDef >Quantity</mat-header-cell>
-    <mat-cell *matCellDef="let element"><input matInput #kolicina="ngModel" (change)="azuriraj(kolicina, element.id)" min="1" max="{{element.leftInStock}}" ngModel type="number"></mat-cell>
+    <mat-cell *matCellDef="let element"><input matInput #kolicina="ngModel"  value="2" (change)="azuriraj(kolicina, element.id)" min="1" max="{{element.leftInStock}}" ngModel type="number"></mat-cell>
   </ng-container>
   <ng-container matColumnDef="total">
     <mat-header-cell *matHeaderCellDef >Total</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{ (element.price * element.quantity) | number }}</mat-cell>
+    <mat-cell *matCellDef="let element">{{ (element.price * element?.quantity) | number }}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
