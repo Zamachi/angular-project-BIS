@@ -199,7 +199,39 @@
       </form>
     </mat-tab>
 
-    <mat-tab label="View my orders:"> Content 2 </mat-tab>
+    <mat-tab label="View my orders:">
+
+      <mat-table [dataSource]="orders" matSort>
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Order id:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="dateCreated">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Date created: </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.date | date }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="paymentOption">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Payment option:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.paymentOption }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.status }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="complete">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>
+          <mat-cell ><button mat-raised-button (click)="complete($event)">Complete</button></mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="cancel">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel order?</mat-header-cell>
+          <mat-cell ><button mat-raised-button (click)="cancel($event)">Complete</button></mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
+        <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
+      </mat-table>
+
+    </mat-tab>
 
     <mat-tab label="View my reviews: "> Content 3 </mat-tab>
   </mat-tab-group>

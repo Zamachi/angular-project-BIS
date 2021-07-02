@@ -9,6 +9,7 @@ import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {map, startWith} from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { OrderModel } from '../models/orderModel';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-userprofile',
@@ -26,9 +27,13 @@ export class UserprofileComponent implements OnInit {
   @ViewChild('categoryInput') categoryInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
 
-
-  orders: OrderModel[];
+  //NOTE: orders tab
+  orders: MatTableDataSource<OrderModel>;
   displayedColumnsOrders = [];
+
+  //NOTE: orders tab
+
+
   constructor(
     private userService: UserService,
     private productService: ProductService
@@ -99,4 +104,14 @@ export class UserprofileComponent implements OnInit {
       return category.toLowerCase().indexOf(filterValue) === 0;
     });
   }
+
+  complete(event){
+
+  }
+
+  cancel(event){
+
+  }
+
+
 }
