@@ -18,7 +18,7 @@ export class ReviewService {
     return this.httpClient.get<ReviewModel[]>(this.url+"findallreviews", {observe: "response"});
   }
 
-  findAllUserReviews(user: UserModel){
+  findAllUserReviews(user){
 
     return this.httpClient.get<ReviewModel[]>(this.url+"getuserreviews/"+user.username, {observe: "response"});
   }

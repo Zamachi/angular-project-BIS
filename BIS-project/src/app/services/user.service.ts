@@ -22,10 +22,16 @@ export class UserService {
   }
 
   getUserByUsernameFromTheServer(username: string): Observable<UserModel> {
-    
+
     const url = "http://localhost:8080/users/finduserbyusername/" + username;
 
     return this.http.get<UserModel>(url, { observe: 'body' });
+  }
+
+  updateUser(usermodel: UserModel):Observable<UserModel>{
+    const url = "http://localhost:8080/users/updateuser";
+
+    return this.http.put<UserModel>(url, usermodel, {observe: 'body'});
   }
 
 }

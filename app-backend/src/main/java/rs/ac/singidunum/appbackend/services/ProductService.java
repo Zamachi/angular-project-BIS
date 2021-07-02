@@ -148,7 +148,7 @@ public class ProductService implements iProductService {
     @Override
     public List<String> findAllCategories() {
 
-        return (List<String>) findAll().stream().map(ProductEntity::getCategory).collect(Collectors.toSet());
+        return new ArrayList<>(findAll().stream().map(ProductEntity::getCategory).collect(Collectors.toSet()));
     }
 
     // method to store file to a local directory on the server (move file to a server)

@@ -51,10 +51,8 @@ public class OrderService implements iOrderService {
 
     @Override
     public List<OrderEntity> getAllUserOrders(String username) {
-
-        var user = iUserRepository.findByUsername(username);
         //NOTE: trebalo bi da radi ovakav search
-        return orderRepository.findAllByUser(user);
+        return orderRepository.findAllByUser(username);
     }
 
     @Override

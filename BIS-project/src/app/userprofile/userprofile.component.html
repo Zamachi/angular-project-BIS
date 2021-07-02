@@ -18,7 +18,7 @@
             required
             email
             #emailInput="ngModel"
-            [value]="user.email"
+            [(ngModel)]="user.email"
           />
 
           <mat-error *ngIf="emailInput.hasError('required')"
@@ -33,15 +33,12 @@
             matInput
             placeholder="Password"
             name="password"
-            required
             minlength="8"
             #userInputPassword="ngModel"
-            [value]="user.password"
           />
           <mat-hint align="end"
             >{{ userInputPassword.value?.length }} / 8</mat-hint>
 
-            <mat-error *ngIf="!userInputPassword.hasError('required')">Field cannot be left empty</mat-error>
         </mat-form-field>
 
         <mat-form-field hintLabel="Please enter minimum 8 characters">
@@ -51,7 +48,6 @@
             matInput
             placeholder="Password"
             name="passwordConfirm"
-            required
             minlength="8"
             #userInputPasswordConfirm="ngModel"
           />
@@ -62,7 +58,6 @@
             *ngIf="userInputPasswordConfirm.value != userInputPassword.value"
             >Passwords do not match!</mat-error
           >
-          <mat-error *ngIf="!userInputPasswordConfirm.hasError('required')">Field cannot be left empty</mat-error>
         </mat-form-field>
 
         <mat-form-field>
@@ -73,7 +68,7 @@
             placeholder="First name"
             name="firstName"
             required
-            [value]="user.firstName"
+            [(ngModel)]="user.firstName"
           />
         </mat-form-field>
 
@@ -85,7 +80,7 @@
             placeholder="Last name"
             name="lastName"
             required
-            [value]="user.lastName"
+            [(ngModel)]="user.lastName"
           />
         </mat-form-field>
 
@@ -97,7 +92,7 @@
             placeholder="Phone number"
             name="phone"
             required
-            [value]="user.phone"
+            [(ngModel)]="user.phone"
           />
         </mat-form-field>
 
@@ -109,7 +104,7 @@
             placeholder="Country"
             name="country"
             required
-            [value]="user.address.country"
+            [(ngModel)]="user.address.country"
           />
         </mat-form-field>
 
@@ -121,7 +116,7 @@
             placeholder="City"
             name="city"
             required
-            [value]="user.address.city"
+            [(ngModel)]="user.address.city"
           />
         </mat-form-field>
 
@@ -133,7 +128,7 @@
             placeholder="Street"
             name="street"
             required
-            [value]="user.address.street"
+            [(ngModel)]="user.address.street"
           />
         </mat-form-field>
 
@@ -145,7 +140,7 @@
             placeholder="Street number"
             name="number"
             required
-            [value]="user.address.number"
+            [(ngModel)]="user.address.number"
           />
         </mat-form-field>
 
@@ -157,20 +152,20 @@
             placeholder="Zip code"
             name="zipCode"
             required
-            [value]="user.address.zipCode"
+            [(ngModel)]="user.address.zipCode"
           />
         </mat-form-field>
 
         <mat-form-field class="example-chip-list" appearance="fill">
           <mat-label>Favorite categories</mat-label>
-          <mat-chip-list #chipList aria-label="Favorite category selection . . .">
+          <mat-chip-list  #chipList aria-label="Favorite category selection . . .">
             <mat-chip
               *ngFor="let favorCategory of user.favourites"
               [selectable]="true"
               [removable]="true"
               (removed)="remove(favorCategory)">
               {{favorCategory}}
-              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              <mat-icon matChipRemove >cancel</mat-icon>
             </mat-chip>
             <input
               placeholder="New favorite category..."
@@ -182,8 +177,8 @@
               (matChipInputTokenEnd)="add($event)">
           </mat-chip-list>
           <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-            <mat-option *ngFor="let category of allCategories | async" [value]="category">
-              {{fruit}}
+            <mat-option *ngFor="let filteredCategory of filteredCategories | async" [value]="filteredCategory">
+              {{filteredCategory}}
             </mat-option>
           </mat-autocomplete>
         </mat-form-field>
@@ -210,21 +205,25 @@
           <mat-header-cell *matHeaderCellDef mat-sort-header>Date created: </mat-header-cell>
           <mat-cell *matCellDef="let element">{{ element.date | date }}</mat-cell>
         </ng-container>
+        <ng-container matColumnDef="totalPrice">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.totalPrice | currency }}</mat-cell>
+        </ng-container>
         <ng-container matColumnDef="paymentOption">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Payment option:</mat-header-cell>
           <mat-cell *matCellDef="let element">{{ element.paymentOption }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="status">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
-          <mat-cell *matCellDef="let element">{{ element.status }}</mat-cell>
+          <mat-cell *matCellDef="let element" #status="ngModel" ngModel>{{ element.status }}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="complete">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>
-          <mat-cell ><button mat-raised-button (click)="complete($event)">Complete</button></mat-cell>
+          <mat-cell *matCellDef="let element"><button *ngIf="element.status == 'ongoing'" mat-raised-button (click)="complete(element.id)">Complete</button></mat-cell>
         </ng-container>
         <ng-container matColumnDef="cancel">
           <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel order?</mat-header-cell>
-          <mat-cell ><button mat-raised-button (click)="cancel($event)">Complete</button></mat-cell>
+          <mat-cell *matCellDef="let element"><button *ngIf="element.status == 'ongoing'" mat-raised-button (click)="cancel(element.id)">Complete</button></mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
@@ -233,6 +232,31 @@
 
     </mat-tab>
 
-    <mat-tab label="View my reviews: "> Content 3 </mat-tab>
+    <mat-tab label="View my reviews: ">
+
+      <mat-table [dataSource]="myReviews" matSort>
+        <ng-container matColumnDef="product.name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Product name:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.product.name }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="comment">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Review comment:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.comment }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="score">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Review score:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.score | number }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="dateCreated">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Date created:</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumnsReviews"></mat-header-row>
+        <mat-row *matRowDef="let rows; columns: displayedColumnsReviews;"></mat-row>
+      </mat-table>
+
+
+    </mat-tab>
   </mat-tab-group>
 </section>

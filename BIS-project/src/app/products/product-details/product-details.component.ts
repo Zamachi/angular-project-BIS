@@ -6,6 +6,9 @@ import { ReviewService } from 'src/app/services/review.service';
 import { ReviewModel } from 'src/app/models/reviewModel';
 import { StarRatingComponent } from 'ng-starrating';
 import { add } from 'cart-localstorage';
+import { UserService } from 'src/app/services/user.service';
+import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
@@ -18,7 +21,9 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ProductModel,
-    private reviewService: ReviewService
+    private reviewService: ReviewService,
+    private userService: UserService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {

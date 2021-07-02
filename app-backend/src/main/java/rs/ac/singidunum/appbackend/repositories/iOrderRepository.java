@@ -9,7 +9,8 @@ import java.util.List;
 
 public interface iOrderRepository extends MongoRepository<OrderEntity, String> {
     // lista svih porudzbina jednog korisnika
-    List<OrderEntity> findAllByUser(UserEntity userEntity);
+    @Query(value = "{ 'user.username': { $regex : ?0}}")
+    List<OrderEntity> findAllByUser(String username);
 
     // treba napisati query koji proverava da li je korisnik kupio neki item
     // treba pronaci sve orders korisnika i proveriti da li lista itema sadrzi zadati product id

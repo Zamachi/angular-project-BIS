@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 import rs.ac.singidunum.appbackend.entities.ReviewEntity;
 import rs.ac.singidunum.appbackend.models.ProductModel;
 import rs.ac.singidunum.appbackend.models.ReviewModel;
+import rs.ac.singidunum.appbackend.models.UserModel;
 import rs.ac.singidunum.appbackend.repositories.iProductRepository;
 import rs.ac.singidunum.appbackend.repositories.iReviewRepository;
+import rs.ac.singidunum.appbackend.repositories.iUserRepository;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -22,12 +24,17 @@ public class ReviewService implements iReviewService {
     @Autowired
     private iProductRepository productRepository;
 
+    @Autowired
+    private iUserRepository userRepository;
+
     @Override
     public ReviewEntity createReview(ReviewModel reviewModel) {
         //NOTE: mzoda bi mogla da se izvrsi provera da li je Order status =="complete" pre no sto se izvrs insert
         reviewModel.setDateCreated(LocalDate.now());
+        reviewModel.setUser( autoMapperService.map(userRepository.findById( reviewModel.getUser().getId() ).get(), UserModel.class) );
 
         //NOTE: modify the original product
+
         var product = productRepository.findById(reviewModel.getProduct().getId()).get();
 
         int number_of_reviews = findAllByProductId( product.getId() ).size();
@@ -40,7 +47,8 @@ public class ReviewService implements iReviewService {
 
         return reviewRepository
                 .insert(autoMapperService
-                        .map(reviewModel,ReviewEntity.class));
+                        .map(reviewModel,ReviewEntity.class)
+                );
     }
 
     @Override

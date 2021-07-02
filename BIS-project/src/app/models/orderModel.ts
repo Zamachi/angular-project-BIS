@@ -6,7 +6,7 @@ export class OrderModel{
   items: OrderItemModel[];
   user: UserModel;
   totalPrice: number;
-  dateCreated: Date;
+  dateCreated?: Date;
   status: string;
   paymentOption: string;
 }

@@ -61,7 +61,13 @@ public class UserService implements iUserService{
 
     @Override
     public UserEntity updateUser(UserModel userModel) {
-        //NOTE: trebalo bi da sacuva ceo model korisnika sa update panela
+
+        if(userModel.getPassword().trim().equals("") || userModel.getPassword() == null ) {
+            userModel.setPassword( findUserByUsername( userModel.getUsername() ).getPassword() );
+        }else {
+            userModel.setPassword( passwordEncoder.encode(userModel.getPassword()) );
+        }
+
         var user = autoMapperService.map(userModel, UserEntity.class);
 
         return userRepository.save(user);

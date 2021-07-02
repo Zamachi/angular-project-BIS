@@ -15,4 +15,18 @@ export class OrderService {
 
     return this.http.post<OrderModel>(url, { observe: 'body' });
   }
+
+  fetchAllUserOrders(): Observable<OrderModel[]> {
+    const url = "http://localhost:8080/orders/getalluserorders/" + localStorage.getItem("username");
+
+    return this.http.get<OrderModel[]>(url, { observe: 'body' });
+  }
+
+  updateOrder(orderModel: OrderModel){
+    const url = "http://localhost:8080/orders/updateorder";
+    return this.http.put<OrderModel>(url, orderModel ,{ observe: 'body' });
+
+  }
+
+
 }

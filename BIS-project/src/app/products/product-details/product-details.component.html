@@ -69,7 +69,7 @@
 
       <h3>Price: {{ data.price | currency }}</h3>
       <p>Left in stock: {{ data.leftInStock }}</p>
-      <button mat-raised-button color="accent" (click)="addToCart()">
+      <button mat-raised-button color="accent" (click)="addToCart()" [disabled]="data.leftInStock == 0">
         Add to cart <mat-icon>shopping_cart_add</mat-icon>
       </button>
     </div>
