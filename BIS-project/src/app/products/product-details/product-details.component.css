@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.top-div:last-child {
+  padding-bottom: 10px;
+}
+
 #matDialogContentCustom {
   place-content: start;
   align-items: start;
@@ -13,10 +17,6 @@ model-viewer {
 
 model-viewer#reveal {
   background-color: transparent;
-}
-
-:host /deep/ .mat-list-item-content {
-  padding: 0!important;
 }
 
 mat-list {
@@ -35,10 +35,6 @@ mat-tab-group{
   padding-top: 10px;
   margin-left :15px;
   margin-right: 10px;
-}
-
-.margina{
-  margin-top: 15px;
 }
 
 .tabovi{

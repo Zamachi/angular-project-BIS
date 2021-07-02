@@ -2,7 +2,7 @@ import { OrderItemModel } from "./orderItemModel";
 import { UserModel } from "./userModel";
 
 export class OrderModel{
-  id: string;
+  id?: string;
   items: OrderItemModel[];
   user: UserModel;
   totalPrice: number;

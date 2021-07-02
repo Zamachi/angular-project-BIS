@@ -28,6 +28,8 @@ import { AuthguardService } from './services/guards/authguard.service';
 import { ComponentaccessService } from './services/guards/componentaccess.service';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { ReviewService } from './services/review.service';
+import { CartService } from './services/cart.service';
+import { OrderService } from './services/order.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { ReviewService } from './services/review.service';
     ProductService,
     AuthguardService,
     ComponentaccessService,
-    ReviewService
+    ReviewService,
+    CartService,
+    OrderService
   ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

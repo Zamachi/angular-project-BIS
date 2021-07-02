@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/iProductService.java" afterDir="false" />
-    </list>
+    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +98,7 @@
       <workItem from="1624992716098" duration="1381000" />
       <workItem from="1625061719301" duration="3311000" />
       <workItem from="1625159466826" duration="1085000" />
+      <workItem from="1625219755234" duration="656000" />
     </task>
     <servers />
   </component>

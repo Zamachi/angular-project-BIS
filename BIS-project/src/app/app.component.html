@@ -1,5 +1,5 @@
 <div fxFlex fxFlexFill fxLayout="column wrap" class="mat-app-background appcomp" [ngClass]="isDarkTheme? 'darkMode' : '' ">
-  <div fxFlex fxFlexFill class="app-content">
+  <div fxFlex fxFlexFill class="app-content" fxLayout="column wrap">
     <mat-toolbar color="primary" [ngClass]="isWelcomePage? 'tool-bar' : '' ">
       <div class="logo">
         <a routerLink="/"><img src="https://user-images.githubusercontent.com/82712969/123667024-0942af00-d83a-11eb-8565-840186886e1c.png"/></a>
@@ -36,6 +36,11 @@
     <div>
       <router-outlet></router-outlet>
     </div>
+    <span class="example-spacer"></span>
+    <!-- footer -->
+    <mat-toolbar  id="footer" color="primary" fxLayoutAlign="center center">
+      <footer>Copyright &copy; Stefan Dimitrijević | Igor Marković - KVA project</footer>
+    </mat-toolbar>
   </div>
 
 </div>

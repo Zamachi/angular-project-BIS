@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { OrderModel } from '../models/orderModel';
 import { ProductModel } from '../models/productModel';
-import { list, update, total, get } from 'cart-localstorage';
-import { MatTableDataSource } from '@angular/material/table';
-import { ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { AuthService } from '../services/auth.service';
+import { CartService } from '../services/cart.service';
+import { OrderService } from '../services/order.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,34 +13,69 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class CartComponent implements OnInit, AfterViewInit {
 
-  items = new MatTableDataSource<any>();
-  displayedColumns = ["name", "description", "price", "quantity","total"];
+  items = [];
+  paymentMethods = ["VISA", "Master Card", "PayPal", "Crypto"];
 
+  paymentValue = '';
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  constructor(private cartService: CartService, private orderService: OrderService, private matSnackBar: MatSnackBar, private authService: AuthService) { }
 
-  constructor() { }
   ngAfterViewInit(): void {
-    this.items.paginator = this.paginator;
+    // this.items.paginator = this.paginator;
   }
 
   ngOnInit(): void {
-    this.items.data = list();
+    this.items = this.cartService.getAllFromCart();
   }
 
-  buy(){
+  buy() {
+    // let orderModel: OrderModel = {
+    //   items: this.items,
+    //   user: this.authService;
+    //   totalPrice: number;
+    //   dateCreated: Date;
+    //   status: string;
+    //   paymentOption: string;
+    // }
+
+    this.orderService.createOrder().subscribe((result) => {
+      if (result != null) {
+        this.matSnackBar.open("Order created!", "", { duration: 2500 });
+      } else {
+        this.matSnackBar.open("Could not create order...", "", { duration: 2500 });
+      }
+    })
+  }
+
+  getCurrentProductQuantityFromCart(product: ProductModel) {
+    return this.cartService.getProductFromCart(product).quantity;
+  }
+
+  increaseProductQuantity(value: any, product: ProductModel) {
+    value = "" + (+value+1);
+
+    if (value <= product.leftInStock) {
+      this.cartService.updateQuantity(product, value);
+    }
 
   }
 
-  azuriraj(kolicina, id_elementa){
-    console.log(kolicina.value);
-    update(id_elementa, "quantity", kolicina.value);
-    // this.items.data = list(); //DANGER: NE RADI
-    this.items.data.find(item => item.id == id_elementa).quantity = kolicina;
+  decreaseProductQuantity(value: any, product: ProductModel) {
+    value = "" + (+value-1);
+
+    if (value > 0) {
+      this.cartService.updateQuantity(product, value);
+    }
+
+  }
+
+  removeFromCart(product: ProductModel) {
+    this.cartService.removeFromCart(product);
+    this.items = this.cartService.getAllFromCart();
   }
 
   calculateTotal(){
-    return total();
+    return this.cartService.totalCartValue();
   }
 
 }

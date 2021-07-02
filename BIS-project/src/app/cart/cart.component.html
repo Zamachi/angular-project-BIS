@@ -1,4 +1,4 @@
-<mat-table [dataSource]="items" matSort>
+<!-- <mat-table [dataSource]="items" matSort>
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef >Item name</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
@@ -22,17 +22,137 @@
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let rows; columns: displayedColumns;"></mat-row>
-</mat-table>
+</mat-table> -->
 
 <!--
   Paginacija / Stranicenje
   https://material.angular.io/components/paginator/api
  -->
 
- <mat-paginator [pageSize]="10" [pageSizeOptions]="[3, 5, 7, 15]"></mat-paginator>
+ <!-- <mat-paginator [pageSize]="10" [pageSizeOptions]="[3, 5, 7, 15]"></mat-paginator>
 
- <h2>In total: {{ calculateTotal() }}</h2>
+ <h2>In total: {{ calculateTotal() }}</h2> -->
 
- <div>
-   <button mat-raised-button color="accent" (click)="buy()">Checkout</button>
- </div>
+<div fxFlex fxLayout="column nowrap" fxLayoutAlign="start center">
+  <div fxFlex fxFill fxLayout="column nowrap" fxLayoutAlign="start center">
+    <h2>Shopping cart:</h2>
+  </div>
+  <div class="border-1" fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="center center">
+    <!-- cart content div -->
+    <div  class="border-1" fxFlex="80%" fxLayout="column nowrap" fxLayoutAlign="start center">
+      <!-- cart content header -->
+      <div class="item-row" fxFlex="100%" fxLayout="row nowrap" fxLayoutAlign="center center">
+        <div fxFlex="7%" class="cart-image-container">
+          
+        </div>
+        <div fxFlex="9%">
+          <p><b>Name</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>Category</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>manufacturer</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>City</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>Score</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>Price</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>Left in stock</b></p>
+        </div>
+        <div fxFlex="9%">
+          <p><b>Quantity</b></p>
+        </div>
+        <div fxFlex fxFlex="9%">
+          <p><b>Increase</b></p>
+          <p><b>Decrease</b></p>
+        </div>
+        <div fxFlex>
+          <p><b>Remove</b></p>
+        </div>
+      </div>
+      <!-- cart item div - print cart items -->
+      <div class="item-row" fxFlex="100%" fxLayout="row nowrap" fxLayoutAlign="center center" *ngFor="let item of items">
+        <div fxFlex="7%" class="cart-image-container">
+          <img class="cart-image" src="{{item.imagePath}}"/>
+        </div>
+        <div fxFlex="9%">
+          <p>{{ item.name }}</p>
+        </div>
+        <div fxFlex="9%">
+          <p>{{ item.category }}</p>
+          <p>{{ item.subCategory }}</p>
+        </div>
+        <div fxFlex="9%">
+          <p>{{ item.manufacturer }}</p>
+        </div>
+        <div fxFlex="9%">
+          <p>{{ item.address.city }}</p>
+        </div>
+        <div fxFlex="9%">
+          <p>{{ item.score }}</p>
+        </div>
+        <div fxFlex="9%">
+          <p>${{ item.price }}</p>
+        </div>
+        <div fxFlex="9%">
+          <p>{{ item.leftInStock }}</p>
+        </div>
+        <div fxFlex="9%">
+          <mat-form-field style="width: 60px;">
+            <input
+              #qValue
+              disabled
+              type="number"
+              matInput
+              name="quantity"
+              min="1"
+              max="item.leftInStock"
+              [value]="getCurrentProductQuantityFromCart(item) | number"
+              />
+          </mat-form-field>
+        </div>
+        <div fxFlex="9%" fxLayout="column nowrap" style="height: 45px;">
+          <button mat-raised-button color="primary" (click)="increaseProductQuantity(qValue.value, item)" style="width: 64px;">+</button>
+          <button mat-raised-button color="warn" (click)="decreaseProductQuantity(qValue.value, item)" style="width: 64px;">-</button>
+        </div>
+        <div fxFlex>
+          <button mat-raised-button color="warn" (click)="removeFromCart(item)"><mat-icon>delete</mat-icon></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- checkout div -->
+    <div fxFlex fxFill fxLayout="column nowrap" fxLayoutAlign="start center" fxLayoutGap="10px">
+      <div>
+
+        <div>
+          <h2>Cart total:</h2>
+          <h3>{{ calculateTotal() | currency }}</h3>
+        </div>
+        <div>
+          <p>Payment method:</p>
+          <mat-form-field appearance="fill">
+              <mat-label>Payment method</mat-label>
+              <mat-select [(ngModel)]="paymentValue">
+                <mat-option *ngFor="let p of paymentMethods" [value]="p">
+                  {{p}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="accent" (click)="buy()">Checkout</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

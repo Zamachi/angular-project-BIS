@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ProductModel } from '../models/productModel';
+import { LocalstorageService } from '../services/localstorage.service';
 import { ProductService } from '../services/product.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
@@ -14,7 +15,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 export class ProductsComponent implements OnInit {
   constructor(
     private productService: ProductService,
-    private dialog: MatDialog) {}
+    private dialog: MatDialog,
+    private localStorageService: LocalstorageService) {}
 
   sortValue: string = '';
   sortValueDirection: SortDirection = '';
@@ -24,8 +26,10 @@ export class ProductsComponent implements OnInit {
   searchValue: string = '';
   catValue: string = 'any';
   subCatValue: string = 'any';
+  cityValue: string = 'any';
   p: number = 1;
   cat = new Map();
+  cities: string[] = [];
 
   minValuePrice: number = 1;
   maxValuePrice: number = 1000;
@@ -96,6 +100,10 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  findUniqueCities() {
+    this.cities = [...new Set(this.data.map((item) => item.address.city))].sort();
+  }
+
   // ------------ Sort
 
   sortData(sort: Sort) {
@@ -146,6 +154,7 @@ export class ProductsComponent implements OnInit {
         this.findUniqueCategoriesAndTheirSubCategoriesAndMap();
         this.setUpPriceSlider();
         this.setUpStockSlider();
+        this.findUniqueCities();
       });
   }
 
@@ -215,6 +224,12 @@ export class ProductsComponent implements OnInit {
       data: product
     });
 
+    productDetailsDialog.afterOpened().subscribe(() => {
+      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
+          productDetailsDialog.addPanelClass('darkMode');
+      }
+    });
+
     productDetailsDialog
     .afterClosed()
     .subscribe(
@@ -267,6 +282,12 @@ export class ProductsComponent implements OnInit {
     if (this.subCatValue != 'any') {
       arr = arr.filter((product) => {
         return product.subCategory == this.subCatValue;
+      });
+    }
+
+    if (this.cityValue != 'any') {
+      arr = arr.filter((product) => {
+        return product.address.city == this.cityValue;
       });
     }
 
