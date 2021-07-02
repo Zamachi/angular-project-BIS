@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserModel } from './models/userModel';
 import { AuthService } from './services/auth.service';
@@ -13,7 +13,7 @@ import { CartService } from './services/cart.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
     private authService: AuthService,
@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
     if (this.localStorageService.getLocalStorageItem("username") != null && this.localStorageService.getLocalStorageItem("username").length > 0) {
       this.userService.getUserByUsernameFromTheServer(this.localStorageService.getLocalStorageItem("username")).subscribe((user: UserModel) => {
         this.userService.setCurrentUser(user);
-        this.currentUser = this.userService.getCurrentUsername();
+
       }).add(() => {});
     }
 
@@ -56,6 +56,10 @@ export class AppComponent implements OnInit {
     });
 
     this.amountInCart$ = this.cartService.geter();
+  }
+
+  ngAfterViewInit(): void {
+    this.currentUser = this.userService.getCurrentUsername();
   }
 
   toggleTheme() {
