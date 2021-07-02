@@ -20,6 +20,7 @@ a:hover, a:active {
 
 .dialog-responsive {
     width: 40%;
+    background-color: rgb(33,33,33) !important;
 }
 
 @media only screen and (max-width: 760px) {

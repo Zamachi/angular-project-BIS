@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ProductModel } from '../models/productModel';
+import { LocalstorageService } from '../services/localstorage.service';
 import { ProductService } from '../services/product.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
@@ -14,7 +15,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 export class ProductsComponent implements OnInit {
   constructor(
     private productService: ProductService,
-    private dialog: MatDialog) {}
+    private dialog: MatDialog,
+    private localStorageService: LocalstorageService) {}
 
   sortValue: string = '';
   sortValueDirection: SortDirection = '';
@@ -213,6 +215,12 @@ export class ProductsComponent implements OnInit {
       width: '70vw',
       panelClass: "dialog-responsive",
       data: product
+    });
+
+    productDetailsDialog.afterOpened().subscribe(() => {
+      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
+          productDetailsDialog.addPanelClass('darkMode');
+      }
     });
 
     productDetailsDialog

@@ -15,14 +15,10 @@ model-viewer#reveal {
   background-color: transparent;
 }
 
-:host /deep/ .mat-list-item-content {
-  padding: 0!important;
-}
-
 mat-list {
   width: 100%
 }
 
-/* mat-dialog-content{
-  background-color: rgba(16, 14, 131, 0.753);
-} */
+mat-tab-group {
+  width: 100%;
+}
