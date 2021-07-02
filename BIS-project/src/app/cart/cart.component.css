@@ -1,0 +1,56 @@
+.item-row {
+    width: 100%;
+}
+
+.item-row p {
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.cart-image-container {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.cart-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.border-1 {
+    border: 1px solid rgb(33,33,33);
+    border-radius: 5px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.top-div:last-child {
+  padding-bottom: 10px;
+}
+
 #matDialogContentCustom {
   place-content: start;
   align-items: start;
@@ -31,10 +35,6 @@ mat-tab-group{
   padding-top: 10px;
   margin-left :15px;
   margin-right: 10px;
-}
-
-.margina{
-  margin-top: 15px;
 }
 
 .tabovi{

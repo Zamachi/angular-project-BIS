@@ -80,7 +80,16 @@
             </div>
 
             <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-                <p>Distance:</p>
+                <p>Distance (Cities):</p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Distance</mat-label>
+                    <mat-select [(ngModel)]="cityValue" (selectionChange)="search()">
+                        <mat-option value="any">Any</mat-option>
+                      <mat-option *ngFor="let city of cities" [value]="city">
+                        {{city}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
             </div>
         </div>
         <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start">

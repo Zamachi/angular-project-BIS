@@ -17,6 +17,7 @@
 
 .tool-bar {
     background: transparent !important;
+    z-index: 5 !important;
 }
 
 .logo > a > img {
@@ -29,4 +30,12 @@
 
 .logoutLink {
     cursor: pointer;
+}
+
+#footer{
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
 }
