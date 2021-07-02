@@ -98,7 +98,7 @@
       <workItem from="1624992716098" duration="1381000" />
       <workItem from="1625061719301" duration="3311000" />
       <workItem from="1625159466826" duration="1085000" />
-      <workItem from="1625219755234" duration="656000" />
+      <workItem from="1625219755234" duration="2277000" />
     </task>
     <servers />
   </component>
@@ -112,6 +112,34 @@
           <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java</url>
           <line>52</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/OrderService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/controllers/OrderController.java</url>
+          <line>20</line>
+          <properties class="rs.ac.singidunum.appbackend.controllers.OrderController" method="createOrder">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,9 +10,9 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
-  createOrder(): Observable<OrderModel> {
+  createOrder(orderModel: OrderModel): Observable<OrderModel> {
     const url = "http://localhost:8080/orders/createorder";
 
-    return this.http.post<OrderModel>(url, { observe: 'body' });
+    return this.http.post<OrderModel>(url, orderModel, { observe: 'body' });
   }
 }
