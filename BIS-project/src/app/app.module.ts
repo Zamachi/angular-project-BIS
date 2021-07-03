@@ -30,6 +30,7 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 import { ReviewService } from './services/review.service';
 import { CartService } from './services/cart.service';
 import { OrderService } from './services/order.service';
+import { EditReviewComponent } from './userprofile/edit-review/edit-review.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { OrderService } from './services/order.service';
     LoginComponent,
     SignupComponent,
     CartComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    EditReviewComponent
   ],
   imports: [
     BrowserModule,

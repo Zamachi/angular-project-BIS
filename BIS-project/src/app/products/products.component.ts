@@ -236,7 +236,8 @@ export class ProductsComponent implements OnInit {
     productDetailsDialog
     .afterClosed()
     .subscribe(
-      result => { this.dialogOpen=false; }
+      result => { this.dialogOpen=false;
+      }
     );
 
   }

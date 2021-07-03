@@ -45,4 +45,11 @@ public class OrderController {
     public OrderEntity updateOrder(@RequestBody OrderModel orderModel){
         return orderService.updateOrder(orderModel);
     }
+
+    @DeleteMapping("deleteorder")
+    @CrossOrigin
+    public void deleteOrder(@RequestParam("order_id") String order_id){
+         orderService.deleteById(order_id);
+    }
+
 }

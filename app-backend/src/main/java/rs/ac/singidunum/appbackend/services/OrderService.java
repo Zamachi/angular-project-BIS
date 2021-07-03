@@ -129,6 +129,11 @@ public class OrderService implements iOrderService {
     }
 
     @Override
+    public void deleteById(String id) {
+        this.orderRepository.deleteById(id);
+    }
+
+    @Override
     public List<OrderEntity> didUserByProduct(String userid, String productid) {
         return this.orderRepository.didUserByProduct(userid, productid);
     }

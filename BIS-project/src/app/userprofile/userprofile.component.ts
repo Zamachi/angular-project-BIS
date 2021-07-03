@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChild,
+  ViewChildren,
+} from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
 import { UserModel } from '../models/userModel';
 import { ProductService } from '../services/product.service';
@@ -19,6 +27,9 @@ import { ReviewService } from '../services/review.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { EditReviewComponent } from './edit-review/edit-review.component';
+import { LocalstorageService } from '../services/localstorage.service';
 
 @Component({
   selector: 'app-userprofile',
@@ -32,6 +43,8 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
   allCategories: string[] = [];
   filteredCategories: Observable<string[]>;
   category: any;
+
+  dialogOpen: boolean = false;
 
   @ViewChild('categoryInput') categoryInput: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
@@ -47,18 +60,23 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
     'status',
     'complete',
     'cancel',
+    "delete"
   ];
 
   numberOfCompleted: number = 0;
   numberOfOngoing: number = 0;
   numberOfCancelled: number = 0;
 
-  
   //NOTE: reviews tab
 
   myReviews = new MatTableDataSource<ReviewModel>();
   displayedColumnsReviews = [
-    'Numero', 'product.name', 'comment', 'score', 'dateCreated'
+    'Numero',
+    'product.name',
+    'comment',
+    'score',
+    'dateCreated',
+    'edit',
   ];
 
   // for more than one mat paginator, we have to use ViewChildren and List of Paginators
@@ -70,7 +88,9 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
     private productService: ProductService,
     private orderService: OrderService,
     private reviewService: ReviewService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private matDialog: MatDialog,
+    private localStorageService: LocalstorageService
   ) {
     this.filteredCategories = this.categoryControl.valueChanges.pipe(
       startWith(null), //<- ukoliko korisnik klikne na input polje i ne unese nista, prikazace svo voce
@@ -105,16 +125,16 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
       .subscribe((response) => (this.myReviews.data = response.body));
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.orders.paginator = this.paginator.toArray()[0];
     this.orders.sort = this.sort.toArray()[0];
-    
+
     this.myReviews.paginator = this.paginator.toArray()[1];
     this.myReviews.sort = this.sort.toArray()[1];
-    
+
     setTimeout(() => {
       this.orders.data.forEach((order: OrderModel) => {
-        
+
         if (order.status == "ongoing") {
           this.numberOfOngoing += 1;
         } else if (order.status == "complete") {
@@ -234,10 +254,51 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
 
   doFilterOrders(filterValue: string) {
     this.orders.filter = filterValue.trim().toLocaleLowerCase();
+    console.log(filterValue);
   }
 
   doFilterReviews(filterValue: string) {
     this.myReviews.filter = filterValue.trim().toLocaleLowerCase();
+    console.log(filterValue);
   }
 
+  editReview(element) {
+    this.dialogOpen = true;
+
+    const review = this.matDialog.open(EditReviewComponent, {
+      disableClose: true,
+      width: '70vw',
+      panelClass: 'dialog-responsive',
+      data: element,
+    });
+
+    review.afterOpened().subscribe(() => {
+      if (this.localStorageService.getLocalStorageItem('theme') == 'dark') {
+        review.addPanelClass('darkMode');
+      }
+    });
+
+    review.afterClosed().subscribe((result: ReviewModel) => {
+      this.dialogOpen = false;
+      this._snackBar.open('Successfully updated the review!', '', {
+        duration: 2500,
+      });
+      console.log(result);
+      this.reviewService
+        .findAllUserReviews({ username: localStorage.getItem('username') })
+        .subscribe((response) => (this.myReviews.data = response.body));
+    });
+  }
+
+  delete(element_id) {
+    this.orderService.deleteOrder(element_id).subscribe((result) => {
+      if (result.ok) {
+
+        this.orderService
+      .fetchAllUserOrders()
+      .subscribe((response) => (this.orders.data = response));
+        this._snackBar.open("Successfully deleted cancelled order", "OK", {duration: 2500});
+      }
+    });
+  }
 }

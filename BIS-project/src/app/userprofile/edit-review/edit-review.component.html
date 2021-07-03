@@ -1,0 +1,58 @@
+<div class="dialog-top">
+  <button mat-button [mat-dialog-close]="true">
+    <mat-icon matListIcon>close</mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+
+  <section>
+    <form
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+      #f="ngForm"
+      (ngSubmit)="onSubmit(f, score)"
+      class="div-container"
+    >
+      <mat-form-field>
+        <input
+          type="email"
+          ngModel
+          matInput
+          placeholder="Your comment goes here..."
+          name="comment"
+          required
+          #commentInput="ngModel"
+          [(ngModel)]="data.comment"
+        />
+
+        <mat-error *ngIf="commentInput.hasError('required')"
+          >Field cannot be left empty</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field>
+        <star-rating
+          fxFlex
+          [value]="data.score"
+          [totalstars]="5"
+          checkedcolor="#ffd740"
+          uncheckedcolor="gray"
+          size="24px"
+          #score
+          name="score"
+        ></star-rating>
+
+        <mat-error *ngIf="commentInput.hasError('required')"
+          >Field cannot be left empty</mat-error
+        >
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid">
+        Submit
+      </button>
+    </form>
+  </section>
+
+</mat-dialog-content>

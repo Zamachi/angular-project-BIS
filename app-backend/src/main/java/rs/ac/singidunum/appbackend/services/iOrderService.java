@@ -15,5 +15,5 @@ public interface iOrderService {
     List<OrderEntity> didUserByProduct(String userid, String productid);
     List<OrderEntity> findAllByUser_Id(String userid);
     List<OrderEntity> getAllCompleteOrdersByUserId(String userid);
-
+    void deleteById(String id);
 }

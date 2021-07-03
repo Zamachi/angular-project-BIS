@@ -16,6 +16,8 @@
         autoplay
         src="{{ data.modelPath }}"
         auto-rotate
+        shadow-intensity="1"
+        skybox-image="../../../assets/kloppenheim_02_2k.hdr"
         rotation-per-second="40deg"
       >
       </model-viewer>
@@ -45,7 +47,7 @@
                 <mat-form-field appearance="fill" fxFlex="100%">
                   <mat-label>Write your review here...</mat-label>
                   <textarea #reviewContent class="scroll"
-                    fxFlex="100%" 
+                    fxFlex="100%"
                     matInput
                     cdkTextareaAutosize
                     cdkAutosizeMinRows="1"
@@ -129,7 +131,7 @@
       <div *ngIf="isAlreadyInTheCart">
         <span><i>Already in your cart!</i></span>
       </div>
-      
+
     </div>
 
     <div fxFlex="100%" fxLayout="column nowrap" class="product-info" fxLayoutGap="15px">

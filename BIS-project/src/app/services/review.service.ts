@@ -47,4 +47,10 @@ export class ReviewService {
     return this.httpClient.post<ReviewModel[]>(url, reviewModel, { observe: 'body' });
   }
 
+  updateReview(reviewModel: ReviewModel){
+    const url = "http://localhost:8080/reviews/updatereview";
+
+    return this.httpClient.put<ReviewModel>(url, reviewModel, { observe: 'body' });
+
+  }
 }
