@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["welcome"]);
       }
       else {
-        this._snackBar.open("Something went wrong...", "", {duration: 2500});
+        this._snackBar.open("Something went wrong. Please check your log-in credentials.", "", {duration: 2500});
       }
     });
   }

@@ -6,53 +6,109 @@
 
 <mat-dialog-content>
 
-  <section>
-    <form
-      fxLayout="column"
-      fxLayoutAlign="center center"
-      fxLayoutGap="10px"
-      #f="ngForm"
-      (ngSubmit)="onSubmit(f, score)"
-      class="div-container"
-    >
-      <mat-form-field>
-        <input
-          type="email"
+  <!-- <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center center">
+    <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center center">
+      <form
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+        #f="ngForm"
+        (ngSubmit)="onSubmit(f, score)"
+        class="div-container"
+      >
+        <mat-form-field>
+           <input
+            ngModel
+            matInput
+            placeholder="Your comment goes here..."
+            name="comment"
+            required
+            #commentInput="ngModel"
+            [(ngModel)]="data.comment"
+          />
+
+          <textarea 
           ngModel
-          matInput
           placeholder="Your comment goes here..."
           name="comment"
           required
           #commentInput="ngModel"
           [(ngModel)]="data.comment"
-        />
+          #reviewContent class="scroll"
+          fxFlex="100%"
+          matInput
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5"></textarea>
 
-        <mat-error *ngIf="commentInput.hasError('required')"
-          >Field cannot be left empty</mat-error
-        >
+          <mat-error *ngIf="commentInput.hasError('required')"
+            >Field cannot be left empty</mat-error
+          >
+        </mat-form-field>
+
+        <div>
+          <star-rating
+            fxFlex
+            [value]="data.score"
+            [totalstars]="5"
+            checkedcolor="#ffd740"
+            uncheckedcolor="gray"
+            size="24px"
+            #score
+            name="score"
+          ></star-rating>
+        </div>
+
+        <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid || score.value == 0">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div> -->
+
+  <div class="top-div user-review" fxFlex fxLayout="column nowrap">
+    <div>
+      <p><b>Update a review:</b></p>
+    </div>
+    <div fxFlex="100%" fxFill>
+      <mat-form-field appearance="fill" fxFlex="100%">
+        <mat-label>Update your review here...</mat-label>
+        <textarea class="scroll"
+          ngModel
+          placeholder="Your comment goes here..."
+          name="comment"
+          required
+          #commentInput="ngModel"
+          [(ngModel)]="data.comment"
+          fxFlex="100%"
+          matInput
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5"></textarea>
       </mat-form-field>
-
-      <mat-form-field>
-        <star-rating
-          fxFlex
-          [value]="data.score"
-          [totalstars]="5"
-          checkedcolor="#ffd740"
-          uncheckedcolor="gray"
-          size="24px"
-          #score
-          name="score"
-        ></star-rating>
-
-        <mat-error *ngIf="commentInput.hasError('required')"
-          >Field cannot be left empty</mat-error
-        >
-      </mat-form-field>
-
-      <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid">
-        Submit
-      </button>
-    </form>
-  </section>
+    </div>
+    <div fxFlex="100%" fxLayoutAlign="space-between center">
+      <div fxLayout="row nowrap" fxFlex="30%" fxLayoutAlign="start center" fxLayoutGap="15px">
+        <div>
+          <p><b>Your score:</b></p>
+        </div>
+        <div>
+          <star-rating
+            fxFlex
+            [value]="data.score"
+            [totalstars]="5"
+            checkedcolor="#ffd740"
+            uncheckedcolor="gray"
+            size="24px"
+            #score
+            name="score"
+          ></star-rating>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="onSubmit(commentInput.value, score.value)" [disabled]="commentInput.value.trim().length == 0 || score.value == 0">Update review</button>
+      </div>
+    </div>
+  </div>
 
 </mat-dialog-content>

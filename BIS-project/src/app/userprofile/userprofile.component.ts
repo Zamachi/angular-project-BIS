@@ -254,12 +254,10 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
 
   doFilterOrders(filterValue: string) {
     this.orders.filter = filterValue.trim().toLocaleLowerCase();
-    console.log(filterValue);
   }
 
   doFilterReviews(filterValue: string) {
     this.myReviews.filter = filterValue.trim().toLocaleLowerCase();
-    console.log(filterValue);
   }
 
   editReview(element) {
@@ -283,7 +281,6 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
       this._snackBar.open('Successfully updated the review!', '', {
         duration: 2500,
       });
-      console.log(result);
       this.reviewService
         .findAllUserReviews({ username: localStorage.getItem('username') })
         .subscribe((response) => (this.myReviews.data = response.body));

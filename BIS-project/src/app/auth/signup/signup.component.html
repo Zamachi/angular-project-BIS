@@ -1,4 +1,4 @@
-<section>
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
     <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px"
     #f="ngForm" (ngSubmit)="onSubmit(f)">
         
@@ -51,8 +51,17 @@
         <mat-form-field>
             <input type="text" ngModel matInput placeholder="Zip code" name="zipCode" required>
         </mat-form-field>
+
+        <div>
+            <mat-checkbox #checkTerms>I accept terms and conditions.</mat-checkbox>
+            <p>&nbsp;</p>
+        </div>
   
-        <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid">Submit</button>
+        <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid || !checkTerms.checked ">Submit</button>
     </form>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <p>Already have an account?</p>
+        <p>You can log-in <a class="auth-link" routerLink="/login">here</a>!</p>
+    </div>
     
 </section>

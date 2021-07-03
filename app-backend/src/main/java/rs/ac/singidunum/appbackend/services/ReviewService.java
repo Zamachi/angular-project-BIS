@@ -52,12 +52,24 @@ public class ReviewService implements iReviewService {
 
     @Override
     public ReviewEntity updateReview(ReviewModel reviewModel) {
+        // product - need to update it's score with a new avg
+        var product = productRepository.findById(reviewModel.getProduct().getId()).get();
 
-        var review = autoMapperService
-                .map(reviewModel, ReviewEntity.class);
+        reviewModel.setProduct( autoMapperService.map( product, ProductModel.class) );
 
+        var updatedReview =  reviewRepository.save(this.autoMapperService.map(reviewModel, ReviewEntity.class));
 
-        return reviewRepository.save(review);
+        var allProductReviews = findAllByProductId( product.getId() );
+
+        double avg_score = allProductReviews.stream().mapToDouble(ReviewEntity::getScore).average().orElse(Double.NaN);
+
+        product.setScore(avg_score);
+
+        productRepository.save(product);
+
+        updatedReview.getProduct().setScore(avg_score);
+
+        return this.reviewRepository.save(updatedReview);
     }
 
     @Override

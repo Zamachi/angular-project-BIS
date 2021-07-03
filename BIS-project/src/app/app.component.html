@@ -13,7 +13,7 @@
       <div fxFlex fxLayoutAlign="end" fxLayoutGap="10px">
         <a routerLink="/products">Browse products</a>
         &nbsp;
-        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/cart">
+        <a routerLink="/cart">
           <mat-icon [matBadge]="amountInCart$ | async" matBadgeColor="warn">shopping_cart</mat-icon>
         </a>
         &nbsp; <div> | </div>

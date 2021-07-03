@@ -31,6 +31,7 @@ import { ReviewService } from './services/review.service';
 import { CartService } from './services/cart.service';
 import { OrderService } from './services/order.service';
 import { EditReviewComponent } from './userprofile/edit-review/edit-review.component';
+import { CartguardService } from './services/guards/cartguard.service';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { EditReviewComponent } from './userprofile/edit-review/edit-review.compo
     ComponentaccessService,
     ReviewService,
     CartService,
-    OrderService
+    OrderService,
+    CartguardService
   ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

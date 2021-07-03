@@ -165,7 +165,7 @@
               {{favorCategory}}
               <mat-icon matChipRemove >cancel</mat-icon>
             </mat-chip>
-            <input
+            <!-- <input
               placeholder="New favorite category..."
               #categoryInput
               [formControl] = "categoryControl"
@@ -173,7 +173,7 @@
               [matChipInputFor]="chipList"
               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
               (matChipInputTokenEnd)="add($event)"
-              >
+              /> -->
 
           </mat-chip-list>
           <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
@@ -221,7 +221,7 @@
             </ng-container>
             <ng-container matColumnDef="status">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
-              <mat-cell *matCellDef="let element" #status="ngModel" ngModel>{{ element.status }}</mat-cell>
+              <mat-cell *matCellDef="let element" #status="ngModel" ngModel name="status" ngDefaultControl>{{ element.status }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="complete">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>

@@ -24,15 +24,14 @@ export class EditReviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(forma, score){
-    // console.log(score.value);
+  onSubmit(comment, score){
     this
     .reviewService
     .updateReview({
       id: this.data.id,
-      comment: forma.value.comment,
+      comment: comment,
       product: this.data.product,
-      score: score.value,
+      score: score,
       user: this.data.user
     })
     .subscribe(

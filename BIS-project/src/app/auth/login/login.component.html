@@ -1,4 +1,4 @@
-<section>
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
     <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px"
     #f="ngForm" (ngSubmit)="onSubmit(f)">
   
@@ -15,4 +15,8 @@
   
         <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid">Submit</button>
     </form>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <p>Don't have an account?</p>
+        <p>You can register <a class="auth-link" routerLink="/signup">here</a>!</p>
+    </div>
 </section>
