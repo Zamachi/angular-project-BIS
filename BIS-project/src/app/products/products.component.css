@@ -17,6 +17,10 @@ mat-card {
     cursor: pointer;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 mat-card-subtitle{
     font-size:18px;
     text-align: center;

@@ -12,8 +12,10 @@
             <h2 class="color-white top-h2">Great place for your shopping plans!</h2>
             <p class="color-white">We bring your models to life! Browse, select, order and we will ship the item to you! No delivery fees!</p>
             <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlexAlign="start" fxLayoutGap="5px">
-                <button mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('login')" >Login</button>
-                <button mat-button style="background-color:rgb(255, 158, 58); color:white" (click)="goNavigate('signup')" >Signup</button>
+                <button *ngIf="!(isLoggedIn$ | async) as isLoggedIn" mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('login')" >Login</button>
+                <button *ngIf="!(isLoggedIn$ | async) as isLoggedIn" mat-button style="background-color:rgb(255, 158, 58); color:white" (click)="goNavigate('signup')" >Signup</button>
+                <button *ngIf="(isLoggedIn$ | async) as isLoggedIn" mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('products')" >Browse products</button>
+                <button *ngIf="(isLoggedIn$ | async) as isLoggedIn" mat-button style="background-color:rgb(255, 158, 58); color:white" (click)="goNavigate('profile')" >Go to Profile</button>
             </div>
         </div>
         <div class="top-div" fxFlex="50%" fxFlexFill fxLayout="column wrap" fxLayoutAlign="center end">
@@ -38,7 +40,8 @@
             </div>
             <div fxFlex fxLayout="column wrap" fxLayoutAlign="center center" >
                 <h2>Join us and see what we have to offer!</h2>
-                <button mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('signup')">Join us</button>
+                <button *ngIf="!(isLoggedIn$ | async) as isLoggedIn" mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('signup')">Join us</button>
+                <button *ngIf="(isLoggedIn$ | async) as isLoggedIn" mat-button style="background-color:rgb(0, 102, 255); color:white" (click)="goNavigate('profile')">Go to Profile</button>
             </div>
         </div>
 
