@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import '@google/model-viewer';
 import { AuthService } from '../services/auth.service';
@@ -15,10 +15,10 @@ export class WelcomeComponent implements OnInit {
 
   constructor(private router: Router,
     private authService: AuthService) { }
+  
 
   ngOnInit(): void {
-
-    // this.isLoggedIn$ = this.authService.isUserLoggedIn();
+    this.isLoggedIn$ = this.authService.isUserLoggedIn();
   }
 
   goNavigate(url: string) {

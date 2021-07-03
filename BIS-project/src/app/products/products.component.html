@@ -150,15 +150,38 @@
             class="matCardImage"
           />
         </mat-card-content>
-        <mat-card-header fxLayout="column nowrap" fxLayoutAlign="center center">
-          <mat-card-title fxFlex="100%" class="dont-break-out truncate">
-            {{product.name}}
-          </mat-card-title>
-          <mat-card-subtitle fxFlex="50%">
-            <span> {{ product.score | number: '1.0-1' }} </span><mat-icon color="accent" class="icon-rating" inline=true>star</mat-icon
-              > | &nbsp;
-            <span> {{ product.price | currency }}</span>
-          </mat-card-subtitle>
+        <mat-card-header fxFill fxLayout="column nowrap" fxLayoutAlign="center start">
+          <div fxFill fxLayoutAlign="center center">
+            <mat-card-title fxFlex="100%" fxFill fxLayoutAlign="center start" class="dont-break-out truncate text-align-center">
+              <div fxFlex fxLayoutAlign="center center">
+                {{product.name}}
+              </div>
+            </mat-card-title>
+          </div>
+          <div fxFill fxLayoutAlign="center center">
+            <mat-card-subtitle fxFlex="90%" fxFill fxLayoutAlign="space-between center" fxLayout="row nowrap" class="text-align-center" style="border-top: 1px solid lightgray;">
+              <div fxLayoutAlign="row nowrap"> 
+
+                <div fxLayoutAlign="center center">
+                  <star-rating fxFlex
+                  [value]="product.score"
+                  [totalstars]="5"
+                  checkedcolor="#ffd740"
+                  uncheckedcolor="gray"
+                  size="24px"
+                  readonly="true"
+                  ></star-rating>
+                </div>
+                <div fxLayoutAlign="center center" class="text-align-center">
+                  ({{ product.score | number }})
+                </div>
+
+              </div>
+              <div>
+                <b>{{ product.price | currency }}</b>
+              </div>
+            </mat-card-subtitle>
+          </div>
         </mat-card-header>
       </mat-card>
 
