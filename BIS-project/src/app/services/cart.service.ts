@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { list, update, total, get, add, exists, remove, destroy } from 'cart-localstorage';
 import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs';
@@ -11,7 +12,7 @@ export class CartService {
 
   cartSize = new BehaviorSubject<number>(0);
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   clearCart(){
     destroy();
@@ -21,11 +22,13 @@ export class CartService {
   addItemToCart(product: ProductModel) {
     add(product, 1);
     this.setCartSize();
+    this.snackBar.open("Product added to cart!", "", { duration: 2500 });
   }
 
   removeFromCart(product: ProductModel) {
     remove(product.id);
     this.setCartSize();
+    this.snackBar.open("Product removed from cart!", "", { duration: 2500 });
   }
 
   getAllFromCart() {

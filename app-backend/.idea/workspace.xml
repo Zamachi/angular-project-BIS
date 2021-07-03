@@ -99,6 +99,7 @@
       <workItem from="1625061719301" duration="3311000" />
       <workItem from="1625159466826" duration="1085000" />
       <workItem from="1625219755234" duration="2277000" />
+      <workItem from="1625266299265" duration="613000" />
     </task>
     <servers />
   </component>
@@ -110,7 +111,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/rs/ac/singidunum/appbackend/services/ReviewService.java</url>
-          <line>52</line>
+          <line>60</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

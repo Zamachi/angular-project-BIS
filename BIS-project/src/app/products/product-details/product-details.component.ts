@@ -19,6 +19,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class ProductDetailsComponent implements OnInit {
 
   reviews: ReviewModel[];
+  isAlreadyInTheCart: boolean = false;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ProductModel,
@@ -29,10 +30,21 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.reviewService.findAllProductReviews(this.data.id).subscribe( response => { this.reviews = response.body } );
+    this.reviewService.findAllProductReviews(this.data.id).subscribe( response => { this.reviews = response.body; } );
+    this.isAlreadyInTheCart = this.isInTheCart();
   }
 
   addToCart(){
     this.cartService.addItemToCart(this.data);
+    this.isAlreadyInTheCart = this.isInTheCart();
+  }
+
+  removeFromCart() {
+    this.cartService.removeFromCart(this.data);
+    this.isAlreadyInTheCart = this.isInTheCart();
+  }
+
+  isInTheCart(): boolean {
+    return this.cartService.alreadyInCart(this.data);
   }
 }

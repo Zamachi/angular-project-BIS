@@ -1,8 +1,7 @@
 .example-card {
     max-width: 355px;
     max-height: 500px;
-
-    border: 2px solid darkblue;
+    border: 1px solid gray;
 }
 
 .example-card:hover {

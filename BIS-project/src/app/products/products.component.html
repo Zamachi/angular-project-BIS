@@ -13,22 +13,27 @@
         (keyup)="search()"
       />
     </mat-form-field>
-    <span> | </span>
+    <span> &nbsp; | &nbsp; </span>
     <div>
       <table matSort (matSortChange)="sortData($event)">
         <tr>
-          <th mat-sort-header="name">Name</th>
-          <th mat-sort-header="score">Score</th>
+          <th mat-sort-header="name">Name</th>&nbsp;
+          <th mat-sort-header="score">Score</th>&nbsp;
           <th mat-sort-header="price">Price</th>
         </tr>
       </table>
     </div>
   </div>
+
+  <div fxLayoutAlign="center center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
   <div fxFlex fxLayout="row wrap">
     <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
-      <p>Filter search results:</p>
+      <h3>Filter search results:</h3>
       <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-        <p>Price range:</p>
+        <p><b>Price range:</b></p>
         <ngx-slider
           [value]="minValuePrice"
           (valueChange)="minValuePrice = $event"
@@ -42,7 +47,7 @@
       </div>
 
       <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-        <p>Category:</p>
+        <p><b>Category:</b></p>
         <mat-form-field appearance="fill">
           <mat-label>Category</mat-label>
           <mat-select [(ngModel)]="catValue" (selectionChange)="search()" [disabled]="chekBox.checked">
@@ -55,7 +60,18 @@
       </div>
 
       <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-        <p>Sub-category:</p>
+        <mat-checkbox
+          class="example-margin"
+          [(ngModel)]="isChecked"
+          (change)="search()"
+          #chekBox
+        >
+          Display only favorite categories
+        </mat-checkbox>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Sub-category:</b></p>
         <mat-form-field appearance="fill">
           <mat-label>Sub-category</mat-label>
           <mat-select [(ngModel)]="subCatValue" (selectionChange)="search()" [disabled]="chekBox.checked">
@@ -68,7 +84,7 @@
       </div>
 
       <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-        <p>Score:</p>
+        <p><b>Score:</b></p>
         <ngx-slider
           [(value)]="minValueScore"
           [(highValue)]="maxValueScore"
@@ -81,7 +97,7 @@
       </div>
 
       <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-        <p>Quantity:</p>
+        <p><b>Quantity:</b></p>
         <ngx-slider
           [value]="minValueStock"
           (valueChange)="minValueStock = $event"
@@ -96,7 +112,7 @@
       </div>
 
       <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-        <p>Distance (Cities):</p>
+        <p><b>Distance (Cities):</b></p>
         <mat-form-field appearance="fill">
           <mat-label>Distance</mat-label>
           <mat-select [(ngModel)]="cityValue" (selectionChange)="search()">
@@ -108,16 +124,7 @@
         </mat-form-field>
       </div>
 
-      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
-          <mat-checkbox
-            class="example-margin"
-            [(ngModel)]="isChecked"
-            (change)="search()"
-            #chekBox
-          >
-            Display only favorite categories
-          </mat-checkbox>
-      </div>
+      
     </div>
     <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start">
       <mat-card
@@ -147,8 +154,8 @@
             product.name
           }}</mat-card-title>
           <mat-card-subtitle fxFlex="50%">
-            <mat-icon color="accent" class="icon-rating">star</mat-icon
-            ><span> {{ product.score | number }}</span> ,
+            <span> {{ product.score | number: '1.0-1' }}</span><mat-icon color="accent" class="icon-rating">star</mat-icon
+              > | &nbsp;
             <span> {{ product.price | currency }}</span>
           </mat-card-subtitle>
         </mat-card-header>

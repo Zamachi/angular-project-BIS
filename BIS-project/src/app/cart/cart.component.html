@@ -37,11 +37,11 @@
   <div fxFlex fxFill fxLayout="column nowrap" fxLayoutAlign="start center">
     <h2>Shopping cart:</h2>
   </div>
-  <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="space-around start">
+  <div fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between start">
     <!-- cart content div -->
-    <div  class="border-1" fxFlex="80%" fxLayout="column nowrap" fxLayoutAlign="start center">
+    <div  class="border-1" fxFlex="85%" fxLayout="column nowrap" fxLayoutAlign="start center">
       <!-- cart content header -->
-      <div class="item-row" fxFlex="100%" fxLayout="row nowrap" fxLayoutAlign="center center">
+      <div class="item-row border-bottom-light padding-bottom" fxFlex="100%" fxLayout="row nowrap" fxLayoutAlign="center center">
         <div fxFlex="7%" class="cart-image-container">
           
         </div>
@@ -52,7 +52,7 @@
           <p><b>Category</b></p>
         </div>
         <div fxFlex="9%">
-          <p><b>manufacturer</b></p>
+          <p><b>Manufacturer</b></p>
         </div>
         <div fxFlex="9%">
           <p><b>City</b></p>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <!-- cart item div - print cart items -->
-      <div class="item-row" fxFlex="100%" fxLayout="row nowrap" fxLayoutAlign="center center" *ngFor="let item of items">
+      <div class="item-row border-bottom-light padding-bottom" fxFlex="100%" fxLayout="row nowrap" fxLayoutAlign="center center" *ngFor="let item of items">
         <div fxFlex="7%" class="cart-image-container">
           <img class="cart-image" src="{{item.imagePath}}"/>
         </div>
@@ -129,14 +129,14 @@
     </div>
 
     <!-- checkout div -->
-    <div fxFlex="15%" fxLayout="column nowrap" fxLayoutAlign="start center" fxLayoutGap="10px">
-      <div class="border-1" fxFill fxFlex fxLayout="column nowrap" fxLayoutAlign="start center">
+    <div fxFlex="15%" fxFill fxLayout="column nowrap" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <div class="border-1" fxFlex="100%" fxLayout="column nowrap" fxLayoutAlign="center center">
         
-        <div fxFlex>
+        <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" fxLayoutGap="5px">
           <h2>Cart total:</h2>
-          <h3>{{ calculateTotal() | currency }}</h3>
+          <h2>{{ calculateTotal() | currency }}</h2>
         </div>
-        <div fxFlex>
+        <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center center">
           <p>Payment method:</p>
           <mat-form-field appearance="fill">
               <mat-label>Payment method</mat-label>

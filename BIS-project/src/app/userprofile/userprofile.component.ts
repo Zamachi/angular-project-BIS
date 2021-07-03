@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
 import { UserModel } from '../models/userModel';
 import { ProductService } from '../services/product.service';
@@ -17,13 +17,15 @@ import { OrderService } from '../services/order.service';
 import { ReviewModel } from '../models/reviewModel';
 import { ReviewService } from '../services/review.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-userprofile',
   templateUrl: './userprofile.component.html',
   styleUrls: ['./userprofile.component.css'],
 })
-export class UserprofileComponent implements OnInit {
+export class UserprofileComponent implements OnInit, AfterViewInit {
   user: UserModel;
   categoryControl = new FormControl();
   separatorKeysCodes: number[] = [ENTER, COMMA];
@@ -37,6 +39,7 @@ export class UserprofileComponent implements OnInit {
   //NOTE: orders tab
   orders = new MatTableDataSource<OrderModel>();
   displayedColumnsOrders = [
+    'No.',
     'id',
     'dateCreated',
     'totalPrice',
@@ -46,7 +49,14 @@ export class UserprofileComponent implements OnInit {
     'cancel',
   ];
 
-  //NOTE: orders tab
+  numberOfCompleted: number = 0;
+  numberOfOngoing: number = 0;
+  numberOfCancelled: number = 0;
+
+  // orders paginator
+  @ViewChild(MatSort)
+  sortOrders: MatSort = new MatSort;
+  @ViewChild(MatPaginator) paginatorOrders!: MatPaginator;
 
   //NOTE: reviews tab
 
@@ -93,6 +103,25 @@ export class UserprofileComponent implements OnInit {
     this.reviewService
       .findAllUserReviews({ username: localStorage.getItem('username') })
       .subscribe((response) => (this.myReviews.data = response.body));
+  }
+
+  ngAfterViewInit(){
+    this.orders.sort = this.sortOrders;
+    this.orders.paginator = this.paginatorOrders;
+    
+    setTimeout(() => {
+      this.orders.data.forEach((order: OrderModel) => {
+        
+        if (order.status == "ongoing") {
+          this.numberOfOngoing += 1;
+        } else if (order.status == "complete") {
+          this.numberOfCompleted += 1;
+        } else if (order.status == "cancelled") {
+          this.numberOfCancelled += 1;
+        }
+
+      });
+    }, 500);
   }
 
   onSubmit(form: NgForm) {
@@ -198,5 +227,9 @@ export class UserprofileComponent implements OnInit {
           });
         }
       });
+  }
+
+  doFilterOrders(filterValue: string) {
+    this.orders.filter = filterValue.trim().toLocaleLowerCase();
   }
 }

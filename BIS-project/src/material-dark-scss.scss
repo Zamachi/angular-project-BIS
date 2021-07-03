@@ -40,7 +40,8 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
   @include angular-material-theme($app-dark-theme);
   
   mat-card-title {
-    color: rgb(95 163 255) !important;
+    // color: rgb(95 163 255) !important;
+    color: white !important;
   }
 
   

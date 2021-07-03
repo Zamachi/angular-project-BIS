@@ -1,12 +1,13 @@
-<section>
-  <mat-tab-group dynamicHeight mat-stretch-tab>
+<div  class="pad-bottom" fxFlex fxLayout="column nowrap" fxLayoutAlign="center center">
+  <mat-tab-group fxFill dynamicHeight mat-stretch-tabs>
     <mat-tab label="Change user info:">
       <form
         fxLayout="column"
         fxLayoutAlign="center center"
-        fxLayoutGap="5px"
+        fxLayoutGap="10px"
         #f="ngForm"
         (ngSubmit)="onSubmit(f)"
+        class="div-container"
       >
         <mat-form-field>
           <input
@@ -41,7 +42,7 @@
 
         </mat-form-field>
 
-        <mat-form-field hintLabel="Please enter minimum 8 characters">
+        <mat-form-field>
           <input
             type="password"
             ngModel
@@ -51,9 +52,6 @@
             minlength="8"
             #userInputPasswordConfirm="ngModel"
           />
-          <mat-hint align="end"
-            >{{ userInputPasswordConfirm.value?.length }} / 8</mat-hint
-          >
           <mat-error
             *ngIf="userInputPasswordConfirm.value != userInputPassword.value"
             >Passwords do not match!</mat-error
@@ -195,44 +193,66 @@
     </mat-tab>
 
     <mat-tab label="View my orders:">
+      <div class="tab-content-wrap" fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" >
 
-      <mat-table [dataSource]="orders" matSort>
-        <ng-container matColumnDef="id">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Order id:</mat-header-cell>
-          <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="dateCreated">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Date created: </mat-header-cell>
-          <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="totalPrice">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>
-          <mat-cell *matCellDef="let element">{{ element.totalPrice | currency }}</mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="paymentOption">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Payment option:</mat-header-cell>
-          <mat-cell *matCellDef="let element">{{ element.paymentOption }}</mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="status">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
-          <mat-cell *matCellDef="let element" #status="ngModel" ngModel>{{ element.status }}</mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="complete">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>
-          <mat-cell *matCellDef="let element">
-            <button *ngIf="element.status == 'ongoing'" color="primary" mat-raised-button (click)="complete(element.id)">Complete</button>
-          </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="cancel">
-          <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel order?</mat-header-cell>
-          <mat-cell *matCellDef="let element">
-            <button *ngIf="element.status == 'ongoing'" color="warn" mat-raised-button (click)="cancel(element.id)">Cancel</button>
-          </mat-cell>
-        </ng-container>
+        <div fxFlex fxFill>
+          <mat-table [dataSource]="orders" matSort>
+            <ng-container matColumnDef="No.">
+              <mat-header-cell *matHeaderCellDef mat-sort-header disabled>No.</mat-header-cell>
+              <mat-cell *matCellDef="let element; let i = index">{{ (paginatorRefOrders.pageIndex * paginatorRefOrders.pageSize) + (i + 1) }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Order id:</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="dateCreated">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Date created: </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="totalPrice">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.totalPrice | currency }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="paymentOption">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Payment option:</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.paymentOption }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
+              <mat-cell *matCellDef="let element" #status="ngModel" ngModel>{{ element.status }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="complete">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'ongoing'" color="primary" mat-raised-button (click)="complete(element.id)">Complete</button>
+              </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="cancel">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel order?</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'ongoing'" color="warn" mat-raised-button (click)="cancel(element.id)">Cancel</button>
+              </mat-cell>
+            </ng-container>
 
-        <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
-        <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
-      </mat-table>
+            <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
+            <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
+          </mat-table>
+        </div>
+
+        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="space-between center">
+          <div>
+            <p>Ongoing: {{numberOfOngoing || 0}}  &nbsp;|&nbsp;  Completed: {{numberOfCompleted || 0}}  &nbsp;|&nbsp;  Cancelled: {{numberOfCancelled || 0}}</p>
+          </div>
+          <mat-form-field>
+            <input matInput type="text" (keyup)="doFilterOrders($any($event.target).value)" placeholder="Search filter...">
+          </mat-form-field>
+          <mat-paginator #paginatorRefOrders [pageSize]="10" [pageSizeOptions]="[10, 15, 25]"></mat-paginator>
+        </div>
+        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="start center">
+          <p>Total number of orders: {{ orders.data.length }}</p>
+        </div>
+
+      </div>
 
     </mat-tab>
 
@@ -263,4 +283,4 @@
 
     </mat-tab>
   </mat-tab-group>
-</section>
+</div>
