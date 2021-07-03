@@ -25,6 +25,8 @@ public class OrderService implements iOrderService {
     private iUserRepository iUserRepository;
     @Autowired
     private iProductRepository productRepository;
+    @Autowired
+    private iReviewService reviewService;
 
     @Override
     public OrderEntity createOrder(OrderModel orderModel) {
@@ -102,8 +104,32 @@ public class OrderService implements iOrderService {
 
     }
 
-//    @Override
-//    public List<OrderEntity> findAllByUsernameAndProductId(String username, String id) {
-//        return orderRepository.findAllByUsernameAndProductId(username,id);
-//    }
+    // find all orders by user id
+    @Override
+    public List<OrderEntity> findAllByUser_Id(String userid) {
+        return this.orderRepository.findAllByUser_Id(userid);
+    };
+
+    @Override
+    public List<OrderEntity> getAllCompleteOrdersByUserId(String userid) {
+
+        var user = iUserRepository.
+                findById(userid);
+
+        var orders = this.findAllByUser_Id(userid);
+
+        return orders
+                .stream()
+                .filter(
+                        orderEntity -> orderEntity
+                                .getStatus()
+                                .equalsIgnoreCase("complete"))
+                .collect(Collectors.toList());
+
+    }
+
+    @Override
+    public List<OrderEntity> didUserByProduct(String userid, String productid) {
+        return this.orderRepository.didUserByProduct(userid, productid);
+    }
 }

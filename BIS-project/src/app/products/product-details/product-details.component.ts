@@ -10,6 +10,9 @@ import { UserService } from 'src/app/services/user.service';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
+import { OrderService } from 'src/app/services/order.service';
+import { UserModel } from 'src/app/models/userModel';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-details',
@@ -20,18 +23,20 @@ export class ProductDetailsComponent implements OnInit {
 
   reviews: ReviewModel[];
   isAlreadyInTheCart: boolean = false;
+  canUserWriteReview: boolean = false;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ProductModel,
     private reviewService: ReviewService,
     private userService: UserService,
-    private router: Router,
-    private cartService: CartService
+    private cartService: CartService,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
     this.reviewService.findAllProductReviews(this.data.id).subscribe( response => { this.reviews = response.body; } );
     this.isAlreadyInTheCart = this.isInTheCart();
+    this.canWriteReview();
   }
 
   addToCart(){
@@ -46,5 +51,38 @@ export class ProductDetailsComponent implements OnInit {
 
   isInTheCart(): boolean {
     return this.cartService.alreadyInCart(this.data);
+  }
+
+  // should return true if user can write a review for a given productId
+  canWriteReview(): any {
+
+    let userid: string = this.userService.getCurrentUser().id;
+
+    let productid: string = this.data.id;
+
+    this.reviewService.canUserWriteAReviewForAProduct(userid, productid).subscribe((result) => {
+      if (result != null && result.length > 0) {
+        return this.canUserWriteReview = true;
+      } else return this.canUserWriteReview = false;
+    });
+  }
+
+  writeAReview(reviewContent: string, userStarRating: number) {
+    let user: UserModel = this.userService.getCurrentUser();
+
+    let reviewModel: ReviewModel = {
+      "comment": reviewContent,
+      "score": userStarRating,
+      "product": this.data,
+      "user": user
+    };
+
+    this.reviewService.createReview(reviewModel).subscribe((result) => {
+      if (result != null) {
+        this.snackBar.open("Review submited!", "", {duration: 2500});
+        this.canWriteReview();
+        this.reviewService.findAllProductReviews(this.data.id).subscribe( response => { this.reviews = response.body; } );
+      }
+    });
   }
 }

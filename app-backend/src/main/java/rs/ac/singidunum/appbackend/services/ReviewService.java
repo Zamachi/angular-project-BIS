@@ -17,15 +17,14 @@ import java.util.List;
 public class ReviewService implements iReviewService {
     @Autowired
     private iReviewRepository reviewRepository;
-
     @Autowired
     private AutoMapperService autoMapperService;
-
     @Autowired
     private iProductRepository productRepository;
-
     @Autowired
     private iUserRepository userRepository;
+    @Autowired
+    private iOrderService orderService;
 
     @Override
     public ReviewEntity createReview(ReviewModel reviewModel) {
@@ -78,9 +77,22 @@ public class ReviewService implements iReviewService {
     }
 
     @Override
+    public List<ReviewEntity> findAllByUser_IdAndProduct_Id(String userId, String productId) {
+        return this.reviewRepository.findAllByUser_IdAndProduct_Id(userId, productId);
+    }
+
+    @Override
     public List<ReviewEntity> findAll() {
         return reviewRepository.findAll();
     }
 
 
+    public List<String> canUserReviewTheProduct(String userid, String productid) {
+        var condition1 = this.orderService.didUserByProduct(userid, productid);
+        var condition2 = this.findAllByUser_IdAndProduct_Id(userid, productid);
+        if (condition1.size() > 0 && condition2.size() == 0) {
+            return List.of("Can write a review");
+        }
+        return null;
+    }
 }

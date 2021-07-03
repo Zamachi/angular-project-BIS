@@ -15,6 +15,14 @@
   align-items: start;
 }
 
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.user-review {
+  border-bottom: 1px solid lightgray;
+}
+
 model-viewer {
   min-height: 450px !important;
 }
@@ -50,7 +58,9 @@ mat-tab-group{
 
 #description{
   border: 1px solid gray;
-  box-shadow: 2px 2px 5px #1290eb;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px gray;
+  /* box-shadow: 2px 2px 5px #1290eb; */
   padding-left: 5px;
   padding-bottom: 10px;
   padding-top: 10px;

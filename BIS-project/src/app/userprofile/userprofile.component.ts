@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
 import { UserModel } from '../models/userModel';
 import { ProductService } from '../services/product.service';
@@ -53,17 +53,17 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
   numberOfOngoing: number = 0;
   numberOfCancelled: number = 0;
 
-  // orders paginator
-  @ViewChild(MatSort)
-  sortOrders: MatSort = new MatSort;
-  @ViewChild(MatPaginator) paginatorOrders!: MatPaginator;
-
+  
   //NOTE: reviews tab
 
   myReviews = new MatTableDataSource<ReviewModel>();
-  displayedColumnsReviews = ['product.name', 'comment', 'dateCreated'];
+  displayedColumnsReviews = [
+    'Numero', 'product.name', 'comment', 'score', 'dateCreated'
+  ];
 
-  //NOTE: reviews tab
+  // for more than one mat paginator, we have to use ViewChildren and List of Paginators
+  @ViewChildren(MatPaginator) paginator = new QueryList<MatPaginator>();
+  @ViewChildren(MatSort) sort = new QueryList<MatSort>();
 
   constructor(
     private userService: UserService,
@@ -106,8 +106,11 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(){
-    this.orders.sort = this.sortOrders;
-    this.orders.paginator = this.paginatorOrders;
+    this.orders.paginator = this.paginator.toArray()[0];
+    this.orders.sort = this.sort.toArray()[0];
+    
+    this.myReviews.paginator = this.paginator.toArray()[1];
+    this.myReviews.sort = this.sort.toArray()[1];
     
     setTimeout(() => {
       this.orders.data.forEach((order: OrderModel) => {
@@ -232,4 +235,9 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
   doFilterOrders(filterValue: string) {
     this.orders.filter = filterValue.trim().toLocaleLowerCase();
   }
+
+  doFilterReviews(filterValue: string) {
+    this.myReviews.filter = filterValue.trim().toLocaleLowerCase();
+  }
+
 }
