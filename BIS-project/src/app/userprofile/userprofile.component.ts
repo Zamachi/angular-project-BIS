@@ -18,7 +18,7 @@ import {
 import { MatChipInputEvent } from '@angular/material/chips';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { map, startWith } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { OrderModel } from '../models/orderModel';
 import { MatTableDataSource } from '@angular/material/table';
 import { OrderService } from '../services/order.service';
@@ -30,6 +30,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { EditReviewComponent } from './edit-review/edit-review.component';
 import { LocalstorageService } from '../services/localstorage.service';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 
 @Component({
   selector: 'app-userprofile',
@@ -58,6 +59,7 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
     'totalPrice',
     'paymentOption',
     'status',
+    'viewItems',
     'complete',
     'cancel',
     "delete"
@@ -100,6 +102,17 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
     );
     //Ako je "fruit" null filter pokazuje SVO voce,
     //u suprotnom voca koja se poklapaju sa imenom u inptu polju
+
+    // this.categoryControl.valueChanges.subscribe(search => {
+    //   console.log("konstruktor sub");
+    //   console.log(search);
+      
+      
+    //   this.filteredCategories = of(this.allCategories.filter(item =>
+    //     {item.valueOf().toLowerCase().includes(search);}
+    //   ));
+    // });
+
   }
 
   ngOnInit(): void {
@@ -218,6 +231,8 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
     });
   }
 
+  // ----------------------------------------------------------------------------------
+
   complete(element_id) {
     this.orderService
       .updateOrder({
@@ -298,4 +313,42 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
+  // edit order
+  
+  editOrder(element) {
+    this.dialogOpen = true;
+
+    const order = this.matDialog.open(EditOrderComponent, {
+      disableClose: true,
+      width: '70vw',
+      panelClass: 'dialog-responsive',
+      data: element,
+    });
+
+    order.afterOpened().subscribe(() => {
+      if (this.localStorageService.getLocalStorageItem('theme') == 'dark') {
+        order.addPanelClass('darkMode');
+      }
+    });
+
+    order.afterClosed().subscribe((result: OrderModel) => {
+      if (result.items.length == 0) {
+        this.delete(result.id);
+      }
+      this.dialogOpen = false;
+      this._snackBar.open('Successfully updated the order!', '', {
+        duration: 2500,
+      });
+      this.orderService
+        .fetchAllUserOrders()
+        .subscribe((response) => (this.orders.data = response));
+    });
+  }
+
+
+
+
+
+
 }

@@ -32,6 +32,7 @@ import { CartService } from './services/cart.service';
 import { OrderService } from './services/order.service';
 import { EditReviewComponent } from './userprofile/edit-review/edit-review.component';
 import { CartguardService } from './services/guards/cartguard.service';
+import { EditOrderComponent } from './userprofile/edit-order/edit-order.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CartguardService } from './services/guards/cartguard.service';
     SignupComponent,
     CartComponent,
     ProductDetailsComponent,
-    EditReviewComponent
+    EditReviewComponent,
+    EditOrderComponent
   ],
   imports: [
     BrowserModule,

@@ -22,8 +22,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatBadgeModule} from '@angular/material/badge';
-import {MatChipsModule} from '@angular/material/chips';
+import {MatChipsModule, MAT_CHIPS_DEFAULT_OPTIONS} from '@angular/material/chips';
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { COMMA, ENTER } from "@angular/cdk/keycodes";
 
 @NgModule ({
     exports: [

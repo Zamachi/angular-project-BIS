@@ -11,6 +11,8 @@ import rs.ac.singidunum.appbackend.repositories.iProductRepository;
 import rs.ac.singidunum.appbackend.repositories.iUserRepository;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -84,6 +86,47 @@ public class OrderService implements iOrderService {
 
         //NOTE: azurirati neophodne atribute
         return orderRepository.save(order);
+    }
+
+    @Override
+    public OrderEntity updateOrderItems(OrderModel orderModel) {
+
+        var order = orderRepository.
+                findById(orderModel.getId()).get();
+
+        // new items to put in the order model
+        var inc = orderModel.getItems();
+
+        // current items in non-updated order model
+        var current = (order.getItems());
+
+        // list of differeces between two items lists
+        List<OrderItem> dif = current.stream().filter(elem -> !inc.contains(elem)).collect(Collectors.toList());
+
+        if (dif.size() > 0) {
+            for(OrderItem item : dif) {
+                var p = this.productRepository
+                        .findById(item.getProduct().getId())
+                        .get();
+
+                p.setLeftInStock(p.getLeftInStock() + item.getQuantity());
+
+                this.productRepository.save(p);
+            }
+        }
+
+
+        order.setItems(inc);
+
+        double newPrice = 0.;
+
+        for (OrderItem orderItem: order.getItems()) {
+            newPrice += (orderItem.getQuantity() * orderItem.getProduct().getPrice());
+        }
+
+        order.setTotalPrice(newPrice);
+
+        return this.orderRepository.save(order);
     }
 
     @Override

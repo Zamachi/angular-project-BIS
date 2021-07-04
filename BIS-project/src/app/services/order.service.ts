@@ -28,6 +28,12 @@ export class OrderService {
 
   }
 
+  updateOrderItems(orderModel: any): Observable<OrderModel> {
+    const url = "http://localhost:8080/orders/updateorderitems";
+
+    return this.http.put<OrderModel>(url, orderModel, {observe: 'body'});
+  }
+
   deleteOrder(order_id): Observable<HttpResponse<any>>{
     const url = "http://localhost:8080/orders/deleteorder?order_id="+order_id;
 

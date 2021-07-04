@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { list, update, total, get, add, exists, remove, destroy } from 'cart-localstorage';
 import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs';
+import { OrderItemModel } from '../models/orderItemModel';
 import { ProductModel } from '../models/productModel';
 
 @Injectable({
@@ -35,8 +36,16 @@ export class CartService {
     return list();
   }
 
+  // getAllFromCartWithSub(): Observable<any> {
+  //   return list();
+  // }
+
   getProductFromCart(product: ProductModel) {
     return get(product.id);
+  }
+
+  getProductFromCartById(id: string) {
+    return get(id);
   }
 
   alreadyInCart(product: ProductModel) {

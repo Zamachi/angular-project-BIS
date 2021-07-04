@@ -17,7 +17,7 @@
         src="{{ data.modelPath }}"
         auto-rotate
         shadow-intensity="1"
-        skybox-image="../../../assets/kloppenheim_02_2k.hdr"
+        skybox-image="../../../assets/Studio.hdr"
         rotation-per-second="40deg"
       >
       </model-viewer>
@@ -76,12 +76,12 @@
               </div>
             </div>
             <div class="top-div" *ngIf="!canUserWriteReview" fxFlex>
-              <p>CANNOT write review</p>
+              <p>Cannot write review. Item needs to be bought or you have already written one.</p>
             </div>
             <div class="top-div" *ngFor="let review of reviews" fxLayout="column nowrap">
               <div fxFlex fxLayoutAlign="space-between" fxLayout="row nowrap">
                 <div>
-                  <b><p>{{review.user.id}} &nbsp;|&nbsp; {{ review.dateCreated | date }} </p></b>
+                  <b><p>{{review.user.username || review.user.id}} &nbsp;|&nbsp; {{ review.dateCreated | date }} </p></b>
                 </div>
                 <div fxLayoutAlign="center center">
                   <star-rating fxFlex

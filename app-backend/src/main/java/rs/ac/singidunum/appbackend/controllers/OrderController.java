@@ -46,8 +46,12 @@ public class OrderController {
         return orderService.updateOrder(orderModel);
     }
 
+    @PutMapping("updateorderitems")
+    @CrossOrigin(origins = "*")
+    public OrderEntity updateOrderItems(@RequestBody OrderModel orderModel) { return this.orderService.updateOrderItems(orderModel); }
+
     @DeleteMapping("deleteorder")
-    @CrossOrigin
+    @CrossOrigin(origins = "*")
     public void deleteOrder(@RequestParam("order_id") String order_id){
          orderService.deleteById(order_id);
     }

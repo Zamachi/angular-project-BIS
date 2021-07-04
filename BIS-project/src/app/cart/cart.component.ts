@@ -1,6 +1,8 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { OrderItemModel } from '../models/orderItemModel';
 import { OrderModel } from '../models/orderModel';
 import { ProductModel } from '../models/productModel';
@@ -15,24 +17,38 @@ import { UserService } from '../services/user.service';
 })
 export class CartComponent implements OnInit, AfterViewInit {
 
-  items = [];
+  displayedCartColumns = [
+    'nummero','imagePath', 'name', 'category', 'subCategory', 'manufacturer', 
+    'address.city', 'score', 'price', 'leftInStock', 'quantity', 'remove'
+  ]
+  cartSource = new MatTableDataSource<any>();
+
+  // items = [];
   paymentMethods = ["VISA", "Master Card", "PayPal", "Crypto"];
   paymentValue = '';
 
-  constructor(private cartService: CartService, private orderService: OrderService, private matSnackBar: MatSnackBar, private userService: UserService) { }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
-  ngAfterViewInit(): void {
-    // this.items.paginator = this.paginator;
+  constructor(private cartService: CartService, private orderService: OrderService, private matSnackBar: MatSnackBar, private userService: UserService) {
   }
 
   ngOnInit(): void {
-    this.items = this.cartService.getAllFromCart();
+
+    this.cartSource.data = this.cartService.getAllFromCart() ;
+  }
+
+  ngAfterViewInit(): void {
+    this.cartSource.paginator = this.paginator;
+    this.cartSource.sort = this.sort;
   }
 
   buy() {
-    this.items = this.cartService.getAllFromCart();
+    this.cartSource.data = this.cartService.getAllFromCart();
 
-    if (this.items.length < 1) {
+    // let orderTemp = this.cartService.getAllFromCart();
+
+    if (this.cartSource.data.length < 1) {
       this.matSnackBar.open("No items in your cart!", "", { duration: 2500 });
       return;
     }
@@ -43,24 +59,24 @@ export class CartComponent implements OnInit, AfterViewInit {
 
     let orderItemModel: OrderItemModel[] = [];
 
-    this.items.forEach((product) => {
+    this.cartSource.data.forEach((orderItem) => {
       let itemModel: OrderItemModel = {
       "product" : {
-        "id": product.id,
-        "slug": product.slug,
-        "name": product.name,
-        "description": product.description,
-        "leftInStock": product.leftInStock,
-        "price": product.price,
-        "manufacturer": product.manufacturer,
-        "score": product.score,
-        "imagePath": product.imagePath,
-        "modelPath": product.modelPath,
-        "address": product.address,
-        "category": product.category,
-        "subCategory": product.subCategory
+        "id": orderItem.id,
+        "slug": orderItem.slug,
+        "name": orderItem.name,
+        "description": orderItem.description,
+        "leftInStock": orderItem.leftInStock,
+        "price": orderItem.price,
+        "manufacturer": orderItem.manufacturer,
+        "score": orderItem.score,
+        "imagePath": orderItem.imagePath,
+        "modelPath": orderItem.modelPath,
+        "address": orderItem.address,
+        "category": orderItem.category,
+        "subCategory": orderItem.subCategory
       },
-      "quantity": product.quantity
+      "quantity": orderItem.quantity
       };
       orderItemModel.push(itemModel);
     });
@@ -72,14 +88,11 @@ export class CartComponent implements OnInit, AfterViewInit {
       paymentOption: this.paymentValue
     }
 
-    console.log(orderModel);
-
-
     if (orderModel != null) {
       this.orderService.createOrder(orderModel).subscribe((result) => {
         if (result != null) {
           this.cartService.clearCart();
-          this.items = this.cartService.getAllFromCart();
+          this.cartSource.data = this.cartService.getAllFromCart();
           this.matSnackBar.open("Order created!", "", { duration: 2500 });
         } else {
           this.matSnackBar.open("Could not create order...", "", { duration: 2500 });
@@ -102,6 +115,7 @@ export class CartComponent implements OnInit, AfterViewInit {
   }
 
   decreaseProductQuantity(value: any, product: ProductModel) {
+    // console.log(value);
     value = "" + (+value-1);
 
     if (value > 0) {
@@ -112,11 +126,15 @@ export class CartComponent implements OnInit, AfterViewInit {
 
   removeFromCart(product: ProductModel) {
     this.cartService.removeFromCart(product);
-    this.items = this.cartService.getAllFromCart();
+    this.cartSource.data = this.cartService.getAllFromCart();
   }
 
   calculateTotal(){
     return this.cartService.totalCartValue();
+  }
+
+  getCartSize() {
+    return this.cartService.getCartSize();
   }
 
 }
