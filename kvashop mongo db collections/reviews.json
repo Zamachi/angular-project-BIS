@@ -1,0 +1,682 @@
+[{
+  "_id": {
+    "$oid": "60ddd7fc4ce435092275eec6"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc78733f33d02d457d8a42"
+    },
+    "slug": "asus-laptop",
+    "name": "Asus Laptop",
+    "description": "This is an Asus ROG gaming laptop",
+    "leftInStock": 9,
+    "price": 369.45,
+    "manufacturer": "Asus",
+    "score": 4,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-asus-laptop.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-asus-laptop.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Beograd",
+      "street": "Durmitorska",
+      "number": 16,
+      "zipCode": 0
+    },
+    "category": "Hardware",
+    "subCategory": "Laptop"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 4,
+  "comment": "It's an okay product",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60ddd90662aef0069d0a1faa"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc78733f33d02d457d8a42"
+    },
+    "slug": "asus-laptop",
+    "name": "Asus Laptop",
+    "description": "This is an Asus ROG gaming laptop",
+    "leftInStock": 9,
+    "price": 369.45,
+    "manufacturer": "Asus",
+    "score": 4.5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-asus-laptop.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-asus-laptop.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Beograd",
+      "street": "Durmitorska",
+      "number": 16,
+      "zipCode": 0
+    },
+    "category": "Hardware",
+    "subCategory": "Laptop"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 5,
+  "comment": "Excellent!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddec89494d10076c3a9f3"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc78733f33d02d457d8a42"
+    },
+    "slug": "asus-laptop",
+    "name": "Asus Laptop",
+    "description": "This is an Asus ROG gaming laptop",
+    "leftInStock": 9,
+    "price": 369.45,
+    "manufacturer": "Asus",
+    "score": 3.333333333333333,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-asus-laptop.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-asus-laptop.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Beograd",
+      "street": "Durmitorska",
+      "number": 16,
+      "zipCode": 0
+    },
+    "category": "Hardware",
+    "subCategory": "Laptop"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 1,
+  "comment": "I don't like it!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddee89494d10076c3a9f4"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc78733f33d02d457d8a42"
+    },
+    "slug": "asus-laptop",
+    "name": "Asus Laptop",
+    "description": "This is an Asus ROG gaming laptop",
+    "leftInStock": 9,
+    "price": 369.45,
+    "manufacturer": "Asus",
+    "score": 2.75,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-asus-laptop.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-asus-laptop.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Beograd",
+      "street": "Durmitorska",
+      "number": 16,
+      "zipCode": 0
+    },
+    "category": "Hardware",
+    "subCategory": "Laptop"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 1,
+  "comment": "Hate it!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddefc9494d10076c3a9f5"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc78733f33d02d457d8a42"
+    },
+    "slug": "asus-laptop",
+    "name": "Asus Laptop",
+    "description": "This is an Asus ROG gaming laptop",
+    "leftInStock": 9,
+    "price": 369.45,
+    "manufacturer": "Asus",
+    "score": 3.2,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-asus-laptop.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-asus-laptop.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Beograd",
+      "street": "Durmitorska",
+      "number": 16,
+      "zipCode": 0
+    },
+    "category": "Hardware",
+    "subCategory": "Laptop"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 5,
+  "comment": "Amazing!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddf249494d10076c3a9f6"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc7bf030631c4190148e31"
+    },
+    "slug": "blue-crystal",
+    "name": "Blue crystal",
+    "description": "This is a blue crystal",
+    "leftInStock": 33,
+    "price": 112.63,
+    "manufacturer": "Gods",
+    "score": 5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi sad",
+      "street": "Novosadska",
+      "number": 1,
+      "zipCode": 21410
+    },
+    "category": "Items",
+    "subCategory": "Crystals"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 5,
+  "comment": "Amazing!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddf2f9494d10076c3a9f7"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc7bf030631c4190148e31"
+    },
+    "slug": "blue-crystal",
+    "name": "Blue crystal",
+    "description": "This is a blue crystal",
+    "leftInStock": 33,
+    "price": 112.63,
+    "manufacturer": "Gods",
+    "score": 4,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi sad",
+      "street": "Novosadska",
+      "number": 1,
+      "zipCode": 21410
+    },
+    "category": "Items",
+    "subCategory": "Crystals"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 3,
+  "comment": "It's okay!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddf6f9494d10076c3a9f8"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc805330631c4190148e32"
+    },
+    "slug": "cyber-building",
+    "name": "Cyber building",
+    "description": "This is a cyber building",
+    "leftInStock": 10,
+    "price": 207.46,
+    "manufacturer": "Me",
+    "score": 1,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-cyber-building.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-cyber-building.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Jagodina",
+      "street": "Cocetova",
+      "number": 6,
+      "zipCode": 0
+    },
+    "category": "Structure",
+    "subCategory": "Building"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 1,
+  "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60dddf779494d10076c3a9f9"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc805330631c4190148e32"
+    },
+    "slug": "cyber-building",
+    "name": "Cyber building",
+    "description": "This is a cyber building",
+    "leftInStock": 10,
+    "price": 207.46,
+    "manufacturer": "Me",
+    "score": 3,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-cyber-building.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-cyber-building.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Jagodina",
+      "street": "Cocetova",
+      "number": 6,
+      "zipCode": 0
+    },
+    "category": "Structure",
+    "subCategory": "Building"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 5,
+  "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.!",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60ddfd2098a7701f836a6543"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc7bf030631c4190148e31"
+    },
+    "slug": "blue-crystal",
+    "name": "Blue crystal",
+    "description": "This is a blue crystal",
+    "leftInStock": 33,
+    "price": 112.63,
+    "manufacturer": "Gods",
+    "score": 5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi sad",
+      "street": "Novosadska",
+      "number": 1,
+      "zipCode": 21410
+    },
+    "category": "Items",
+    "subCategory": "Crystals"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 5,
+  "comment": "Amazing dsad asd asd asdasd asd asd asd asd !",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60de017198a7701f836a670d"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc7bf030631c4190148e31"
+    },
+    "slug": "blue-crystal",
+    "name": "Blue crystal",
+    "description": "This is a blue crystal",
+    "leftInStock": 33,
+    "price": 112.63,
+    "manufacturer": "Gods",
+    "score": 5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi sad",
+      "street": "Novosadska",
+      "number": 1,
+      "zipCode": 21410
+    },
+    "category": "Items",
+    "subCategory": "Crystals"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60d9d4169b5e1b424dc9b3b8"
+    }
+  },
+  "score": 4,
+  "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at enim ut sem volutpat varius nec eu ante. Ut dapibus est sapien, sed consequat lectus accumsan ac. Nulla facilisi. Praesent lacinia at purus vel luctus. Proin neque mauris, porta sit amet luctus lobortis, scelerisque vitae turpis. In blandit sagittis lacinia. Aliquam erat volutpat. In pharetra pulvinar convallis. Ut malesuada massa nulla, sed euismod dolor mollis quis. Sed finibus purus ac erat iaculis tincidunt. Integer a arcu vel neque viverra scelerisque. Sed tellus lectus, posuere et dapibus sed, vestibulum at magna. Donec nec semper urna, sit amet cursus lorem. Donec cursus posuere sollicitudin. Pellentesque nisi lectus, bibendum quis vulputate sed, pellentesque sed ex. Proin varius metus id ex vehicula ultrices. Ut sit amet felis sem. Curabitur vitae purus quis ipsum malesuada volutpat in eget orci. Duis auctor tortor sit amet finibus rutrum. Nunc laoreet placerat urna vel laoreet. Praesent dapibus ex at nulla efficitur fringilla. Mauris venenatis erat sollicitudin, dictum est ac, consectetur eros.",
+  "dateCreated": {
+    "$date": "2021-06-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e03ed57cab8b766c4ebec7"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc7bf030631c4190148e31"
+    },
+    "slug": "blue-crystal",
+    "name": "Blue crystal",
+    "description": "This is a blue crystal",
+    "leftInStock": 33,
+    "price": 112.63,
+    "manufacturer": "Gods",
+    "score": 5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi sad",
+      "street": "Novosadska",
+      "number": 1,
+      "zipCode": 21410
+    },
+    "category": "Items",
+    "subCategory": "Crystals"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user1",
+    "lastName": "user1",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS",
+    "dateCreated": {
+      "$date": "2021-06-30T22:00:00Z"
+    },
+    "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
+  },
+  "score": 3,
+  "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at enim ut sem volutpat varius nec eu ante. Ut dapibus est sapien, sed consequat lectus accumsan ac. Nulla facilisi. Praesent lacinia at purus vel luctus. Proin neque mauris, porta sit amet luctus lobortis, scelerisque vitae turpis. In blandit sagittis lacinia. Aliquam erat volutpat. In pharetra pulvinar convallis. Ut malesuada massa nulla, sed euismod dolor mollis quis. Sed finibus purus ac erat iaculis tincidunt. Integer a arcu vel neque viverra scelerisque. Sed tellus lectus, posuere et dapibus sed, vestibulum at magna. Donec nec semper urna, sit amet cursus lorem. Donec cursus posuere sollicitudin. Pellentesque nisi lectus, bibendum quis vulputate sed, pellentesque sed ex. Proin varius metus id ex vehicula ultrices. Ut sit amet felis sem. Curabitur vitae purus quis ipsum malesuada volutpat in eget orci. Duis auctor tortor sit amet finibus rutrum. Nunc laoreet placerat urna vel laoreet. Praesent dapibus ex at nulla efficitur fringilla. Mauris venenatis erat sollicitudin, dictum est ac, consectetur eros.",
+  "dateCreated": {
+    "$date": "2021-03-30T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e0e39ea8fd1b445e042ad6"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60e0de8648ae3f0918602a5d"
+    },
+    "slug": "angry-bird",
+    "name": "Angry Bird",
+    "description": "Angry bird - Red from the Angry Birds movie. Extremely short temper, beware...",
+    "leftInStock": 21,
+    "price": 81.49,
+    "manufacturer": "Minecraft",
+    "score": 3,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-angry-bird.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-angry-bird.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Jagodina",
+      "street": "Kneginje Milice",
+      "number": 32,
+      "zipCode": 35000
+    },
+    "category": "Characters",
+    "subCategory": "Angry Birds"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 3,
+  "comment": "safasf",
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e0e422a8fd1b445e042ad9"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60e0de8648ae3f0918602a5d"
+    },
+    "slug": "angry-bird",
+    "name": "Angry Bird",
+    "description": "Angry bird - Red from the Angry Birds movie. Extremely short temper, beware...",
+    "leftInStock": 19,
+    "price": 81.49,
+    "manufacturer": "Minecraft",
+    "score": 4,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-angry-bird.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-angry-bird.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Jagodina",
+      "street": "Kneginje Milice",
+      "number": 32,
+      "zipCode": 35000
+    },
+    "category": "Characters",
+    "subCategory": "Angry Birds"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60e0e3eaa8fd1b445e042ad7"
+    },
+    "firstName": "user2",
+    "lastName": "user2",
+    "email": "user2@email.com",
+    "phone": "+38123654",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street s",
+      "number": 123,
+      "zipCode": 11000
+    },
+    "username": "user2",
+    "password": "$2a$10$Xc9Es6dQDsh/G8c7xBIE/e6jrb994dfwcoEvM79POiNn9eum20eMO",
+    "dateCreated": {
+      "$date": "2021-07-03T22:00:00Z"
+    }
+  },
+  "score": 5,
+  "comment": "r234",
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e1fad34d0edc1075999cbb"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc80a330631c4190148e35"
+    },
+    "slug": "kirby",
+    "name": "Kirby",
+    "description": "This is a Kirby(not a vacuum cleaner)",
+    "leftInStock": 11,
+    "price": 52.79,
+    "manufacturer": "Nintendo",
+    "score": 5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-kirby.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-kirby.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Nis",
+      "street": "Nikole Graonica",
+      "number": 23,
+      "zipCode": 0
+    },
+    "category": "Characters",
+    "subCategory": "Nintendo"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 5,
+  "comment": "This pink ball is awesome!",
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e2083d4d0edc1075999cc4"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc805330631c4190148e32"
+    },
+    "slug": "cyber-building",
+    "name": "Cyber building",
+    "description": "This is a cyber building",
+    "leftInStock": 8,
+    "price": 207.46,
+    "manufacturer": "Me",
+    "score": 3.3333333333333335,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-cyber-building.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-cyber-building.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Jagodina",
+      "street": "Cocetova",
+      "number": 6,
+      "zipCode": 0
+    },
+    "category": "Structure",
+    "subCategory": "Building"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60e207a94d0edc1075999cc2"
+    },
+    "firstName": "test2",
+    "lastName": "test2",
+    "email": "test2@email.com",
+    "phone": "+38164123456",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters",
+      "Weapons"
+    ],
+    "username": "test2",
+    "password": "$2a$10$9DoMTExCZFf89/oC9i8FLOZhw6OY4oYsbzJYnUYq/6p0t2b6Qn8oe"
+  },
+  "score": 4,
+  "comment": "Awesome!!! Great!",
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+}]
