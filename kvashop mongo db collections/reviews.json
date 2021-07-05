@@ -571,7 +571,10 @@
     }
   },
   "score": 5,
-  "comment": "r234",
+  "comment": "r234556",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
   "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
 },{
   "_id": {
@@ -678,5 +681,385 @@
   },
   "score": 4,
   "comment": "Awesome!!! Great!",
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e377c4ac216910f5837188"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc806330631c4190148e33"
+    },
+    "slug": "dragonsword",
+    "name": "Dragonsword",
+    "description": "This is a dragonsword",
+    "leftInStock": 4,
+    "price": 346.12,
+    "manufacturer": "Blacksmith",
+    "score": 4,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-dragonsword.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-dragonsword.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Neki grad",
+      "street": "Kovacka",
+      "number": 1,
+      "zipCode": 0
+    },
+    "category": "Weapons",
+    "subCategory": "Sword"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 4,
+  "comment": "Very sharp!",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e377eaac216910f5837189"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc811830631c4190148e3b"
+    },
+    "slug": "saucer",
+    "name": "Saucer",
+    "description": "This is a saucer(UFO)",
+    "leftInStock": 90,
+    "price": 452.16,
+    "manufacturer": "Aliens",
+    "score": 5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-saucer.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-saucer.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Pancevo",
+      "street": "Stevana SRemca",
+      "number": 11,
+      "zipCode": 300136
+    },
+    "category": "Vehicles",
+    "subCategory": "UFO"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 5,
+  "comment": "Spooky aliens!",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e3780cac216910f583718a"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc8f0bb908243a2a1f65a7"
+    },
+    "slug": "abyss-deer",
+    "name": "Abyss Deer",
+    "description": "Minecraft deer model with blue antlers and shiny effect.",
+    "leftInStock": 69,
+    "price": 138.29,
+    "manufacturer": "Minecraft",
+    "score": 4,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-abyss-deer.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-abyss-deer.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi Sad",
+      "street": "Zmaj Jovina",
+      "number": 17,
+      "zipCode": 21000
+    },
+    "category": "Characters",
+    "subCategory": "Minecraft"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 4,
+  "comment": "Nicely done. Really reminds me of the in-game one!",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e37830ac216910f583718b"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc8f6eb908243a2a1f65af"
+    },
+    "slug": "incinerator-rifle",
+    "name": "Incinerator rifle",
+    "description": "Futuristic and cyberpunk-ish laser assault rifle",
+    "leftInStock": 64,
+    "price": 390.79,
+    "manufacturer": "Company Punk101",
+    "score": 4,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-incinerator-rifle.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-incinerator-rifle.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Pozarevac",
+      "street": "Milesevska",
+      "number": 256,
+      "zipCode": 290802
+    },
+    "category": "Weapons",
+    "subCategory": "Guns"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 4,
+  "comment": "Pew pew",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e37850ac216910f583718c"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc8f4ab908243a2a1f65ac"
+    },
+    "slug": "destiny-sparrow",
+    "name": "Destiny Sparrow",
+    "description": "A flying vehicle from a video game Destiny",
+    "leftInStock": 92,
+    "price": 106.45,
+    "manufacturer": "Bungie",
+    "score": 3,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-destiny-sparrow.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-destiny-sparrow.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Kraljice Marije",
+      "number": 3,
+      "zipCode": 11000
+    },
+    "category": "Characters",
+    "subCategory": "Robots"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "score": 3,
+  "comment": "Extremely fast vehicle. Great looking model, but I don't like the color...",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e378edac216910f583718f"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc806330631c4190148e33"
+    },
+    "slug": "dragonsword",
+    "name": "Dragonsword",
+    "description": "This is a dragonsword",
+    "leftInStock": 3,
+    "price": 346.12,
+    "manufacturer": "Blacksmith",
+    "score": 4.5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-dragonsword.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-dragonsword.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Neki grad",
+      "street": "Kovacka",
+      "number": 1,
+      "zipCode": 0
+    },
+    "category": "Weapons",
+    "subCategory": "Sword"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60e207a94d0edc1075999cc2"
+    },
+    "firstName": "test2",
+    "lastName": "test2",
+    "email": "test2@email.com",
+    "phone": "+38164123456",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters",
+      "Weapons"
+    ],
+    "username": "test2",
+    "password": "$2a$10$9DoMTExCZFf89/oC9i8FLOZhw6OY4oYsbzJYnUYq/6p0t2b6Qn8oe"
+  },
+  "score": 5,
+  "comment": "testest",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
+},{
+  "_id": {
+    "$oid": "60e37903ac216910f5837190"
+  },
+  "product": {
+    "_id": {
+      "$oid": "60dc8f0bb908243a2a1f65a7"
+    },
+    "slug": "abyss-deer",
+    "name": "Abyss Deer",
+    "description": "Minecraft deer model with blue antlers and shiny effect.",
+    "leftInStock": 68,
+    "price": 138.29,
+    "manufacturer": "Minecraft",
+    "score": 3.5,
+    "imagePath": "http://localhost:8080/products/download?fileName=poster-abyss-deer.png",
+    "modelPath": "http://localhost:8080/products/download?fileName=model-abyss-deer.glb",
+    "address": {
+      "country": "Serbia",
+      "city": "Novi Sad",
+      "street": "Zmaj Jovina",
+      "number": 17,
+      "zipCode": 21000
+    },
+    "category": "Characters",
+    "subCategory": "Minecraft"
+  },
+  "user": {
+    "_id": {
+      "$oid": "60e207a94d0edc1075999cc2"
+    },
+    "firstName": "test2",
+    "lastName": "test2",
+    "email": "test2@email.com",
+    "phone": "+38164123456",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters",
+      "Weapons"
+    ],
+    "username": "test2",
+    "password": "$2a$10$9DoMTExCZFf89/oC9i8FLOZhw6OY4oYsbzJYnUYq/6p0t2b6Qn8oe"
+  },
+  "score": 3,
+  "comment": "lorem i ipsum",
+  "dateCreated": {
+    "$date": "2021-07-04T22:00:00Z"
+  },
   "_class": "rs.ac.singidunum.appbackend.entities.ReviewEntity"
 }]
