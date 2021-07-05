@@ -52,14 +52,15 @@
     "country": "Serbia",
     "city": "Belgrade",
     "street": "Street s",
-    "number": 123,
+    "number": 1234,
     "zipCode": 11000
   },
+  "favourites": [
+    "Weapons",
+    "Characters"
+  ],
   "username": "user2",
   "password": "$2a$10$Xc9Es6dQDsh/G8c7xBIE/e6jrb994dfwcoEvM79POiNn9eum20eMO",
-  "dateCreated": {
-    "$date": "2021-07-03T22:00:00Z"
-  },
   "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
 },{
   "_id": {
