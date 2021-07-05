@@ -1,0 +1,829 @@
+[{
+  "_id": {
+    "$oid": "60dc78733f33d02d457d8a42"
+  },
+  "slug": "asus-laptop",
+  "name": "Asus Laptop",
+  "description": "This is an Asus ROG gaming laptop",
+  "leftInStock": 9,
+  "price": 369.45,
+  "manufacturer": "Asus",
+  "score": 3.2,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-asus-laptop.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-asus-laptop.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Beograd",
+    "street": "Durmitorska",
+    "number": 16,
+    "zipCode": 0
+  },
+  "category": "Hardware",
+  "subCategory": "Laptop",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc7bf030631c4190148e31"
+  },
+  "slug": "blue-crystal",
+  "name": "Blue crystal",
+  "description": "This is a blue crystal",
+  "leftInStock": 31,
+  "price": 112.63,
+  "manufacturer": "Gods",
+  "score": 4,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Novi sad",
+    "street": "Novosadska",
+    "number": 1,
+    "zipCode": 21410
+  },
+  "category": "Items",
+  "subCategory": "Crystals",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc805330631c4190148e32"
+  },
+  "slug": "cyber-building",
+  "name": "Cyber building",
+  "description": "This is a cyber building",
+  "leftInStock": 8,
+  "price": 207.46,
+  "manufacturer": "Me",
+  "score": 3.3333333333333335,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-cyber-building.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-cyber-building.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Jagodina",
+    "street": "Cocetova",
+    "number": 6,
+    "zipCode": 0
+  },
+  "category": "Structure",
+  "subCategory": "Building",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc806330631c4190148e33"
+  },
+  "slug": "dragonsword",
+  "name": "Dragonsword",
+  "description": "This is a dragonsword",
+  "leftInStock": 5,
+  "price": 346.12,
+  "manufacturer": "Blacksmith",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-dragonsword.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-dragonsword.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Neki grad",
+    "street": "Kovacka",
+    "number": 1,
+    "zipCode": 0
+  },
+  "category": "Weapons",
+  "subCategory": "Sword",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc806e30631c4190148e34"
+  },
+  "slug": "iron-anvil",
+  "name": "Iron anvil",
+  "description": "This is an iron anvil",
+  "leftInStock": 68,
+  "price": 71.89,
+  "manufacturer": "Blacksmith",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-iron-anvil.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-iron-anvil.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Novi sad",
+    "street": "Cara Dusana",
+    "number": 1,
+    "zipCode": 0
+  },
+  "category": "Items",
+  "subCategory": "Tools",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc80a330631c4190148e35"
+  },
+  "slug": "kirby",
+  "name": "Kirby",
+  "description": "This is a Kirby(not a vacuum cleaner)",
+  "leftInStock": 11,
+  "price": 52.79,
+  "manufacturer": "Nintendo",
+  "score": 5,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-kirby.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-kirby.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Nis",
+    "street": "Nikole Graonica",
+    "number": 23,
+    "zipCode": 0
+  },
+  "category": "Characters",
+  "subCategory": "Nintendo",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc80da30631c4190148e36"
+  },
+  "slug": "statue-of-liberty",
+  "name": "Statue of Liberty",
+  "description": "This is a replica of statue of Liberty in New York City",
+  "leftInStock": 59,
+  "price": 332.28,
+  "manufacturer": "NYC",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-statue-of-liberty.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-statue-of-liberty.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Beograd",
+    "street": "Durmitorska",
+    "number": 16,
+    "zipCode": 11160
+  },
+  "category": "Structure",
+  "subCategory": "Building",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc80e730631c4190148e37"
+  },
+  "slug": "mars-planet",
+  "name": "Mars planet",
+  "description": "This is a replica of Mars and its surface",
+  "leftInStock": 43,
+  "price": 457.31,
+  "manufacturer": "Solar system",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-mars-planet.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-mars-planet.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Beograd",
+    "street": "Durmitorska",
+    "number": 16,
+    "zipCode": 11160
+  },
+  "category": "Nature",
+  "subCategory": "Planet",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc80f430631c4190148e38"
+  },
+  "slug": "rubik's-cube",
+  "name": "Rubik's cube",
+  "description": "This is a rubik's cube",
+  "leftInStock": 27,
+  "price": 377.53,
+  "manufacturer": "Rubik",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-rubik's-cube.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-rubik's-cube.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Pozarevac",
+    "street": "Lole Ribara",
+    "number": 1,
+    "zipCode": 290803
+  },
+  "category": "Items",
+  "subCategory": "Toys",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc80ff30631c4190148e39"
+  },
+  "slug": "solar-panels",
+  "name": "Solar panels",
+  "description": "These are solar panels",
+  "leftInStock": 5,
+  "price": 164.02,
+  "manufacturer": "Solar corp",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-solar-panels.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-solar-panels.gltf",
+  "address": {
+    "country": "Serbia",
+    "city": "Kostolac",
+    "street": "Bratstva i jedinstva",
+    "number": 1,
+    "zipCode": 12208
+  },
+  "category": "Items",
+  "subCategory": "Technology",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc811830631c4190148e3b"
+  },
+  "slug": "saucer",
+  "name": "Saucer",
+  "description": "This is a saucer(UFO)",
+  "leftInStock": 95,
+  "price": 452.16,
+  "manufacturer": "Aliens",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-saucer.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-saucer.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Pancevo",
+    "street": "Stevana SRemca",
+    "number": 11,
+    "zipCode": 300136
+  },
+  "category": "Vehicles",
+  "subCategory": "UFO",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc812330631c4190148e3c"
+  },
+  "slug": "war-spider",
+  "name": "War spider",
+  "description": "This is a war spider",
+  "leftInStock": 94,
+  "price": 14.18,
+  "manufacturer": "Umbrella corporation",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-war-spider.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-war-spider.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Beograd",
+    "street": "Vitezova Karadjordjeve Zvezde",
+    "number": 12,
+    "zipCode": 11160
+  },
+  "category": "Characters",
+  "subCategory": "Robot",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc812f30631c4190148e3d"
+  },
+  "slug": "wine",
+  "name": "Wine",
+  "description": "These are Wine bottles",
+  "leftInStock": 77,
+  "price": 355.35,
+  "manufacturer": "Winery",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-wine.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-wine.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Nis",
+    "street": "Ulica",
+    "number": 1,
+    "zipCode": 700132
+  },
+  "category": "Items",
+  "subCategory": "Bottles",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f0bb908243a2a1f65a7"
+  },
+  "slug": "abyss-deer",
+  "name": "Abyss Deer",
+  "description": "Minecraft deer model with blue antlers and shiny effect.",
+  "leftInStock": 71,
+  "price": 138.29,
+  "manufacturer": "Minecraft",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-abyss-deer.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-abyss-deer.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Novi Sad",
+    "street": "Zmaj Jovina",
+    "number": 17,
+    "zipCode": 21000
+  },
+  "category": "Characters",
+  "subCategory": "Minecraft",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f27b908243a2a1f65a9"
+  },
+  "slug": "ac3-connor-tomahawk",
+  "name": "AC3 Connor Tomahawk",
+  "description": "Faithful replica of the famous weapon from a globally popular game franchise - Assassin's Creed",
+  "leftInStock": 12,
+  "price": 297.86,
+  "manufacturer": "Ubisoft",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-ac3-connor-tomahawk.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-ac3-connor-tomahawk.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Nis",
+    "street": "Milana Obrenovica",
+    "number": 2,
+    "zipCode": 700132
+  },
+  "category": "Weapons",
+  "subCategory": "Tomahawk",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f34b908243a2a1f65aa"
+  },
+  "slug": "converse-all-stars",
+  "name": "Converse All Stars",
+  "description": "Timeless snickers. Well, only one is available, but still...",
+  "leftInStock": 97,
+  "price": 455.11,
+  "manufacturer": "Converse",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-converse-all-stars.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-converse-all-stars.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Samjuela Beketa",
+    "number": 12,
+    "zipCode": 11000
+  },
+  "category": "Wear",
+  "subCategory": "Snickers",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f3fb908243a2a1f65ab"
+  },
+  "slug": "mecha-cryptic-fenrir",
+  "name": "Mecha Cryptic Fenrir",
+  "description": "3D model of a mecha-robot",
+  "leftInStock": 97,
+  "price": 535.07,
+  "manufacturer": "Company UT1",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-mecha-cryptic-fenrir.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-mecha-cryptic-fenrir.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Bulevar Kralja Aleksandra",
+    "number": 123,
+    "zipCode": 11000
+  },
+  "category": "Characters",
+  "subCategory": "Robots",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f4ab908243a2a1f65ac"
+  },
+  "slug": "destiny-sparrow",
+  "name": "Destiny Sparrow",
+  "description": "A flying vehicle from a video game Destiny",
+  "leftInStock": 94,
+  "price": 106.45,
+  "manufacturer": "Bungie",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-destiny-sparrow.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-destiny-sparrow.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Kraljice Marije",
+    "number": 3,
+    "zipCode": 11000
+  },
+  "category": "Characters",
+  "subCategory": "Robots",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f57b908243a2a1f65ad"
+  },
+  "slug": "ganesha",
+  "name": "Ganesha",
+  "description": "Ganesha, also spelled Ganesh, also called Ganapati, elephant-headed Hindu god of beginnings, who is traditionally worshipped before any major enterprise and is the patron of intellectuals, bankers, scribes, and authors.",
+  "leftInStock": 39,
+  "price": 260.99,
+  "manufacturer": "Company VA",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-ganesha.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-ganesha.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Branka Copica",
+    "number": 31,
+    "zipCode": 11000
+  },
+  "category": "Characters",
+  "subCategory": "Gods",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f64b908243a2a1f65ae"
+  },
+  "slug": "guardian-lion-dog",
+  "name": "Guardian Lion Dog",
+  "description": "Fearsome guardian",
+  "leftInStock": 10,
+  "price": 295.73,
+  "manufacturer": "Company VA",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-guardian-lion-dog.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-guardian-lion-dog.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Branka Copica",
+    "number": 31,
+    "zipCode": 11000
+  },
+  "category": "Characters",
+  "subCategory": "Gods",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f6eb908243a2a1f65af"
+  },
+  "slug": "incinerator-rifle",
+  "name": "Incinerator rifle",
+  "description": "Futuristic and cyberpunk-ish laser assault rifle",
+  "leftInStock": 68,
+  "price": 390.79,
+  "manufacturer": "Company Punk101",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-incinerator-rifle.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-incinerator-rifle.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Pozarevac",
+    "street": "Milesevska",
+    "number": 256,
+    "zipCode": 290802
+  },
+  "category": "Weapons",
+  "subCategory": "Guns",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f76b908243a2a1f65b0"
+  },
+  "slug": "katana",
+  "name": "Katana",
+  "description": "An old but trusty katana",
+  "leftInStock": 20,
+  "price": 99.7,
+  "manufacturer": "Japan",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-katana.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-katana.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Pozarevac",
+    "street": "Milosa Obilica",
+    "number": 26,
+    "zipCode": 290802
+  },
+  "category": "Weapons",
+  "subCategory": "Swords",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f81b908243a2a1f65b1"
+  },
+  "slug": "paladin's-book",
+  "name": "Paladin's Book",
+  "description": "A very old book that can be used for a display",
+  "leftInStock": 7,
+  "price": 430.67,
+  "manufacturer": "Gutenberg",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-paladin's-book.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-paladin's-book.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Sabac",
+    "street": "Gospodar Jevremova",
+    "number": 6,
+    "zipCode": 271390
+  },
+  "category": "Items",
+  "subCategory": "Books",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f8db908243a2a1f65b2"
+  },
+  "slug": "potions-of-eternity",
+  "name": "Potions of Eternity",
+  "description": "Two potions of unknown quality. Models can be used for a fantasy game.",
+  "leftInStock": 18,
+  "price": 98.54,
+  "manufacturer": "Amazon",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-potions-of-eternity.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-potions-of-eternity.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Jagodina",
+    "street": "Cocetova",
+    "number": 61,
+    "zipCode": 35000
+  },
+  "category": "Items",
+  "subCategory": "Potions",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8f9fb908243a2a1f65b3"
+  },
+  "slug": "rocket-league-car",
+  "name": "Rocket League Car",
+  "description": "A car from a globally aclaimed video game - Rocket League",
+  "leftInStock": 96,
+  "price": 263.17,
+  "manufacturer": "Psyonix",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-rocket-league-car.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-rocket-league-car.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Kragujevac",
+    "street": "Kralja Aleksandra I Karadjordjevica",
+    "number": 128,
+    "zipCode": 550601
+  },
+  "category": "Vehicle",
+  "subCategory": "Cars",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8fabb908243a2a1f65b4"
+  },
+  "slug": "wooden-slingshot",
+  "name": "Wooden Slingshot",
+  "description": "A toy or a weapon from the old days",
+  "leftInStock": 1,
+  "price": 307.48,
+  "manufacturer": "Hand-made",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-wooden-slingshot.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-wooden-slingshot.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Kragujevac",
+    "street": "27. marta",
+    "number": 66,
+    "zipCode": 550601
+  },
+  "category": "Weapons",
+  "subCategory": "Ranged",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8fb6b908243a2a1f65b5"
+  },
+  "slug": "slowest-snail",
+  "name": "Slowest Snail",
+  "description": "A 3d model of a snail that has won the 2nd place in a race",
+  "leftInStock": 90,
+  "price": 411.2,
+  "manufacturer": "Company R1",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-slowest-snail.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-slowest-snail.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Kragujevac",
+    "street": "25. avgusta",
+    "number": 213,
+    "zipCode": 550601
+  },
+  "category": "Characters",
+  "subCategory": "Animals",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8fc0b908243a2a1f65b6"
+  },
+  "slug": "snake-plant",
+  "name": "Snake plant",
+  "description": "A 3d model of a snake plant",
+  "leftInStock": 58,
+  "price": 180,
+  "manufacturer": "Company R1",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-snake-plant.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-snake-plant.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Negotin",
+    "street": "Moravska",
+    "number": 213,
+    "zipCode": 19300
+  },
+  "category": "Characters",
+  "subCategory": "Plants",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8fcab908243a2a1f65b7"
+  },
+  "slug": "vaso-estilo-huara",
+  "name": "Vaso Estilo Huara",
+  "description": "A replica of an artifact",
+  "leftInStock": 86,
+  "price": 207.79,
+  "manufacturer": "Company R1",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-vaso-estilo-huara.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-vaso-estilo-huara.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Negotin",
+    "street": "Sreje Jovanovica",
+    "number": 21,
+    "zipCode": 19300
+  },
+  "category": "Structure",
+  "subCategory": "Statue",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8fd5b908243a2a1f65b8"
+  },
+  "slug": "viking-helmet",
+  "name": "Viking Helmet",
+  "description": "A replica of a viking helmet from Nordic countries",
+  "leftInStock": 85,
+  "price": 255.25,
+  "manufacturer": "Sweden",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-viking-helmet.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-viking-helmet.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Zrenjanin",
+    "street": "Panonska",
+    "number": 11,
+    "zipCode": 350902
+  },
+  "category": "Items",
+  "subCategory": "Helmet",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dc8fddb908243a2a1f65b9"
+  },
+  "slug": "wyvren",
+  "name": "Wyvren",
+  "description": "A wyvren model figurine",
+  "leftInStock": 12,
+  "price": 374.44,
+  "manufacturer": "Amazon",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-wyvren.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-wyvren.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Zrenjanin",
+    "street": "Drinska",
+    "number": 111,
+    "zipCode": 350902
+  },
+  "category": "Games",
+  "subCategory": "Dragons",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60dcd38b29953c3db52ff92e"
+  },
+  "slug": "sonic",
+  "name": "Sonic",
+  "description": "This is a model of Sonic and Tails flying a plane",
+  "leftInStock": 56,
+  "price": 374.36,
+  "manufacturer": "Sega",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-sonic.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-sonic.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Novi sad",
+    "street": "Neka ulica",
+    "number": 11,
+    "zipCode": 21440
+  },
+  "category": "Characters",
+  "subCategory": "Sonic",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60e0de8648ae3f0918602a5d"
+  },
+  "slug": "angry-bird",
+  "name": "Angry Bird",
+  "description": "Angry bird - Red from the Angry Birds movie. Extremely short temper, beware...",
+  "leftInStock": 18,
+  "price": 81.49,
+  "manufacturer": "Minecraft",
+  "score": 3.5,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-angry-bird.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-angry-bird.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Jagodina",
+    "street": "Kneginje Milice",
+    "number": 32,
+    "zipCode": 35000
+  },
+  "category": "Characters",
+  "subCategory": "Angry Birds",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60e201ac4d0edc1075999cbe"
+  },
+  "slug": "soul-of-the-forest",
+  "name": "Soul of the forest",
+  "description": "A fearsome creature roaming the forest.",
+  "leftInStock": 65,
+  "price": 104.81,
+  "manufacturer": "Company FV90",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-soul-of-the-forest.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-soul-of-the-forest.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Balkanska",
+    "number": 121,
+    "zipCode": 11000
+  },
+  "category": "Games",
+  "subCategory": "Monsters",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60e201c04d0edc1075999cbf"
+  },
+  "slug": "zombie-samurai",
+  "name": "Zombie samurai",
+  "description": "A concept of a zombie samurai",
+  "leftInStock": 14,
+  "price": 290.58,
+  "manufacturer": "Company FV90",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-zombie-samurai.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-zombie-samurai.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Stepe Stepanovica",
+    "number": 21,
+    "zipCode": 11000
+  },
+  "category": "Games",
+  "subCategory": "Monsters",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+},{
+  "_id": {
+    "$oid": "60e305d98e019500253437e8"
+  },
+  "slug": "dark-dagger",
+  "name": "Dark dagger",
+  "description": "A 3d model of a mystical fantasy knife/dagger",
+  "leftInStock": 22,
+  "price": 478.98,
+  "manufacturer": "Company R1",
+  "score": 0,
+  "imagePath": "http://localhost:8080/products/download?fileName=poster-dark-dagger.png",
+  "modelPath": "http://localhost:8080/products/download?fileName=model-dark-dagger.glb",
+  "address": {
+    "country": "Serbia",
+    "city": "Kragujevac",
+    "street": "25. avgusta",
+    "number": 213,
+    "zipCode": 550601
+  },
+  "category": "Weapons",
+  "subCategory": "Daggers",
+  "_class": "rs.ac.singidunum.appbackend.entities.ProductEntity"
+}]

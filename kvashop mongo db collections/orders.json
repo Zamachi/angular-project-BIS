@@ -1,0 +1,879 @@
+[{
+  "_id": {
+    "$oid": "60df2f5829672b64371d6121"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80a330631c4190148e35"
+        },
+        "slug": "kirby",
+        "name": "Kirby",
+        "description": "This is a Kirby(not a vacuum cleaner)",
+        "leftInStock": 21,
+        "price": 52.79,
+        "manufacturer": "Nintendo",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-kirby.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-kirby.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Nis",
+          "street": "Nikole Graonica",
+          "number": 23,
+          "zipCode": 0
+        },
+        "category": "Characters",
+        "subCategory": "Nintendo"
+      },
+      "quantity": 1
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user1",
+    "lastName": "user1",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS",
+    "dateCreated": {
+      "$date": "2021-06-30T22:00:00Z"
+    }
+  },
+  "totalPrice": 52.79,
+  "dateCreated": {
+    "$date": "2021-07-01T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "Master Card",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60df305e29672b64371d6123"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80a330631c4190148e35"
+        },
+        "slug": "kirby",
+        "name": "Kirby",
+        "description": "This is a Kirby(not a vacuum cleaner)",
+        "leftInStock": 21,
+        "price": 52.79,
+        "manufacturer": "Nintendo",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-kirby.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-kirby.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Nis",
+          "street": "Nikole Graonica",
+          "number": 23,
+          "zipCode": 0
+        },
+        "category": "Characters",
+        "subCategory": "Nintendo"
+      },
+      "quantity": 8
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user1",
+    "lastName": "user1",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS",
+    "dateCreated": {
+      "$date": "2021-06-30T22:00:00Z"
+    }
+  },
+  "totalPrice": 422.32,
+  "dateCreated": {
+    "$date": "2021-07-01T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "PayPal",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60df9c00471c72185ace5a0a"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80a330631c4190148e35"
+        },
+        "slug": "kirby",
+        "name": "Kirby",
+        "description": "This is a Kirby(not a vacuum cleaner)",
+        "leftInStock": 21,
+        "price": 52.79,
+        "manufacturer": "Nintendo",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-kirby.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-kirby.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Nis",
+          "street": "Nikole Graonica",
+          "number": 23,
+          "zipCode": 0
+        },
+        "category": "Characters",
+        "subCategory": "Nintendo"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80da30631c4190148e36"
+        },
+        "slug": "statue-of-liberty",
+        "name": "Statue of Liberty",
+        "description": "This is a replica of statue of Liberty in New York City",
+        "leftInStock": 61,
+        "price": 332.28,
+        "manufacturer": "NYC",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-statue-of-liberty.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-statue-of-liberty.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Beograd",
+          "street": "Durmitorska",
+          "number": 16,
+          "zipCode": 11160
+        },
+        "category": "Structure",
+        "subCategory": "Building"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80e730631c4190148e37"
+        },
+        "slug": "mars-planet",
+        "name": "Mars planet",
+        "description": "This is a replica of Mars and its surface",
+        "leftInStock": 45,
+        "price": 457.31,
+        "manufacturer": "Solar system",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-mars-planet.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-mars-planet.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Beograd",
+          "street": "Durmitorska",
+          "number": 16,
+          "zipCode": 11160
+        },
+        "category": "Nature",
+        "subCategory": "Planet"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8fcab908243a2a1f65b7"
+        },
+        "slug": "vaso-estilo-huara",
+        "name": "Vaso Estilo Huara",
+        "description": "A replica of an artifact",
+        "leftInStock": 87,
+        "price": 207.79,
+        "manufacturer": "Company R1",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-vaso-estilo-huara.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-vaso-estilo-huara.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Negotin",
+          "street": "Sreje Jovanovica",
+          "number": 21,
+          "zipCode": 19300
+        },
+        "category": "Structure",
+        "subCategory": "Statue"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8fabb908243a2a1f65b4"
+        },
+        "slug": "wooden-slingshot",
+        "name": "Wooden Slingshot",
+        "description": "A toy or a weapon from the old days",
+        "leftInStock": 2,
+        "price": 307.48,
+        "manufacturer": "Hand-made",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-wooden-slingshot.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-wooden-slingshot.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Kragujevac",
+          "street": "27. marta",
+          "number": 66,
+          "zipCode": 550601
+        },
+        "category": "Weapons",
+        "subCategory": "Ranged"
+      },
+      "quantity": 1
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user1",
+    "lastName": "user1",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS",
+    "dateCreated": {
+      "$date": "2021-06-30T22:00:00Z"
+    }
+  },
+  "totalPrice": 1357.65,
+  "dateCreated": {
+    "$date": "2021-07-02T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "PayPal",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60e04abc08368751ff442746"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8f0bb908243a2a1f65a7"
+        },
+        "slug": "abyss-deer",
+        "name": "Abyss Deer",
+        "description": "Minecraft deer model with blue antlers and shiny effect.",
+        "leftInStock": 72,
+        "price": 138.29,
+        "manufacturer": "Minecraft",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-abyss-deer.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-abyss-deer.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Novi Sad",
+          "street": "Zmaj Jovina",
+          "number": 17,
+          "zipCode": 21000
+        },
+        "category": "Characters",
+        "subCategory": "Minecraft"
+      },
+      "quantity": 1
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user1",
+    "lastName": "user1",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS",
+    "dateCreated": {
+      "$date": "2021-06-30T22:00:00Z"
+    }
+  },
+  "totalPrice": 138.29,
+  "dateCreated": {
+    "$date": "2021-07-02T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "PayPal",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60e0dedf48ae3f0918602a5e"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60e0de8648ae3f0918602a5d"
+        },
+        "slug": "angry-bird",
+        "name": "Angry Bird",
+        "description": "Angry bird - Red from the Angry Birds movie. Extremely short temper, beware...",
+        "leftInStock": 22,
+        "price": 81.49,
+        "manufacturer": "Minecraft",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-angry-bird.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-angry-bird.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Jagodina",
+          "street": "Kneginje Milice",
+          "number": 32,
+          "zipCode": 35000
+        },
+        "category": "Characters",
+        "subCategory": "Angry Birds"
+      },
+      "quantity": 1
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "totalPrice": 81.49,
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "PayPal",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60e0e409a8fd1b445e042ad8"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60e0de8648ae3f0918602a5d"
+        },
+        "slug": "angry-bird",
+        "name": "Angry Bird",
+        "description": "Angry bird - Red from the Angry Birds movie. Extremely short temper, beware...",
+        "leftInStock": 21,
+        "price": 81.49,
+        "manufacturer": "Minecraft",
+        "score": 3,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-angry-bird.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-angry-bird.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Jagodina",
+          "street": "Kneginje Milice",
+          "number": 32,
+          "zipCode": 35000
+        },
+        "category": "Characters",
+        "subCategory": "Angry Birds"
+      },
+      "quantity": 2
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60e0e3eaa8fd1b445e042ad7"
+    },
+    "firstName": "user2",
+    "lastName": "user2",
+    "email": "user2@email.com",
+    "phone": "+38123654",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street s",
+      "number": 123,
+      "zipCode": 11000
+    },
+    "username": "user2",
+    "password": "$2a$10$Xc9Es6dQDsh/G8c7xBIE/e6jrb994dfwcoEvM79POiNn9eum20eMO",
+    "dateCreated": {
+      "$date": "2021-07-03T22:00:00Z"
+    }
+  },
+  "totalPrice": 162.98,
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "Crypto",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60e1fedf4d0edc1075999cbd"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc7bf030631c4190148e31"
+        },
+        "slug": "blue-crystal",
+        "name": "Blue crystal",
+        "description": "This is a blue crystal",
+        "leftInStock": 33,
+        "price": 112.63,
+        "manufacturer": "Gods",
+        "score": 4,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-blue-crystal.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-blue-crystal.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Novi sad",
+          "street": "Novosadska",
+          "number": 1,
+          "zipCode": 21410
+        },
+        "category": "Items",
+        "subCategory": "Crystals"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80da30631c4190148e36"
+        },
+        "slug": "statue-of-liberty",
+        "name": "Statue of Liberty",
+        "description": "This is a replica of statue of Liberty in New York City",
+        "leftInStock": 60,
+        "price": 332.28,
+        "manufacturer": "NYC",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-statue-of-liberty.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-statue-of-liberty.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Beograd",
+          "street": "Durmitorska",
+          "number": 16,
+          "zipCode": 11160
+        },
+        "category": "Structure",
+        "subCategory": "Building"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80e730631c4190148e37"
+        },
+        "slug": "mars-planet",
+        "name": "Mars planet",
+        "description": "This is a replica of Mars and its surface",
+        "leftInStock": 44,
+        "price": 457.31,
+        "manufacturer": "Solar system",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-mars-planet.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-mars-planet.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Beograd",
+          "street": "Durmitorska",
+          "number": 16,
+          "zipCode": 11160
+        },
+        "category": "Nature",
+        "subCategory": "Planet"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8f27b908243a2a1f65a9"
+        },
+        "slug": "ac3-connor-tomahawk",
+        "name": "AC3 Connor Tomahawk",
+        "description": "Faithful replica of the famous weapon from a globally popular game franchise - Assassin's Creed",
+        "leftInStock": 14,
+        "price": 297.86,
+        "manufacturer": "Ubisoft",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-ac3-connor-tomahawk.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-ac3-connor-tomahawk.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Nis",
+          "street": "Milana Obrenovica",
+          "number": 2,
+          "zipCode": 700132
+        },
+        "category": "Weapons",
+        "subCategory": "Tomahawk"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8f34b908243a2a1f65aa"
+        },
+        "slug": "converse-all-stars",
+        "name": "Converse All Stars",
+        "description": "Timeless snickers. Well, only one is available, but still...",
+        "leftInStock": 98,
+        "price": 455.11,
+        "manufacturer": "Converse",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-converse-all-stars.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-converse-all-stars.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Belgrade",
+          "street": "Samjuela Beketa",
+          "number": 12,
+          "zipCode": 11000
+        },
+        "category": "Wear",
+        "subCategory": "Snickers"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc812f30631c4190148e3d"
+        },
+        "slug": "wine",
+        "name": "Wine",
+        "description": "These are Wine bottles",
+        "leftInStock": 78,
+        "price": 355.35,
+        "manufacturer": "Winery",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-wine.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-wine.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Nis",
+          "street": "Ulica",
+          "number": 1,
+          "zipCode": 700132
+        },
+        "category": "Items",
+        "subCategory": "Bottles"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80f430631c4190148e38"
+        },
+        "slug": "rubik's-cube",
+        "name": "Rubik's cube",
+        "description": "This is a rubik's cube",
+        "leftInStock": 28,
+        "price": 377.53,
+        "manufacturer": "Rubik",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-rubik's-cube.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-rubik's-cube.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Pozarevac",
+          "street": "Lole Ribara",
+          "number": 1,
+          "zipCode": 290803
+        },
+        "category": "Items",
+        "subCategory": "Toys"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc80ff30631c4190148e39"
+        },
+        "slug": "solar-panels",
+        "name": "Solar panels",
+        "description": "These are solar panels",
+        "leftInStock": 6,
+        "price": 164.02,
+        "manufacturer": "Solar corp",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-solar-panels.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-solar-panels.gltf",
+        "address": {
+          "country": "Serbia",
+          "city": "Kostolac",
+          "street": "Bratstva i jedinstva",
+          "number": 1,
+          "zipCode": 12208
+        },
+        "category": "Items",
+        "subCategory": "Technology"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc811830631c4190148e3b"
+        },
+        "slug": "saucer",
+        "name": "Saucer",
+        "description": "This is a saucer(UFO)",
+        "leftInStock": 96,
+        "price": 452.16,
+        "manufacturer": "Aliens",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-saucer.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-saucer.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Pancevo",
+          "street": "Stevana SRemca",
+          "number": 11,
+          "zipCode": 300136
+        },
+        "category": "Vehicles",
+        "subCategory": "UFO"
+      },
+      "quantity": 1
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60ddd2335dacc441ca918ab2"
+    },
+    "firstName": "user12",
+    "lastName": "user123",
+    "email": "user1@email.com",
+    "phone": "+38163232323",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street 123",
+      "number": 456,
+      "zipCode": 11000
+    },
+    "favourites": [
+      "Characters"
+    ],
+    "username": "user1",
+    "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS"
+  },
+  "totalPrice": 3004.2499999999995,
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "status": "ongoing",
+  "paymentOption": "VISA",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60e203d04d0edc1075999cc1"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8fc0b908243a2a1f65b6"
+        },
+        "slug": "snake-plant",
+        "name": "Snake plant",
+        "description": "A 3d model of a snake plant",
+        "leftInStock": 62,
+        "price": 180,
+        "manufacturer": "Company R1",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-snake-plant.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-snake-plant.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Negotin",
+          "street": "Moravska",
+          "number": 213,
+          "zipCode": 19300
+        },
+        "category": "Characters",
+        "subCategory": "Plants"
+      },
+      "quantity": 4
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60e203b24d0edc1075999cc0"
+    },
+    "firstName": "test1",
+    "lastName": "test1",
+    "email": "test1@email.com",
+    "phone": "+38161123456",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street",
+      "number": 111,
+      "zipCode": 11000
+    },
+    "username": "test1",
+    "password": "$2a$10$H23nacekPbHytrGWFnSGcetjyriFZ1m3IY9nRQ8p95GaYCgLLeZ1S",
+    "dateCreated": {
+      "$date": "2021-07-03T22:00:00Z"
+    }
+  },
+  "totalPrice": 720,
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "status": "ongoing",
+  "paymentOption": "VISA",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+},{
+  "_id": {
+    "$oid": "60e207d34d0edc1075999cc3"
+  },
+  "items": [
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc8f27b908243a2a1f65a9"
+        },
+        "slug": "ac3-connor-tomahawk",
+        "name": "AC3 Connor Tomahawk",
+        "description": "Faithful replica of the famous weapon from a globally popular game franchise - Assassin's Creed",
+        "leftInStock": 13,
+        "price": 297.86,
+        "manufacturer": "Ubisoft",
+        "score": 0,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-ac3-connor-tomahawk.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-ac3-connor-tomahawk.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Nis",
+          "street": "Milana Obrenovica",
+          "number": 2,
+          "zipCode": 700132
+        },
+        "category": "Weapons",
+        "subCategory": "Tomahawk"
+      },
+      "quantity": 1
+    },
+    {
+      "product": {
+        "_id": {
+          "$oid": "60dc805330631c4190148e32"
+        },
+        "slug": "cyber-building",
+        "name": "Cyber building",
+        "description": "This is a cyber building",
+        "leftInStock": 10,
+        "price": 207.46,
+        "manufacturer": "Me",
+        "score": 3,
+        "imagePath": "http://localhost:8080/products/download?fileName=poster-cyber-building.png",
+        "modelPath": "http://localhost:8080/products/download?fileName=model-cyber-building.glb",
+        "address": {
+          "country": "Serbia",
+          "city": "Jagodina",
+          "street": "Cocetova",
+          "number": 6,
+          "zipCode": 0
+        },
+        "category": "Structure",
+        "subCategory": "Building"
+      },
+      "quantity": 2
+    }
+  ],
+  "user": {
+    "_id": {
+      "$oid": "60e207a94d0edc1075999cc2"
+    },
+    "firstName": "test2",
+    "lastName": "test2",
+    "email": "test2@email.com",
+    "phone": "+38164123456",
+    "address": {
+      "country": "Serbia",
+      "city": "Belgrade",
+      "street": "Street",
+      "number": 123,
+      "zipCode": 11000
+    },
+    "username": "test2",
+    "password": "$2a$10$9DoMTExCZFf89/oC9i8FLOZhw6OY4oYsbzJYnUYq/6p0t2b6Qn8oe",
+    "dateCreated": {
+      "$date": "2021-07-03T22:00:00Z"
+    }
+  },
+  "totalPrice": 712.78,
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "status": "complete",
+  "paymentOption": "Master Card",
+  "_class": "rs.ac.singidunum.appbackend.entities.OrderEntity"
+}]

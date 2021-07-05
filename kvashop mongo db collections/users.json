@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "60dc831129953c3db52ff92d"
+  },
+  "firstName": "Stefan",
+  "lastName": "Dimitrijevic",
+  "email": "zamachi@mail.com",
+  "phone": "0652404266",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Dragoslava Djordjevica Gose",
+    "number": 16,
+    "zipCode": 11160
+  },
+  "username": "zamachi",
+  "password": "$2a$10$67nUnn9iNH1e8MN3iCAZGOOAzyeTZzzYsQ8KLHg7g60SnrsnMb0lO",
+  "dateCreated": {
+    "$date": "2021-06-29T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
+},{
+  "_id": {
+    "$oid": "60ddd2335dacc441ca918ab2"
+  },
+  "firstName": "user12",
+  "lastName": "user123",
+  "email": "user1@email.com",
+  "phone": "+38163232323",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Street 123",
+    "number": 456,
+    "zipCode": 11000
+  },
+  "favourites": [
+    "Characters"
+  ],
+  "username": "user1",
+  "password": "$2a$10$DVhYgWU7VNAvmvRK0Vim.O8tknxbw9JZ99AytMEltv8g75OoOF2rS",
+  "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
+},{
+  "_id": {
+    "$oid": "60e0e3eaa8fd1b445e042ad7"
+  },
+  "firstName": "user2",
+  "lastName": "user2",
+  "email": "user2@email.com",
+  "phone": "+38123654",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Street s",
+    "number": 123,
+    "zipCode": 11000
+  },
+  "username": "user2",
+  "password": "$2a$10$Xc9Es6dQDsh/G8c7xBIE/e6jrb994dfwcoEvM79POiNn9eum20eMO",
+  "dateCreated": {
+    "$date": "2021-07-03T22:00:00Z"
+  },
+  "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
+},{
+  "_id": {
+    "$oid": "60e203b24d0edc1075999cc0"
+  },
+  "firstName": "test1",
+  "lastName": "test1",
+  "email": "test1@email.com",
+  "phone": "+38161123456",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Street 123",
+    "number": 456,
+    "zipCode": 11000
+  },
+  "favourites": [
+    "Characters",
+    "Games",
+    "Items"
+  ],
+  "username": "test1",
+  "password": "$2a$10$H23nacekPbHytrGWFnSGcetjyriFZ1m3IY9nRQ8p95GaYCgLLeZ1S",
+  "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
+},{
+  "_id": {
+    "$oid": "60e207a94d0edc1075999cc2"
+  },
+  "firstName": "test2",
+  "lastName": "test2",
+  "email": "test2@email.com",
+  "phone": "+38164123456",
+  "address": {
+    "country": "Serbia",
+    "city": "Belgrade",
+    "street": "Street 123",
+    "number": 456,
+    "zipCode": 11000
+  },
+  "favourites": [
+    "Characters",
+    "Weapons"
+  ],
+  "username": "test2",
+  "password": "$2a$10$9DoMTExCZFf89/oC9i8FLOZhw6OY4oYsbzJYnUYq/6p0t2b6Qn8oe",
+  "_class": "rs.ac.singidunum.appbackend.entities.UserEntity"
+}]
