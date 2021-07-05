@@ -14,5 +14,6 @@ public class OrderModel {
     private LocalDate dateCreated;
     private String status; // complete, ongoign, cancelled
     private String paymentOption;
+    private int minEta;
 //    private int score; // samo ako je porudzbina zavrsena - kako ovo prikazati/resiti, da li se ovde zapravo cuva
 }

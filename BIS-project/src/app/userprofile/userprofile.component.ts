@@ -44,6 +44,7 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
   allCategories: string[] = [];
   filteredCategories: Observable<string[]>;
   category: any;
+  maxEta: number = 5;
 
   dialogOpen: boolean = false;
 
@@ -59,6 +60,7 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
     'totalPrice',
     'paymentOption',
     'status',
+    'minEta',
     'viewItems',
     'complete',
     'cancel',

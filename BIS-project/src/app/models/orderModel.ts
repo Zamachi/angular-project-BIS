@@ -9,4 +9,5 @@ export class OrderModel{
   dateCreated?: Date;
   status?: string;
   paymentOption: string;
+  minEta?: number;
 }

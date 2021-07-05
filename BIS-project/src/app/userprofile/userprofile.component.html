@@ -223,6 +223,10 @@
               <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
               <mat-cell *matCellDef="let element" name="status" #status>{{ element.status }}</mat-cell>
             </ng-container>
+            <ng-container matColumnDef="minEta">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>ETA:</mat-header-cell>
+              <mat-cell *matCellDef="let element" name="minEta" >{{ element.minEta }}-{{ maxEta }} days</mat-cell>
+            </ng-container>
 
             <ng-container matColumnDef="viewItems">
               <mat-header-cell *matHeaderCellDef mat-sort-header>View items</mat-header-cell>

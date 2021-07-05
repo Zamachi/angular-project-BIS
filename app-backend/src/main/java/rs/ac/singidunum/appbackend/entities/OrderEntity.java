@@ -27,4 +27,6 @@ public class OrderEntity {
     private String status; // zavrsena, tekuca, otkazana
     @Field("paymentOption")
     private String paymentOption;
+    @Field("minEta")
+    private int minEta;
 }
