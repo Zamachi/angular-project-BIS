@@ -55,6 +55,8 @@ public class ReviewService implements iReviewService {
         // product - need to update it's score with a new avg
         var product = productRepository.findById(reviewModel.getProduct().getId()).get();
 
+        reviewModel.setDateCreated(LocalDate.now());
+
         reviewModel.setProduct( autoMapperService.map( product, ProductModel.class) );
 
         var updatedReview =  reviewRepository.save(this.autoMapperService.map(reviewModel, ReviewEntity.class));
