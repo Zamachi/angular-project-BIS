@@ -46,7 +46,7 @@
               </ng-container>
               <ng-container matColumnDef="score">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>Score</mat-header-cell>
-                <mat-cell *matCellDef="let element">{{ element.product.score }}</mat-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.score | number: '1.0-1' }}</mat-cell>
               </ng-container>
               <ng-container matColumnDef="price">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>

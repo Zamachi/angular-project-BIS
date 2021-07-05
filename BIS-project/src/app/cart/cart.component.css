@@ -36,6 +36,10 @@
     object-fit: cover;
 }
 
+.rating-icon {
+    color: gold;
+}
+
 /* .quantity-button {
     
 } */

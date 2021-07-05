@@ -292,7 +292,7 @@
               <mat-cell *matCellDef="let element">{{ element.comment }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="score">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Score: </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Rating: </mat-header-cell>
               <mat-cell *matCellDef="let element">
                 <div fxLayoutAlign="center center">
                   <star-rating fxFlex
@@ -304,7 +304,7 @@
                   readonly="true"
                   ></star-rating>
                 </div>
-                &nbsp; ({{ element.score | number }})
+                &nbsp; ({{ element.score | number: '1.0-1' }})
               </mat-cell>
             </ng-container>
             <ng-container matColumnDef="dateCreated">

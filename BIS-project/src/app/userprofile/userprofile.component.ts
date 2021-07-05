@@ -161,8 +161,6 @@ export class UserprofileComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form);
-    console.log(this.user.favourites);
     this.userService
       .updateUser({
         id: this.user.id,
