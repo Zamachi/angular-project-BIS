@@ -30,11 +30,16 @@ public class OrderService implements iOrderService {
     @Autowired
     private iReviewService reviewService;
 
+    private int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
     @Override
     public OrderEntity createOrder(OrderModel orderModel) {
 
         orderModel.setDateCreated(LocalDate.now());
         orderModel.setStatus("ongoing");
+        orderModel.setMinEta( this.getRandomNumber(1,4) );
 
         //NOTE: trebalo bi mozda proveriti dostupnost pre nego sto bude upisano u bazu
 
