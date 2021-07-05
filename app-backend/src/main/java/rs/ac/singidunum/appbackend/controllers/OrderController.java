@@ -40,15 +40,20 @@ public class OrderController {
         return orderService.getAllCompleteOrders(username);
     }
 
-//    @GetMapping("findallbyusernameandproductid/{username}/{id}")
-//    @CrossOrigin(origins = "*")
-//    public List<OrderEntity> findAllByUsernameAndProductId(@PathVariable("username")String username, @PathVariable("id")String id){
-//        return orderService.findAllByUsernameAndProductId(username,id);
-//    }
-
     @PutMapping("updateorder")
     @CrossOrigin(origins = "*")
     public OrderEntity updateOrder(@RequestBody OrderModel orderModel){
         return orderService.updateOrder(orderModel);
     }
+
+    @PutMapping("updateorderitems")
+    @CrossOrigin(origins = "*")
+    public OrderEntity updateOrderItems(@RequestBody OrderModel orderModel) { return this.orderService.updateOrderItems(orderModel); }
+
+    @DeleteMapping("deleteorder")
+    @CrossOrigin(origins = "*")
+    public void deleteOrder(@RequestParam("order_id") String order_id){
+         orderService.deleteById(order_id);
+    }
+
 }

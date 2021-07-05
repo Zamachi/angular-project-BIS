@@ -13,4 +13,5 @@ public interface iProductService {
     ProductEntity createProduct(ProductModel productModel, MultipartFile[] file);
     List<ProductEntity> findAll();
     ResponseEntity<Resource> download(String fileName, HttpServletRequest request);
+    List<String> findAllCategories();
 }

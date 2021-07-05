@@ -1,28 +1,79 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RoutingModule } from './routing.module';
+import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { RatingModule } from 'ng-starrating';
+
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material/material.module';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductsComponent } from './products/products.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { CartComponent } from './cart/cart.component';
 
+import { AuthService } from './services/auth.service';
+import { LocalstorageService } from './services/localstorage.service';
+import { UserService } from './services/user.service';
+import { ProductService } from './services/product.service';
+import { AuthguardService } from './services/guards/authguard.service';
+import { ComponentaccessService } from './services/guards/componentaccess.service';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { ReviewService } from './services/review.service';
+import { CartService } from './services/cart.service';
+import { OrderService } from './services/order.service';
+import { EditReviewComponent } from './userprofile/edit-review/edit-review.component';
+import { CartguardService } from './services/guards/cartguard.service';
+import { EditOrderComponent } from './userprofile/edit-order/edit-order.component';
 
 @NgModule({
-  declarations: [ //NOTE: koje komponente su deo ovog modula?
-    AppComponent, WelcomeComponent
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    PagenotfoundComponent,
+    ProductsComponent,
+    UserprofileComponent,
+    LoginComponent,
+    SignupComponent,
+    CartComponent,
+    ProductDetailsComponent,
+    EditReviewComponent,
+    EditOrderComponent
   ],
-  imports: [ //NOTE: koje module importujemo da bi koristili njihove funkcionalnosti?
+  imports: [
     BrowserModule,
-    AppRoutingModule,
-    MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
-  ], //NOTE: postoji i exports niz koji izlistava modules koje tekuci modul izvozi i omogucuje drugim modulima da koriste te elemente
-  providers: [], //NOTE: koje servise koristi ovaj modul?
+    RoutingModule,
+    HttpClientModule,
+    FlexLayoutModule,
+    MaterialModule,
+    FormsModule,
+    NgxSliderModule,
+    NgxPaginationModule,
+    RatingModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    AuthService,
+    LocalstorageService,
+    UserService,
+    ProductService,
+    AuthguardService,
+    ComponentaccessService,
+    ReviewService,
+    CartService,
+    OrderService,
+    CartguardService
+  ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA] //NOTE: ovo je neophodno ukoliko se koristi tzv. "Web component"
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

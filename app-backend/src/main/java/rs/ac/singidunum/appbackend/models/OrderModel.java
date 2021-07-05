@@ -12,6 +12,7 @@ public class OrderModel {
     private UserModel user;
     private double totalPrice;
     private LocalDate dateCreated;
-    private String status; // zavrsena, tekuca, otkazana
+    private String status; // complete, ongoign, cancelled
+    private String paymentOption;
 //    private int score; // samo ako je porudzbina zavrsena - kako ovo prikazati/resiti, da li se ovde zapravo cuva
 }

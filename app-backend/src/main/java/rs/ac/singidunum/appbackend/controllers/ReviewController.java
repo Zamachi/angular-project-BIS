@@ -50,4 +50,16 @@ public class ReviewController {
         return reviewService.updateReview(reviewModel);
     }
 
+    @GetMapping("canreview") // did user buy a product
+    @CrossOrigin(origins = "*")
+    public List<String> canUserReviewTheProduct(@RequestParam("userid") String userid, @RequestParam("productid") String productid){
+        return reviewService.canUserReviewTheProduct(userid, productid);
+    }
+
+//    @GetMapping("finduserreviewforaproduct")
+//    @CrossOrigin(origins = "*")
+//    public ReviewEntity findUserReviewForAGivenProduct(@RequestParam("userid") String userId, @RequestParam("productid") String productId) {
+//        return null;
+//    }
+
 }

@@ -17,4 +17,6 @@ public interface iReviewService {
     List<ReviewEntity> findAllByUsernameAndProductId(String username, String id);
 
     List<ReviewEntity> findAll();
+
+    List<ReviewEntity> findAllByUser_IdAndProduct_Id(String userId, String productId);
 }

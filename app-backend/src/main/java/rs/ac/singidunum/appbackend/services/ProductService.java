@@ -19,10 +19,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService implements iProductService {
@@ -30,6 +32,8 @@ public class ProductService implements iProductService {
     private iProductRepository productRepository;
     @Autowired
     private AutoMapperService autoMapperService;
+
+    private static final DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
     // allowed poster extensions
     private final Set<String> allowedPosterExtensions = Set.of(
@@ -87,12 +91,20 @@ public class ProductService implements iProductService {
 
         productModel.setSlug(slug);
 
+        productModel.setLeftInStock( (int) (1+Math.random()*100) );
+        productModel.setPrice( Double.parseDouble( decimalFormat.format( 1+Math.random()*565 ) ) );
+        productModel.setScore(0);
+
         try {
             this.storeFile(model, storageLocation, modelFileName);
             this.storeFile(poster, storageLocation, posterFileName);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        productModel.setLeftInStock( (int) (1+Math.random()*100) );
+        productModel.setPrice( Double.parseDouble( decimalFormat.format( 1+Math.random()*565 ) ) );
+        productModel.setScore(0);
 
         return productRepository.insert(autoMapperService.map(productModel, ProductEntity.class));
     }
@@ -131,6 +143,12 @@ public class ProductService implements iProductService {
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(contentType))
                 .body(product);
+    }
+
+    @Override
+    public List<String> findAllCategories() {
+
+        return new ArrayList<>(findAll().stream().map(ProductEntity::getCategory).collect(Collectors.toSet()));
     }
 
     // method to store file to a local directory on the server (move file to a server)

@@ -3,21 +3,17 @@ package rs.ac.singidunum.appbackend.repositories;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import rs.ac.singidunum.appbackend.entities.OrderEntity;
-import rs.ac.singidunum.appbackend.entities.UserEntity;
 
 import java.util.List;
 
 public interface iOrderRepository extends MongoRepository<OrderEntity, String> {
     // lista svih porudzbina jednog korisnika
-    List<OrderEntity> findAllByUser(UserEntity userEntity);
+    @Query(value = "{ 'user.username': { $regex : ?0}}")
+    List<OrderEntity> findAllByUser(String username);
 
-    // treba napisati query koji proverava da li je korisnik kupio neki item
-    // treba pronaci sve orders korisnika i proveriti da li lista itema sadrzi zadati product id
-    // items je niz
-    // u tom nizu order items objekti
-    // ti objekti se sastoje od product modela i quantity
-    // u tom modelu proveriti id product-a
-//    @Query(value = "{ 'user.username': {$regex: ?0}, 'items.product.id': { $regex: ?1 } }")
-    //    @Query(value = "{ 'user.username': {$regex: ?0}, 'items': { $elemMatch: { 'id': {$regex: ?1} } } }") //NOTE: Alternativa
-//    List<OrderEntity> findAllByUsernameAndProductId(String username, String itemId);
+    List<OrderEntity> findAllByUser_Id(String userid);
+
+    @Query(value = "{ 'user._id': ObjectId(?0), 'items.product._id': ObjectId(?1), 'status' : 'complete'  }")
+    List<OrderEntity> didUserByProduct(String userid, String productid);
+
 }

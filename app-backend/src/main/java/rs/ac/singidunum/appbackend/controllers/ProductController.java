@@ -39,4 +39,10 @@ public class ProductController {
         return productService.findAll();
     }
 
+    @GetMapping("findallcategories")
+    @CrossOrigin(origins="*")
+    public List<String> findAllCategories(){
+        return productService.findAllCategories();
+    }
+
 }

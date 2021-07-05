@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0cc76a69-1552-4820-9273-8708b135c49d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,21 +46,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ISA_finals_project/isa-finals-backend" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.20652173" />
+    <property name="project.structure.side.proportion" value="0.24195339" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunManager" selected="Application.AppBackendApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rs.ac.singidunum.appbackend.AppBackendApplication" />
       <module name="app-backend" />
@@ -104,6 +91,19 @@
       <workItem from="1623862345596" duration="9165000" />
       <workItem from="1624786339868" duration="9496000" />
       <workItem from="1624801010668" duration="9861000" />
+      <workItem from="1624887602161" duration="351000" />
+      <workItem from="1624887974568" duration="700000" />
+      <workItem from="1624904509389" duration="3013000" />
+      <workItem from="1624959421431" duration="1808000" />
+      <workItem from="1624992716098" duration="1381000" />
+      <workItem from="1625061719301" duration="3311000" />
+      <workItem from="1625159466826" duration="1085000" />
+      <workItem from="1625219755234" duration="2277000" />
+      <workItem from="1625266299265" duration="613000" />
+      <workItem from="1625302015849" duration="9688000" />
+      <workItem from="1625341270995" duration="3569000" />
+      <workItem from="1625391611433" duration="5763000" />
+      <workItem from="1625489672555" duration="2090000" />
     </task>
     <servers />
   </component>

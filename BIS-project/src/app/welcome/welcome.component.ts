@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-// import "@google/model-viewer";
-// import { Sketchfab } from "@sketchfab/viewer-api";
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import '@google/model-viewer';
+import { AuthService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-welcome',
@@ -9,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn$: any;
+
+  constructor(private router: Router,
+    private authService: AuthService) { }
+  
 
   ngOnInit(): void {
+    this.isLoggedIn$ = this.authService.isUserLoggedIn();
+  }
+
+  goNavigate(url: string) {
+    this.router.navigate([url]);
   }
 
 }
